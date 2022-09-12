@@ -1,4 +1,5 @@
 <script lang="ts">
+import AlternatingFeatures from "$lib/sections/AlternatingFeatures.svelte";
 import Hero from "$lib/sections/Hero.svelte";
 
     export let data;
@@ -6,3 +7,4 @@ import Hero from "$lib/sections/Hero.svelte";
 </script>
 
 <Hero />
+<AlternatingFeatures />
