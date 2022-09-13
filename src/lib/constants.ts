@@ -5,6 +5,7 @@ interface Social {
 		| 'facebook'
 		| 'instagram'
 		| 'twitter'
+		| 'youtube'
 		| 'yelp'
 		| 'github'
 		| 'tripadvisor'
@@ -20,6 +21,8 @@ interface Logo {
 	img: {
 		src: string;
 		alt: string;
+		height: string;
+		width: string;
 	};
 }
 
@@ -46,14 +49,16 @@ interface Company {
 	mapEmbed: string;
 }
 
-export const COMPANY = {
+export const COMPANY: Company = {
 	name: 'FtS Excavation',
 	logo: {
 		label: 'FtS Excavation',
 		href: '/',
 		img: {
 			src: '/logo/FtS_Logo_Cream.webp',
-			alt: 'FtS Excavation logo'
+			alt: 'FtS Excavation logo',
+			height: '492',
+			width: '469'
 		}
 	},
 	contact: {
