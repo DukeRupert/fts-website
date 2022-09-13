@@ -5,12 +5,16 @@
 	import Hero from '$lib/sections/Hero.svelte';
 	import Posts from '$lib/sections/Posts.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
+	import ServiceArea from '$lib/sections/ServiceArea.svelte';
+	import Reviews from '$lib/sections/Reviews.svelte';
 
 	export let data: PageData;
 </script>
 
 <Hero />
 <AlternatingFeatures />
-<GradientFeatures />
+<ServiceArea />
+<Reviews />
 <Posts posts={data.data} />
+<GradientFeatures />
 <CallToAction />
