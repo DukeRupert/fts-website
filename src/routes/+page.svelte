@@ -11,6 +11,8 @@
 	import Reviews from '$lib/sections/Reviews.svelte';
 
 	export let data: PageData;
+
+	console.log(data);
 </script>
 
 <SvelteSeo
