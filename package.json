@@ -38,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sanity/client": "^3.3.6"
+		"@sanity/client": "^3.3.6",
+		"@sanity/image-url": "^1.0.1"
 	}
 }
