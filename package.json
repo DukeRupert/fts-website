@@ -39,6 +39,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sanity/client": "^3.3.6",
-		"@sanity/image-url": "^1.0.1"
+		"@sanity/image-url": "^1.0.1",
+		"sveltekit-embed": "^0.0.5"
 	}
 }
