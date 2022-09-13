@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@felte/reporter-svelte': ^1.1.3
   '@sanity/client': ^3.3.6
   '@sanity/image-url': ^1.0.1
   '@sveltejs/adapter-auto': next
@@ -15,8 +16,10 @@ specifiers:
   eslint: ^8.16.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^4.0.0
+  felte: ^1.2.3
   postcss: ^8.4.14
   postcss-load-config: ^4.0.1
+  postmark: ^3.0.14
   prettier: ^2.6.2
   prettier-plugin-svelte: ^2.7.0
   svelte: ^3.44.0
@@ -30,8 +33,11 @@ specifiers:
   vite: ^3.1.0
 
 dependencies:
+  '@felte/reporter-svelte': 1.1.3_svelte@3.50.1
   '@sanity/client': 3.3.6
   '@sanity/image-url': 1.0.1
+  felte: 1.2.3_svelte@3.50.1
+  postmark: 3.0.14
   sveltekit-embed: 0.0.5
 
 devDependencies:
@@ -91,6 +97,28 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@felte/common/1.1.2:
+    resolution: {integrity: sha512-RNSuI+x5BG7oocz0uY+jdkxYRFlRR/C4PZTvfi4mx9U23LzhNSSRG7gPhbQgO75L5YTB1lPwFKJry4uiVXxtwA==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
+
+  /@felte/core/1.3.3:
+    resolution: {integrity: sha512-RcK3VBx6CL8O37tw8mWS44pfYkJQdxraT+eO5yHr9AjDpeqF4n864AcXnX7r6ists1EFXCXGMLSRrvY99cLFzw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      '@felte/common': 1.1.2
+    dev: false
+
+  /@felte/reporter-svelte/1.1.3_svelte@3.50.1:
+    resolution: {integrity: sha512-ffBSl/Cz5G+4sAGqfSo/mkyPDRTjZlkq81oTTCNNdu4YjKhTLbCgwE9vkhrK0Z7Br0MBu4gvEdALIemGsRyZTw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    peerDependencies:
+      svelte: ^3.31.0
+    dependencies:
+      '@felte/common': 1.1.2
+      svelte: 3.50.1
+    dev: false
 
   /@humanwhocodes/config-array/0.10.4:
     resolution: {integrity: sha512-mXAIHxZT3Vcpg83opl1wGlVZ9xydbfZO3r5YfRSH6Gpp2J/PfdBP0wbDa2sO6/qRbcalpoevVyW6A/fI6LfeMw==}
@@ -626,6 +654,14 @@ packages:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
     dev: true
+
+  /axios/0.25.0:
+    resolution: {integrity: sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==}
+    dependencies:
+      follow-redirects: 1.15.1_debug@2.6.9
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -1288,6 +1324,16 @@ packages:
     dependencies:
       reusify: 1.0.4
     dev: true
+
+  /felte/1.2.3_svelte@3.50.1:
+    resolution: {integrity: sha512-AUxizK3LP+S14TvnPyOgJMEJfzKE4FPz+A4386kRdpOEEYFyh+pwKOvIkGZWO7c6LIuDIs6DDmP0VS9Cjq4Qhg==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    peerDependencies:
+      svelte: ^3.31.0
+    dependencies:
+      '@felte/core': 1.3.3
+      svelte: 3.50.1
+    dev: false
 
   /fetch-blob/3.2.0:
     resolution: {integrity: sha512-7yAQpD2UMJzLi1Dqv7qFYnPbaPx7ZfFK6PiIxQ4PfkGPyNyl2Ugx+a/umUonmKqjhM4DnfbMvdX6otXq83soQQ==}
@@ -2055,6 +2101,14 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /postmark/3.0.14:
+    resolution: {integrity: sha512-Bkt6msv+I4Z3Y/jwt2owTNVmahOOyJlS1aQLiWsFAz5fzeJPfEqIUMSPPQTk7lYyJvYnLXQuzhFNG7M8yxqPhA==}
+    dependencies:
+      axios: 0.25.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
@@ -2484,7 +2538,6 @@ packages:
   /svelte/3.50.1:
     resolution: {integrity: sha512-bS4odcsdj5D5jEg6riZuMg5NKelzPtmsCbD9RG+8umU03TeNkdWnP6pqbCm0s8UQNBkqk29w/Bdubn3C+HWSwA==}
     engines: {node: '>= 8'}
-    dev: true
 
   /sveltekit-embed/0.0.5:
     resolution: {integrity: sha512-2YpLULXG4CNPaCWh2IKb+TaEnrOX1UZTzeKSPY10Yhlv44ssbVm66eJEWbJV/Clng4EX0cWVo6sSFnIOzWZnVA==}
