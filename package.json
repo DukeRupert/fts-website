@@ -12,6 +12,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@portabletext/svelte": "^1.0.1",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"@tailwindcss/aspect-ratio": "^0.4.2",

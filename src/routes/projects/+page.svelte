@@ -6,7 +6,6 @@
 	import Posts from '$lib/sections/Posts.svelte';
 
 	export let data: PageData;
-	console.log(data);
 </script>
 
 <SvelteSeo
