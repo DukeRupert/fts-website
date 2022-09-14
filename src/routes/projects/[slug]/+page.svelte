@@ -104,7 +104,7 @@
 			</svg>
 		</div>
 	</div>
-	<div class="relative px-4 sm:px-6 lg:px-8">
+	<article class="relative px-4 sm:px-6 lg:px-8">
 		<div class="text-lg max-w-prose mx-auto">
 			<h1>
 				<span
@@ -187,5 +187,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</article>
 </div>
