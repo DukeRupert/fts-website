@@ -16,15 +16,11 @@
 
 <!-- markup (zero or more items) goes here -->
 {#each [items[index]] as item (index)}
-	<div
-		on:click={next}
-		in:fade={{ delay: 200, duration: 500, easing: quartIn }}
-		class="relative max-h-[500px] h-[25vh]"
-	>
+	<div on:click={next} in:fade={{ delay: 200, duration: 500, easing: quartIn }} class="relative">
 		<div class="relative">
 			<blockquote class="mt-10">
 				<div
-					class="mx-auto max-w-3xl text-center text-sm md:text-3xl font-medium leading-9 text-gray-700 dark:text-gray-200"
+					class="mx-auto max-w-3xl text-center text-lg md:text-3xl font-medium leading-9 text-gray-200 dark:text-gray-200"
 				>
 					<p class="line-clamp-3">
 						&ldquo;{item.review}&rdquo;
@@ -41,7 +37,7 @@
 							/>
 						</div>
 						<div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-							<div class="text-base font-medium text-gray-500 dark:text-gray-300">
+							<div class="text-base font-medium text-gray-300 dark:text-gray-300">
 								{item.firstName}
 								{item.lastName}
 							</div>

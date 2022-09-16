@@ -20,7 +20,7 @@
 		<IntersectionObserver once element={elementOne} bind:intersecting={intersectingOne} {threshold}>
 			<div
 				bind:this={elementTwo}
-				class="transition-all transform duration-500 ease-quart-out {show1
+				class="transition-all transform duration-500 delay-150 ease-quart-out {show1
 					? 'opacity-100 translate-y-0'
 					: 'opacity-0 translate-y-12'} lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
 			>
@@ -106,15 +106,10 @@
 		</IntersectionObserver>
 	</div>
 	<div class="mt-24">
-		<IntersectionObserver
-			once
-			element={elementTwo}
-			bind:intersecting={intersectingTwo}
-			threshold="0.2"
-		>
+		<IntersectionObserver once element={elementTwo} bind:intersecting={intersectingTwo} {threshold}>
 			<div
 				bind:this={elementTwo}
-				class="transition-all transform duration-500 ease-quart-out {show2
+				class="transition-all transform duration-500 delay-150 ease-quart-out {show2
 					? 'opacity-100 translate-y-0'
 					: 'opacity-0 translate-y-12'} lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
 			>
