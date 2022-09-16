@@ -3,7 +3,7 @@ import type { Post } from '$lib/types';
 import client from '$lib/sanityClient';
 
 export const load: PageLoad = async () => {
-	const query = '*[_type == "post"][0..2] | order(publishedAt desc)';
+	const query = '*[_type == "post"] | order(publishedAt desc) [0..2]';
 	const data: Post[] = await client.fetch(query);
 
 	return {
