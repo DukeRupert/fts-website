@@ -1,7 +1,7 @@
 <script>
-  export let portableText
+	export let portableText;
 </script>
 
-<a href={portableText.mark.href} target="_blank">
-  <slot />
+<a href={portableText.value.href} target="_blank">
+	<slot />
 </a>
