@@ -16,10 +16,10 @@
 			class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8"
 		>
 			<div class="flex justify-start lg:w-0 lg:flex-1">
-				<a href="/" class="z-20">
+				<a href="/" class="bg-evergreen-500 rounded-md">
 					<span class="sr-only">{COMPANY.logo.label}</span>
 					<img
-						class="h-16 w-auto p-1 sm:h-20 sm:p-2 bg-evergreen-500 rounded-md"
+						class="h-auto w-16 sm:w-20 p-1 sm:p-2 rounded-md"
 						src={COMPANY.logo.img.src}
 						alt={COMPANY.logo.img.alt}
 						height={COMPANY.logo.img.height}
