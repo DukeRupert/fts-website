@@ -16,16 +16,18 @@
 			class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8"
 		>
 			<div class="flex justify-start lg:w-0 lg:flex-1">
-				<a href="/" class="bg-evergreen-500 rounded-md">
-					<span class="sr-only">{COMPANY.logo.label}</span>
-					<img
-						class="h-auto w-16 sm:w-20 p-1 sm:p-2 rounded-md"
-						src={COMPANY.logo.img.src}
-						alt={COMPANY.logo.img.alt}
-						height={COMPANY.logo.img.height}
-						width={COMPANY.logo.img.width}
-					/>
-				</a>
+				<div class="flex justify-start lg:w-0 lg:flex-1">
+					<a href="/">
+						<span class="sr-only">{COMPANY.logo.label}</span>
+						<img
+							class="h-20 w-auto bg-evergreen-500 rounded-md"
+							src="/logo/FtS_Logo_Cream.webp"
+							alt="FtS Excavation logo"
+							width="390"
+							height="409"
+						/>
+					</a>
+				</div>
 			</div>
 			<div class="-mr-2 -my-2 md:hidden z-10">
 				<button
@@ -80,7 +82,7 @@
 		</div>
 
 		<div
-			class="absolute top-0 inset-x-0 p-2 transition transform origin-top-left md:hidden opacity-0 scale-95 {menuOpen
+			class="absolute top-0 inset-x-0 p-2 transition transform origin-top-left md:hidden  scale-95 {menuOpen
 				? 'z-30 duration-200 ease-out opacity-100 scale-100'
 				: '-z-10 duration-100 ease-in opacity-0 scale-95'}"
 		>
@@ -92,11 +94,11 @@
 						<div>
 							<a href="/" on:click={() => (menuOpen = !menuOpen)}>
 								<img
-									class="h-16 w-auto p-1 sm:h-20 sm:p-2 bg-gradient-to-r from-evergreen-500 to-evergreen-500 rounded-md"
-									src={COMPANY.logo.img.src}
-									alt={COMPANY.logo.img.alt}
-									height={COMPANY.logo.img.height}
-									width={COMPANY.logo.img.width}
+									class="h-16 w-auto p-1  bg-gradient-to-r from-evergreen-500 to-evergreen-500 rounded-md"
+									src="/logo/FtS_Logo_Cream.webp"
+									alt="FtS Excavation logo"
+									width="390"
+									height="409"
 								/>
 							</a>
 						</div>

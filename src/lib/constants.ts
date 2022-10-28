@@ -55,7 +55,7 @@ export const COMPANY: Company = {
 		label: 'FtS Excavation',
 		href: '/',
 		img: {
-			src: '/logo/FtS_Logo_Cream.webp',
+			src: 'logo/FtS_Logo_Cream.png',
 			alt: 'FtS Excavation logo',
 			height: '492',
 			width: '469'
