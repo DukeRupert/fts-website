@@ -11,8 +11,7 @@
 
 	const headerData = {
 		title: 'Drainage',
-		subtitle:
-			"Don't let the rain ruin your property! Contact FTS Excavation today to help you fix or install a drainage solution.",
+		subtitle: '"There is ALWAYS a solution."',
 		image: {
 			src: '/image/drainage.webp',
 			alt: 'A white gravel drain installed in a green lawn.'
@@ -21,8 +20,7 @@
 
 	const featureData = {
 		title: 'Custom Solutions',
-		subtitle:
-			'We have many different techniques to effectively implement a drainage solution that will work.',
+		subtitle: 'We have many different techniques to effectively solve your drainage problems.',
 		features: [
 			{
 				title: 'French drains',
@@ -58,7 +56,7 @@
 	keywords="excavation land clearing foundations leveling dirt removal residential construction utility installation tacoma puyallup"
 	openGraph={{
 		title: 'Drainage',
-		description: `See some of the excellent excavation work FtS Excavation has completed in the greater Puget Sound region. Here is what professional commercial and residential excavation services can do for you.`,
+		description: `There is ALWAYS a solution. We have many different techniques to effectively solve your drainage problems.`,
 		url: $page.url.href,
 		type: 'website',
 		images: [
