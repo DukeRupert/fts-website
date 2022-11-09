@@ -4,10 +4,10 @@
 
 	// Intersection oberver variables
 	const threshold = 0.2;
-	let elementOne;
-	let intersectingOne;
-	let elementTwo;
-	let intersectingTwo;
+	let elementOne: HTMLElement;
+	let intersectingOne: boolean;
+	let elementTwo: HTMLElement;
+	let intersectingTwo: boolean;
 
 	// Reactive assignments for transitions
 	$: show1 = intersectingOne;
