@@ -19,32 +19,32 @@
 	};
 
 	const featureData = {
-		title: 'Custom Solutions',
-		subtitle: 'We have many different techniques to effectively solve your drainage problems.',
+		title: 'Multiple Techniques',
+		subtitle: 'We have many different options to effectively solve your drainage problems.',
 		features: [
 			{
 				title: 'French drains',
-				body: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quisac. Lacus.'
+				body: 'A trench filled with gravel or rock that contains a perforated pipe that redirects surface or groundwater away from an area.'
 			},
 			{
 				title: 'Gutter drains',
-				body: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quisac. Lacus.'
+				body: 'Gutters and drain spouts are important but they work so much better when paired with a good gutter drain system.'
 			},
 			{
 				title: 'Curtain drains',
-				body: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quisac. Lacus.'
+				body: 'Similar to a french drain except that it is installed underground and often out of sight. Useful to direct water away from a home.'
 			},
 			{
 				title: 'Dry wells',
-				body: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quisac. Lacus.'
+				body: 'A drywell is used to quickly transfer excess surface water into the subsoil. Proper location and construction are crucial.'
 			},
 			{
 				title: 'Catch basins',
-				body: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quisac. Lacus.'
+				body: 'Installing catch basins correctly is extremely important to the operation of most drainage solutions.'
 			},
 			{
-				title: 'Water table',
-				body: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quisac. Lacus.'
+				title: 'Erosion Control',
+				body: 'Your best ally in the fight against excess water is land. We integrate and support natural solutions through erosion control.'
 			}
 		]
 	};
@@ -52,7 +52,7 @@
 
 <SvelteSeo
 	title="Drainage"
-	description="See some of the excellent excavation work FtS Excavation has completed in the greater Puget Sound region. Here is what professional commercial and residential excavation services can do for you."
+	description="FtS Excavation are drainage experts capable of solving any excess water problems you may face in the Puget Sound."
 	keywords="excavation land clearing foundations leveling dirt removal residential construction utility installation tacoma puyallup"
 	openGraph={{
 		title: 'Drainage',
@@ -61,10 +61,10 @@
 		type: 'website',
 		images: [
 			{
-				url: `${$page.url.host}/image/P06_900.webp`,
-				width: 960,
-				height: 600,
-				alt: 'Site preparation by clearing brush using a New Holland compact track loader.'
+				url: `${$page.url.host}/image/drainage.webp`,
+				width: 961,
+				height: 640,
+				alt: 'A white gravel drain installed in a green lawn.'
 			}
 		]
 	}}

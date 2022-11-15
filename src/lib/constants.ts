@@ -86,14 +86,22 @@ export const COMPANY: Company = {
 
 export const LINKS = [
 	{
+		label: 'Services',
+		href: '/services/drainage',
+		svg: wrench,
+		subitems: [{ title: 'Drainage', href: '/services/drainage' }]
+	},
+	{
 		label: 'Projects',
 		href: '/projects',
-		svg: wrench
+		svg: wrench,
+		subitems: []
 	},
-	{ label: 'About', href: '/about-us', svg: heart },
+	{ label: 'About', href: '/about-us', svg: heart, subitems: [] },
 	{
 		label: 'Contact',
 		href: '/contact-us',
-		svg: mail
+		svg: mail,
+		subitems: []
 	}
 ];

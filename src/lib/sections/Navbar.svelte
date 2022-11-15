@@ -1,13 +1,13 @@
 <!-- header.svelte -->
 <script lang="ts">
 	import { page } from '$app/stores';
+	import NavItem from '$lib/components/NavItem.svelte';
 	import SocialMedia from '$lib/components/SocialMedia.svelte';
 	import { LINKS, COMPANY } from '$lib/constants';
+	import { mobileMenu } from '$lib/stores';
 
 	let pathname;
 	$: ({ pathname } = $page.url);
-
-	let menuOpen = false;
 </script>
 
 <header>
@@ -34,7 +34,7 @@
 					type="button"
 					class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
 					aria-expanded="false"
-					on:click={() => (menuOpen = !menuOpen)}
+					on:click={() => ($mobileMenu = !$mobileMenu)}
 				>
 					<span class="sr-only">Open menu</span>
 					<!-- Heroicon name: outline/menu -->
@@ -82,7 +82,7 @@
 		</div>
 
 		<div
-			class="absolute top-0 inset-x-0 p-2 transition transform origin-top-left md:hidden  scale-95 {menuOpen
+			class="absolute top-0 inset-x-0 p-2 transition transform origin-top-left md:hidden  scale-95 {$mobileMenu
 				? 'z-30 duration-200 ease-out opacity-100 scale-100'
 				: '-z-10 duration-100 ease-in opacity-0 scale-95'}"
 		>
@@ -92,7 +92,7 @@
 				<div class="pt-5 pb-6 px-5">
 					<div class="flex items-center justify-between">
 						<div>
-							<a href="/" on:click={() => (menuOpen = !menuOpen)}>
+							<a href="/" on:click={() => ($mobileMenu = !$mobileMenu)}>
 								<img
 									class="h-16 w-auto p-1  bg-gradient-to-r from-evergreen-500 to-evergreen-500 rounded-md"
 									src="/logo/FtS_Logo_Cream.webp"
@@ -106,7 +106,7 @@
 							<button
 								type="button"
 								class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-evergreen-500"
-								on:click={() => (menuOpen = !menuOpen)}
+								on:click={() => ($mobileMenu = !$mobileMenu)}
 							>
 								<span class="sr-only">Close menu</span>
 								<!-- Heroicon name: outline/x -->
@@ -130,33 +130,8 @@
 					</div>
 					<div class="mt-6">
 						<nav class="grid grid-cols-1 gap-7">
-							{#each LINKS as { href, label, svg }}
-								<a
-									{href}
-									class="-m-3 p-3 flex items-center rounded-lg hover:bg-evergreen-100"
-									on:click={() => (menuOpen = !menuOpen)}
-								>
-									<div
-										class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-evergreen-500 to-evergreen-500 text-cream-500"
-									>
-										<svg
-											class="h-6 w-6"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="none"
-											viewBox={svg.viewbox}
-											stroke="currentColor"
-											aria-hidden="true"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
-												d={svg.path}
-											/>
-										</svg>
-									</div>
-									<div class="ml-4 text-base font-medium text-gray-900">{label}</div>
-								</a>
+							{#each LINKS as link}
+								<NavItem data={link} />
 							{/each}
 						</nav>
 					</div>
@@ -169,7 +144,7 @@
 						<a
 							href="/contact-us"
 							class="w-full flex items-center justify-center bg-gradient-to-r from-evergreen-500 to-evergreen-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-cream-500 hover:from-evergreen-600 hover:to-evergreen-600"
-							on:click={() => (menuOpen = !menuOpen)}
+							on:click={() => ($mobileMenu = !$mobileMenu)}
 						>
 							<svg
 								class="h-6 w-6 mr-2 text-cream-500"

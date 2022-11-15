@@ -34,8 +34,8 @@
 					width={COMPANY.logo.img.width}
 				/>
 				<h1 class="mt-6 max-w-lg mx-auto text-center text-xl lg:text-2xl text-white sm:max-w-3xl">
-					Professional excavation, drainage and site preparation services. Based in Puyallup and
-					proudly serving the Puget Sound & King County.
+					Professional drainage solutions, excavation and site preparation services. Based in
+					Puyallup and proudly serving the Puget Sound & King County.
 				</h1>
 				<div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
 					<div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">

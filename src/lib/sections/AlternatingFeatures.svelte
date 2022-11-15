@@ -53,10 +53,11 @@
 						</div>
 						<div class="mt-6">
 							<h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-								Puyallup's excavation experts
+								Puyallup's drainage experts
 							</h2>
 							<p class="mt-4 text-lg text-gray-500">
-								Our company serves Puyallup and Tacoma by offering residential and commercial
+								We specialize in drainage solutions which solve the excess surface water problems
+								common in the Puget Sound region. We also offer residential and commercial
 								excavating services including site preparation, leveling, road work, land clearing
 								and utility installation.
 							</p>
