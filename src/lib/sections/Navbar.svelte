@@ -57,7 +57,7 @@
 			</div>
 			<nav class="hidden md:flex space-x-10">
 				{#each LINKS as { href, label }}
-					<a {href} class="text-base font-medium text-gray-500 hover:text-gray-900">
+					<a {href} class="text-base md:text-lg font-medium text-gray-500 hover:text-gray-900">
 						{label}
 					</a>
 				{/each}
