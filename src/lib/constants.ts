@@ -1,4 +1,4 @@
-import { wrench, heart, mail } from '$lib/icons';
+import { wrench, heart, mail, job, star } from '$lib/icons';
 
 interface Social {
 	type:
@@ -94,7 +94,7 @@ export const LINKS = [
 	{
 		label: 'Projects',
 		href: '/projects',
-		svg: wrench,
+		svg: star,
 		subitems: []
 	},
 	{ label: 'About', href: '/about-us', svg: heart, subitems: [] },
@@ -102,6 +102,12 @@ export const LINKS = [
 		label: 'Contact',
 		href: '/contact-us',
 		svg: mail,
+		subitems: []
+	},
+	{
+		label: 'Jobs',
+		href: '/jobs',
+		svg: job,
 		subitems: []
 	}
 ];
