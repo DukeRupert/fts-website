@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 import { asyncReadable, type Loadable } from '@square/svelte-store';
-import type { PLaylistResponse, Snippet } from '$lib/types';
+import type { SearchListResponse, Item } from '$lib/types';
 
 interface Guide {
 	body: [];
@@ -21,22 +21,25 @@ export const First_Name = writable('');
 export const Last_Name = writable('');
 
 // Youtube Channel Videos
-export const recentVideos: Loadable<Snippet[]> = asyncReadable(
+export const recentVideos: Loadable<Item[]> = asyncReadable(
 	[],
 	async () => {
 		const channelId = 'UC_LbjVWjiiFg3h9lB6rcvGQ';
-		const requestBody = JSON.stringify({ channelId: channelId });
-		const res = await fetch('/api/youtube.json', {
+		const maxResults = 3;
+		const requestBody = JSON.stringify({ channelId: channelId, maxResults: maxResults });
+		const res = await fetch('/api/youtube', {
 			method: 'POST',
 			body: requestBody,
 			headers: {
 				'Content-Type': 'application/json'
 			}
 		});
-		const data = await res.json();
+		const data: SearchListResponse = await res.json();
+
 		const { items } = data;
 		const newItems = [...items];
+		console.log(newItems);
 		return newItems;
 	},
-	true
+	{ reloadable: true }
 );

@@ -14,7 +14,7 @@
 			{/if}
 		</div>
 		<div class="flex-1 p-4 space-y-2 flex flex-col">
-			<h3 class="text-base font-medium text-evergreen-500">
+			<h3 class="text-base md:text-lg font-medium text-evergreen-500">
 				{post.title}
 			</h3>
 			<p class="text-sm text-gray-600 line-clamp-4">{post.excerpt}</p>

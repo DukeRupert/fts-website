@@ -9,8 +9,7 @@
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 	import ServiceArea from '$lib/sections/ServiceArea.svelte';
 	import Reviews from '$lib/sections/Reviews.svelte';
-	import { recentVideos } from '$lib/stores';
-	import Card from '$lib/youtube/Card.svelte';
+	import Videos from '$lib/sections/Videos.svelte';
 
 	export let data: PageData;
 </script>
@@ -37,17 +36,9 @@
 
 <Hero />
 <AlternatingFeatures />
-<!-- {#await recentVideos.load()}
-	<p>Loading...</p>
-{:then}
-	{#each recentVideos as video}
-		<Card snippet={video.snippet} />
-	{/each}
-{:catch error}
-	<p class="text-red-500">{error.message}</p>
-{/await} -->
 <ServiceArea />
 <Reviews />
+<Videos />
 <Projects posts={data.data} />
 <GradientFeatures />
 <CallToAction />
