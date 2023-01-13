@@ -102,7 +102,7 @@
 			</div>
 		</IntersectionObserver>
 	</div>
-	<div class="mt-24">
+	<div class="mt-24 prose">
 		<IntersectionObserver once element={elementTwo} bind:intersecting={intersectingTwo} {threshold}>
 			<div
 				bind:this={elementTwo}
@@ -146,7 +146,9 @@
 								some of our past excavaction projects to see what we mean.
 							</p>
 							<div class="mt-6">
-								<a href="/contact-us" class="inline-flex btn btn-ringed-primary"> Contact Us </a>
+								<a href="/contact-us" class="inline-flex btn btn-ringed-primary no-underline">
+									Contact Us
+								</a>
 							</div>
 						</div>
 					</div>

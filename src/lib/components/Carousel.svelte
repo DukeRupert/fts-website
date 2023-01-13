@@ -2,8 +2,9 @@
 	import Stars from '$lib/components/Stars.svelte';
 	import { fade } from 'svelte/transition';
 	import { quartIn, quartOut } from 'svelte/easing';
+	import type { Review } from '$lib/types';
 
-	export let items = [];
+	export let items: Review[] = [];
 
 	let index = 0;
 
@@ -16,12 +17,15 @@
 
 <!-- markup (zero or more items) goes here -->
 {#each [items[index]] as item (index)}
-	<div on:click={next} in:fade={{ delay: 200, duration: 500, easing: quartIn }} class="relative">
+	<div
+		on:click={next}
+		on:keypress={next}
+		in:fade={{ delay: 200, duration: 500, easing: quartIn }}
+		class="relative"
+	>
 		<div class="relative">
 			<blockquote class="mt-10">
-				<div
-					class="mx-auto max-w-3xl text-center text-lg md:text-3xl font-medium leading-9 text-gray-200 dark:text-gray-200"
-				>
+				<div class="mx-auto max-w-3xl text-center text-lg md:text-3xl font-medium leading-9">
 					<p class="line-clamp-3">
 						&ldquo;{item.review}&rdquo;
 					</p>
@@ -37,7 +41,7 @@
 							/>
 						</div>
 						<div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-							<div class="text-base font-medium text-gray-300 dark:text-gray-300">
+							<div class="text-base font-medium">
 								{item.firstName}
 								{item.lastName}
 							</div>
