@@ -15,8 +15,8 @@
 </script>
 
 <div class="relative pt-16 pb-32 overflow-hidden">
-	<div aria-hidden="true" class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100" />
-	<div class="relative">
+	<div aria-hidden="true" class="absolute inset-x-0 top-0 h-48" />
+	<div class="relative prose">
 		<IntersectionObserver once element={elementOne} bind:intersecting={intersectingOne} {threshold}>
 			<div
 				bind:this={elementTwo}
@@ -28,7 +28,7 @@
 					<div bind:this={elementOne}>
 						<div>
 							<span
-								class="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-evergreen-500 to-evergreen-500"
+								class="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-primary-500 to-primary-700"
 							>
 								<!-- Icon: Ruler/Pencil -->
 								<svg
@@ -52,10 +52,8 @@
 							</span>
 						</div>
 						<div class="mt-6">
-							<h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-								Puyallup's drainage experts
-							</h2>
-							<p class="mt-4 text-lg text-gray-500">
+							<h2>Puyallup's drainage experts</h2>
+							<p class="mt-4">
 								We specialize in drainage solutions which solve the excess surface water problems
 								common in the Puget Sound region. We also offer residential and commercial
 								excavating services including site preparation, leveling, road work, land clearing
@@ -64,26 +62,24 @@
 							<div class="mt-6">
 								<a
 									href="/services/drainage"
-									class="inline-flex bg-gradient-to-r from-evergreen-500 to-evergreen-500 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-evergreen-200 hover:to-evergreen-400"
+									class="inline-flex btn btn-ringed-primary no-underline"
 								>
 									Learn More
 								</a>
 							</div>
 						</div>
 					</div>
-					<div class="mt-8 border-t border-gray-200 pt-6">
+					<div class="mt-8 border-t pt-6">
 						<blockquote>
 							<div>
-								<p class="text-base text-gray-500">
-									&ldquo;We had a great experience in working with Frank. He never cut any corners
-									but was always mindful of costs so as not to exceed our budget.&rdquo;
+								<p>
+									We had a great experience in working with Frank. He never cut any corners but was
+									always mindful of costs so as not to exceed our budget.
 								</p>
 							</div>
 							<footer class="mt-3">
 								<div class="flex items-center space-x-3">
-									<div class="text-base font-medium text-gray-700">
-										Demetrius S. - Bonney Lake, WA
-									</div>
+									<div>Demetrius S. - Bonney Lake, WA</div>
 								</div>
 							</footer>
 						</blockquote>
@@ -120,7 +116,7 @@
 					<div>
 						<div>
 							<span
-								class="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-evergreen-500 to-evergreen-500"
+								class="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-primary-500 to-primary-700"
 							>
 								<!-- Heroicon name: outline/sparkles -->
 								<svg
@@ -143,21 +139,14 @@
 						</div>
 
 						<div class="mt-6">
-							<h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-								Precision + Integrity
-							</h2>
-							<p class="mt-4 text-lg text-gray-500">
+							<h2>Precision + Integrity</h2>
+							<p>
 								We pride ourselves on the excellence of our work. Whether its land clearing or
 								building a retaining wall we ensure every job is completed with precision. Check out
 								some of our past excavaction projects to see what we mean.
 							</p>
 							<div class="mt-6">
-								<a
-									href="/contact-us"
-									class="inline-flex bg-gradient-to-r from-evergreen-500 to-evergreen-500 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-evergreen-200 hover:to-evergreen-400"
-								>
-									Contact Us
-								</a>
+								<a href="/contact-us" class="inline-flex btn btn-ringed-primary"> Contact Us </a>
 							</div>
 						</div>
 					</div>
