@@ -4,7 +4,7 @@
 </script>
 
 <div class="relative">
-	<div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
+	<div class="absolute inset-x-0 bottom-0 h-1/2" />
 	<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 		<div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
 			<div class="absolute inset-0">
@@ -21,9 +21,6 @@
 					Your browser does not support the video tag.
 					<track kind="captions" />
 				</video>
-				<!-- <div
-          class="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply"
-        /> -->
 			</div>
 			<div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
 				<img
@@ -33,16 +30,13 @@
 					height={COMPANY.logo.img.height}
 					width={COMPANY.logo.img.width}
 				/>
-				<h1 class="mt-6 max-w-lg mx-auto text-center text-xl lg:text-2xl text-white sm:max-w-3xl">
+				<h1 class="mt-6 max-w-lg mx-auto text-center text-xl lg:text-2xl sm:max-w-3xl text-white">
 					Professional drainage solutions, excavation and site preparation services. Based in
 					Puyallup and proudly serving the Puget Sound & King County.
 				</h1>
 				<div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
 					<div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-						<a
-							href="/contact-us"
-							class="flex items-center justify-center px-4 py-3 border border-transparent text-lg font-bold rounded-md shadow-sm text-cream-500 bg-evergreen-500 hover:bg-evergreen-300 sm:px-8"
-						>
+						<a href="/contact-us" class="flex btn btn-filled-primary">
 							<svg
 								class="h-6 w- mr-2"
 								width="24"
@@ -61,9 +55,7 @@
 							>
 							Contact
 						</a>
-						<a
-							href={COMPANY.contact.phone.href}
-							class="flex items-center justify-center px-4 py-3 border border-transparent text-lg font-bold rounded-md shadow-sm text-black hover:text-cream-500 bg-actionorange-500 hover:bg-actionorange-300 sm:px-8"
+						<a href={COMPANY.contact.phone.href} class="flex btn btn-filled-tertiary"
 							><svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
 									stroke-linecap="round"
