@@ -6,6 +6,7 @@
 	import { AppShell } from '@skeletonlabs/skeleton';
 	import Header from '$lib/sections/Navbar.svelte';
 	import Footer from '$lib/sections/Footer.svelte';
+	import Drawer from '$lib/components/Drawer.svelte';
 	import { navigating } from '$app/stores';
 	import { mobileMenu } from '$lib/stores';
 
@@ -24,9 +25,7 @@
 
 <AppShell>
 	<svelte:fragment slot="header"><Header /></svelte:fragment>
-	<!-- <svelte:fragment slot="sidebarLeft">Sidebar Left</svelte:fragment>
-	<svelte:fragment slot="sidebarRight">Sidebar Right</svelte:fragment>
-	<svelte:fragment slot="pageHeader">Page Header</svelte:fragment> -->
+	<svelte:fragment slot="sidebarRight"><Drawer /></svelte:fragment>
 	<!-- Router Slot -->
 	<slot />
 	<!-- ---- / ---- -->

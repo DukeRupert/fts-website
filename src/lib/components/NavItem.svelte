@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
-	import { linear, quartOut } from 'svelte/easing';
+	import { quartOut } from 'svelte/easing';
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
 
@@ -39,11 +39,11 @@
 	let toggle = false;
 </script>
 
-<div class="-m-3 p-3 flex items-center rounded-lg hover:bg-evergreen-100">
+<div class="-m-3 p-3 flex items-center rounded-lg hover:bg-primary-300">
 	{#if subitems && subitems.length == 0}
 		<a {href} class="w-full flex items-center">
 			<div
-				class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-evergreen-500 to-evergreen-500 text-cream-500"
+				class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-primary-500 to-primary-700 text-cream-500"
 			>
 				<svg
 					class="h-6 w-6"
@@ -59,9 +59,13 @@
 			<div class="ml-4 text-base font-medium text-gray-900 dark:text-gray-100">{label}</div>
 		</a>
 	{:else}
-		<div class="w-full flex items-center" on:click={() => (toggle = !toggle)}>
+		<div
+			class="w-full flex items-center"
+			on:click={() => (toggle = !toggle)}
+			on:keypress={() => (toggle = !toggle)}
+		>
 			<div
-				class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-evergreen-500 to-evergreen-500 text-cream-500"
+				class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-primary-500 to-primary-700 text-cream-500"
 			>
 				<svg
 					class="h-6 w-6"
@@ -77,10 +81,14 @@
 			<div class="ml-4 text-base font-medium text-gray-900 dark:text-gray-100">{label}</div>
 		</div>
 
-		<span on:click={() => (toggle = !toggle)} class="flex flex-col justify-center ml-auto mr-2">
+		<span
+			on:click={() => (toggle = !toggle)}
+			on:keypress={() => (toggle = !toggle)}
+			class="flex flex-col justify-center ml-auto mr-2"
+		>
 			<!-- plus -->
 			<svg
-				class="h-6 w-6 text-custard-500"
+				class="h-6 w-6"
 				width="24"
 				height="24"
 				viewBox="0 0 24 24"
@@ -96,7 +104,7 @@
 					y1="5"
 					x2="12"
 					y2="19"
-					class="transition-transform duration-300 ease-linear transform origin-center {toggle
+					class="transition-transform duration-150 ease-[quartout] transform origin-center {toggle
 						? 'rotate-90'
 						: 'rotate-0'}"
 				/>
@@ -114,7 +122,7 @@
 		{#if subitems}
 			{#each subitems as { href, title }}
 				<li class="flex">
-					<a sveltekit:prefetch {href} class="text-gray-900 dark:text-gray-100">
+					<a {href}>
 						{title}
 					</a>
 				</li>
