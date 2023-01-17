@@ -20,7 +20,7 @@
 
 	const featureData = {
 		title: 'Multiple Techniques',
-		subtitle: 'We have many different options to effectively solve your drainage problems.',
+		subtitle: '"There is ALWAYS a solution."',
 		features: [
 			{
 				title: 'French drains',
@@ -76,10 +76,8 @@
 		<Feature data={featureData} />
 		<div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
 			<div class="mx-auto max-w-3xl text-center">
-				<h2 class="text-3xl font-bold tracking-tight text-gray-900">Drainage Projects</h2>
-				<p class="mt-4 text-lg text-gray-500">
-					Check out the results of some of our past drainage projects.
-				</p>
+				<h2 class="text-3xl font-bold tracking-tight ">Drainage Projects</h2>
+				<p class="mt-4 text-lg ">Check out the results of some of our past drainage projects.</p>
 			</div>
 			<div class="pt-16 pb-32">
 				<Posts posts={data.data} cta={false} />

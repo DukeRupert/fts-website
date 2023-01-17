@@ -31,19 +31,17 @@
 <div class="relative">
 	<div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
 		<div class="text-center">
-			<h1 class="text-base font-semibold text-evergreen-500 tracking-wide uppercase">Projects</h1>
-			<p
-				class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl"
-			>
+			<h1 class="text-base font-semibold text-primary-500 tracking-wide uppercase">Projects</h1>
+			<h2 class="mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">
 				See what we do
-			</p>
-			<p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">
+			</h2>
+			<p class="max-w-xl mt-4 mx-auto text-xl">
 				We are proud to showcase a few examples of the work we are doing in the Greater Puget Sound
 				region.
 			</p>
 		</div>
 		<div class="pt-16 pb-32">
-			<Posts posts={data.data} />
+			<Posts posts={data.data} cta={false} />
 		</div>
 		<CallToAction />
 	</div>

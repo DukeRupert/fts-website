@@ -1,7 +1,6 @@
 <script>
 	import { recentVideos } from '$lib/stores';
 	import Spinner from '$lib/components/Spinner.svelte';
-	import Card from '$lib/youtube/Card.svelte';
 	import VideoCard from '$lib/components/VideoCard.svelte';
 	import { COMPANY } from '$lib/constants';
 
@@ -15,7 +14,9 @@
 	>
 		<h2>Recent Videos</h2>
 		<p>Get a glimpse of what we can do for you!</p>
-		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 divide-y h-auto lg:gap-x-8">
+		<div
+			class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-x-8"
+		>
 			{#await recentVideos.load()}
 				<Spinner />
 			{:then}

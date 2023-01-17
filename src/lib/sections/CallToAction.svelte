@@ -3,22 +3,19 @@
 	import { COMPANY } from '$lib/constants';
 </script>
 
-<div class="bg-white">
+<div>
 	<div
 		class="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between"
 	>
 		<h2 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
 			<span class="block">Ready to get started?</span>
 			<span
-				class="-mb-1 pb-1 block bg-gradient-to-r from-evergreen-500 to-evergreen-500 bg-clip-text text-transparent"
+				class="-mb-1 pb-1 block bg-gradient-to-r from-primary-500 to-primary-500 bg-clip-text text-transparent"
 				>Let's talk!</span
 			>
 		</h2>
 		<div class="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
-			<a
-				href="/contact-us"
-				class="flex items-center justify-center bg-gradient-to-r from-evergreen-500 to-evergreen-500 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-cream-500 hover:from-evergreen-200 hover:to-evergreen-400"
-			>
+			<a href="/contact-us" class="btn btn-filled-primary">
 				<svg
 					class="h-6 w- mr-2"
 					width="24"
@@ -35,10 +32,7 @@
 				>
 				Contact
 			</a>
-			<a
-				href={COMPANY.contact.phone.href}
-				class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-black hover:text-cream-500 bg-actionorange-500 hover:bg-actionorange-300"
-			>
+			<a href={COMPANY.contact.phone.href} class="btn btn-filled-tertiary">
 				<svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path
 						stroke-linecap="round"

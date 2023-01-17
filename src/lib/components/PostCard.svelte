@@ -4,22 +4,20 @@
 	export let post: Post;
 </script>
 
-<article
-	class="group relative bg-white border border-gray-200 rounded-lg flex flex-col overflow-hidden"
->
-	<a rel="prefetch" href="/projects/{post.slug.current}">
+<article class="group relative border rounded-lg flex flex-col overflow-hidden">
+	<a data-sveltekit-preload-data href="/projects/{post.slug.current}" class="no-underline">
 		<div class="aspect-w-3 aspect-h-4 bg-gray-200 group-hover:opacity-90 sm:aspect-none sm:h-96">
 			{#if post.image}
 				<SanityImage image={post.image} maxWidth={600} />
 			{/if}
 		</div>
-		<div class="flex-1 p-4 space-y-2 flex flex-col">
-			<h3 class="text-base md:text-lg font-medium text-evergreen-500">
+		<div class="flex-1 prose text-left p-4 space-y-2 flex flex-col">
+			<h3>
 				{post.title}
 			</h3>
-			<p class="text-sm text-gray-600 line-clamp-4">{post.excerpt}</p>
+			<p class="line-clamp-4">{post.excerpt}</p>
 			<div class="flex-1 flex flex-col justify-end">
-				<p class="text-sm italic text-gray-500">
+				<p class="italic">
 					{new Date(post.publishedAt).toLocaleDateString('en', {
 						month: 'long',
 						day: '2-digit',

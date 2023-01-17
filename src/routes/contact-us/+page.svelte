@@ -4,7 +4,6 @@
 	//@ts-ignore
 	import { page } from '$app/stores';
 	import ContactForm from '$lib/sections/ContactForm.svelte';
-	import GoogleMap from '$lib/components/GoogleMap.svelte';
 </script>
 
 <SvelteSeo
@@ -31,15 +30,11 @@
 <div class="relative">
 	<div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
 		<div class="text-center">
-			<h2 class="text-base font-semibold text-evergreen-500 tracking-wide uppercase">Contact Us</h2>
-			<p
-				class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl"
-			>
+			<h1 class="text-base font-semibold text-primary-500 tracking-wide uppercase">Contact Us</h1>
+			<h2 class="mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">
 				Let's get started
-			</p>
-			<p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-				No commitment, just a conversation starter.
-			</p>
+			</h2>
+			<p class="max-w-xl mt-4 mx-auto text-xl">No commitment, just a conversation starter.</p>
 		</div>
 		<div
 			class="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8"

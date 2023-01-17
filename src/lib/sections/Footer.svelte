@@ -23,12 +23,11 @@
 		</div>
 		<a
 			href="https://www.google.com/maps/place/FtS-Excavation,+LLC/@47.1761259,-122.2630845,10z/data=!4m5!3m4!1s0x0:0xb896498a4891ace9!8m2!3d47.1761259!4d-122.2630845"
-			class="mt-8 block text-center text-base text-evergreen-500"
-			>12714 151st St E Puyallup, WA 98374</a
+			class="mt-8 block text-center">12714 151st St E Puyallup, WA 98374</a
 		>
 		<a
 			href={COMPANY.contact.phone.href}
-			class="mt-8 flex mx-auto items-center justify-center text-center text-base text-evergreen-500"
+			class="mt-8 flex mx-auto items-center justify-center text-center"
 		>
 			<svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path
@@ -49,11 +48,14 @@
 				Design by <span class="text-blue-600 hover:text-blue-700">Firefly Software</span>
 			</p>
 		</a>
-		<div
-			class="mt-8 text-base text-gray-600 flex flex-col text-center items-center justify-center border-t border-gray-300"
-		>
+		<div class="mt-8 flex flex-col text-center items-center justify-center border-t ">
 			<p class="mt-8">Proud Member of</p>
-			<a href="https://www.puyallupsumnerchamber.com/" target="_blank">
+			<a
+				href="https://www.puyallupsumnerchamber.com/"
+				target="_blank"
+				rel="noreferrer"
+				class="no-underline"
+			>
 				<img
 					src="/image/PSChamberLogo_2016_Square.webp"
 					alt="Puyallup / Sumner Chamber of Commerce"

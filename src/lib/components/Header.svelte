@@ -11,7 +11,7 @@
 	};
 </script>
 
-<div class="relative bg-indigo-800">
+<div class="relative">
 	<div class="absolute inset-0">
 		<img class="h-full w-full object-cover" src={data.image.src} alt={data.image.alt} />
 		<div
@@ -23,8 +23,8 @@
 		<h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
 			{data.title}
 		</h1>
-		<p class="mt-6 max-w-3xl text-xl font-bold text-gray-50">
+		<!-- <p class="text-token mt-6 max-w-3xl text-xl font-bold ">
 			{data.subtitle}
-		</p>
+		</p> -->
 	</div>
 </div>
