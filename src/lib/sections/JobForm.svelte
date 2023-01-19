@@ -74,7 +74,7 @@
 		{ first: 'Hoban', last: 'Washburne', email: 'aleafonthewind@gmail.com' },
 		{ first: 'Jayne', last: 'Cobb', email: 'vera@gmail.com' }
 	];
-	const getRandomInt = (max) => {
+	const getRandomInt = (max: number): number => {
 		return Math.floor(Math.random() * max);
 	};
 
@@ -88,7 +88,7 @@
 		<div class="pt-8">
 			<div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
 				<div class="sm:col-span-3">
-					<label for="first" class="block text-sm font-medium text-gray-700"> First name </label>
+					<label for="first" class="block text-sm"> First name </label>
 					<div class="mt-1">
 						<input
 							type="text"

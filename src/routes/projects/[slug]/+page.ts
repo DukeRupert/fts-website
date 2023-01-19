@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
 import type { Post } from '$lib/types';
-import client from '$lib/sanityClient';
+import Sanity from '$lib/sanityClient';
 import { error } from '@sveltejs/kit';
 
 export const load: PageLoad = async ({ params, fetch }) => {
@@ -19,7 +19,7 @@ export const load: PageLoad = async ({ params, fetch }) => {
 	const query = filter + projection;
 
 	try {
-		const post: Post = await client.fetch(query);
+		const post: Post = await Sanity.fetch(query);
 
 		if (post) {
 			return {

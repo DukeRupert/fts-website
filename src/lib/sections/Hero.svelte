@@ -36,7 +36,7 @@
 				</h1>
 				<div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
 					<div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-						<a href="/contact-us" class="flex btn btn-filled-primary">
+						<a href="/contact-us" class="flex btn btn-filled-primary btn-base">
 							<svg
 								class="h-6 w- mr-2"
 								width="24"

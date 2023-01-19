@@ -3,12 +3,13 @@
 	import '@skeletonlabs/skeleton/styles/all.css';
 	import '../theme.postcss';
 	import '../app.postcss';
-	import { AppShell } from '@skeletonlabs/skeleton';
+	import { AppShell, Modal, Toast } from '@skeletonlabs/skeleton';
 	import Header from '$lib/sections/Navbar.svelte';
 	import Footer from '$lib/sections/Footer.svelte';
 	import Drawer from '$lib/components/Drawer.svelte';
 	import { navigating } from '$app/stores';
 	import { mobileMenu } from '$lib/stores';
+	import { modalStore } from '@skeletonlabs/skeleton';
 
 	$: if ($navigating) {
 		$mobileMenu = false;
@@ -23,6 +24,7 @@
 	></script>
 </svelte:head>
 
+<Modal />
 <AppShell>
 	<svelte:fragment slot="header"><Header /></svelte:fragment>
 	<svelte:fragment slot="sidebarRight"><Drawer /></svelte:fragment>
@@ -32,6 +34,7 @@
 	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
 	<!-- <svelte:fragment slot="footer">Footer</svelte:fragment> -->
 </AppShell>
+<Toast />
 
 <!-- <Header />
 <div class="bg-white">

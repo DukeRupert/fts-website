@@ -10,8 +10,27 @@
 	import ServiceArea from '$lib/sections/ServiceArea.svelte';
 	import Reviews from '$lib/sections/Reviews.svelte';
 	import Videos from '$lib/sections/Videos.svelte';
+	import ModalForm from '$lib/components/ModalForm.svelte';
+	import { modalStore, toastStore } from '@skeletonlabs/skeleton';
+	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
 
 	export let data: PageData;
+
+	function triggerCustomModal(): void {
+		const modalComponent: ModalComponent = {
+			// Pass a reference to your custom component
+			ref: ModalForm,
+			// Add your props as key/value pairs
+			props: { background: 'bg-red-500' },
+			// Provide default slot content as a template literal
+			slot: '<p>Skeleton</p>'
+		};
+		const d: ModalSettings = {
+			type: 'component',
+			component: modalComponent
+		};
+		modalStore.trigger(d);
+	}
 </script>
 
 <SvelteSeo
@@ -35,6 +54,7 @@
 />
 
 <Hero />
+<button on:click={triggerCustomModal} class="btn-filled-primary">Modal</button>
 <AlternatingFeatures />
 <ServiceArea />
 <Reviews />

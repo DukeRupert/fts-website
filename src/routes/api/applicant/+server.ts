@@ -1,5 +1,5 @@
 import type { RequestHandler } from './$types';
-import client from '$lib/postmarkClient';
+import Postmark from '$lib/postmarkClient';
 
 // Send an email:
 export const POST: RequestHandler = async ({ request }) => {
@@ -21,7 +21,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 	// Send message
 	try {
-		const response = await client.sendEmailWithTemplate({
+		const response = await Postmark.sendEmailWithTemplate({
 			TemplateId: 29832037,
 			TemplateModel: data,
 			From: 'logan@firefly.llc',
@@ -45,7 +45,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		});
 	} catch (err) {
 		// Send error notification
-		await client.sendEmail({
+		await Postmark.sendEmail({
 			From: 'logan@firefly.llc',
 			To: 'logan@firefly.llc',
 

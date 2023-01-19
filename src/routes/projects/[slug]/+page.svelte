@@ -13,28 +13,30 @@
 	const { post } = data;
 </script>
 
-<SvelteSeo
-	title={post.title}
-	description={post.excerpt}
-	keywords="excavation construction services contractor puget sound puyallup drainage grading"
-	openGraph={{
-		title: post.title,
-		description: post.excerpt,
-		url: $page.url.href,
-		type: 'article',
-		article: {
-			publishedTime: post.publishedAt
-		},
-		images: [
-			{
-				url: urlFor(post.image).width(600).height(600),
-				width: 600,
-				height: 600,
-				alt: post.image.alt
-			}
-		]
-	}}
-/>
+{#if post}
+	<SvelteSeo
+		title={post.title}
+		description={post.excerpt}
+		keywords="excavation construction services contractor puget sound puyallup drainage grading"
+		openGraph={{
+			title: post.title,
+			description: post.excerpt,
+			url: $page.url.href,
+			type: 'article',
+			article: {
+				publishedTime: post.publishedAt
+			},
+			images: [
+				{
+					url: urlFor(post.image).width(600).height(600),
+					width: 600,
+					height: 600,
+					alt: post.image.alt
+				}
+			]
+		}}
+	/>
+{/if}
 
 <div class="relative py-16 bg-white overflow-hidden">
 	<div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
@@ -144,12 +146,9 @@
 				class="py-16 px-4 prose-a:no-underline flex items-center justify-center sm:px-6 sm:py-24 lg:px-8"
 			>
 				<div class="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
-					<a
-						href="/contact-us"
-						class="flex items-center justify-center bg-gradient-to-r from-evergreen-500 to-evergreen-500 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-cream-500 hover:from-evergreen-600 hover:to-evergreen-600"
-					>
+					<a href="/contact-us" class="btn btn-filled-primary text-token">
 						<svg
-							class="h-6 w- mr-2 text-cream-500"
+							class="h-6 w- mr-2"
 							width="24"
 							height="24"
 							viewBox="0 0 24 24"
@@ -166,10 +165,7 @@
 						>
 						Contact Us
 					</a>
-					<a
-						href="/projects"
-						class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-black hover:text-cream-500 bg-actionorange-500 hover:bg-actionorange-300"
-					>
+					<a href="/projects" class="btn btn-filled-tertiary text-token">
 						<svg
 							class="h-6 w-6 mr-2"
 							fill="none"

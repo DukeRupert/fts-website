@@ -51,10 +51,12 @@
 	<div
 		class="prose max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8"
 	>
-		<h2>Commercial and domestic services</h2>
+		<h2><span class="text-on-primary-token">Commercial and domestic services</span></h2>
 		<p class="mt-4 max-w-3xl">
-			If it involves dirt then we have probably done it before. Here are a few of the services we
-			offer.
+			<span class="text-on-warning-token"
+				>If it involves dirt then we have probably done it before. Here are a few of the services we
+				offer.</span
+			>
 		</p>
 		<div
 			class="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16"
@@ -70,9 +72,9 @@
 						/>
 					</div>
 					<div class="mt-6">
-						<h3>{service.title}</h3>
+						<h3><span class="text-on-primary-token">{service.title}</span></h3>
 						<p class="mt-2">
-							{service.body}
+							<span class="text-on-warning-token">{service.body}</span>
 						</p>
 					</div>
 				</div>

@@ -24,10 +24,10 @@
 		class="relative"
 	>
 		<div class="relative">
-			<blockquote class="mt-10">
+			<blockquote class="mt-10 text-on-primary-token">
 				<div class="mx-auto max-w-3xl text-center text-lg md:text-3xl font-medium leading-9">
 					<p class="line-clamp-3">
-						&ldquo;{item.review}&rdquo;
+						<span class="text-on-primary-token">&ldquo;{item.review}&rdquo;</span>
 					</p>
 					<Stars rating={item.rating} />
 				</div>
@@ -41,7 +41,7 @@
 							/>
 						</div>
 						<div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-							<div class="text-base font-medium">
+							<div class="text-base font-medium text-on-primary-token">
 								{item.firstName}
 								{item.lastName}
 							</div>

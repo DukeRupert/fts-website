@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
 import type { Post } from '$lib/types';
-import client from '$lib/sanityClient';
+import Sanity from '$lib/sanityClient';
 
 export const load: PageLoad = async () => {
 	// id for drainage category
@@ -20,7 +20,7 @@ export const load: PageLoad = async () => {
 	const query = filter + projection;
 
 	// Fetch data from Sanity
-	const data: Post[] = await client.fetch(query);
+	const data: Post[] = await Sanity.fetch(query);
 
 	// Return results
 	return {

@@ -1,10 +1,10 @@
 import type { PageLoad } from './$types';
 import type { Post } from '$lib/types';
-import client from '$lib/sanityClient';
+import Sanity from '$lib/sanityClient';
 
 export const load: PageLoad = async () => {
 	const query = '*[_type == "post"] | order(publishedAt desc)';
-	const data: Post[] = await client.fetch(query);
+	const data: Post[] = await Sanity.fetch(query);
 
 	return {
 		data
