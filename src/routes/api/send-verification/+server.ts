@@ -34,9 +34,9 @@ export const POST: RequestHandler = async ({ request }) => {
 	}
 
 	const support_email = 'service@fts-excavation.com';
-	const payload = data.email;
+	const payload = data?.email ?? 'logan@firefly.llc';
 	const token = jwt.sign(payload, PROMO_SECRET);
-	const action_url = 'https://fts-jobs.vercel.app/validate/' + token;
+	const action_url = 'https://fts-excavation.com/validate/' + token;
 	const model: LeadModel = {
 		...data,
 		action_url,
@@ -49,7 +49,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		TemplateId: 30415525,
 		TemplateModel: model,
 		From: support_email,
-		To: 'logan@firefly.llc',
+		To: payload,
 		MessageStream: 'outbound',
 		TrackOpens: true
 	});

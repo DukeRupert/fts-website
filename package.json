@@ -9,7 +9,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"gentypes": "npx supabase gen types typescript --project-id peppmzdzcqdfgiidsaut --schema public > src/lib/types/supabase.ts"
 	},
 	"devDependencies": {
 		"@portabletext/svelte": "^1.0.1",

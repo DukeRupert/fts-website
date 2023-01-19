@@ -142,6 +142,10 @@ export interface Database {
           first_name: string | null
           id: number
           last_name: string | null
+          promo_waive_equipment_fee: string | null
+          promo_waive_equipment_fee_used: boolean
+          unsubscribed: boolean
+          unsubscribed_at: string | null
           verified: boolean
           verified_at: string | null
         }
@@ -151,6 +155,10 @@ export interface Database {
           first_name?: string | null
           id?: number
           last_name?: string | null
+          promo_waive_equipment_fee?: string | null
+          promo_waive_equipment_fee_used?: boolean
+          unsubscribed?: boolean
+          unsubscribed_at?: string | null
           verified?: boolean
           verified_at?: string | null
         }
@@ -160,6 +168,10 @@ export interface Database {
           first_name?: string | null
           id?: number
           last_name?: string | null
+          promo_waive_equipment_fee?: string | null
+          promo_waive_equipment_fee_used?: boolean
+          unsubscribed?: boolean
+          unsubscribed_at?: string | null
           verified?: boolean
           verified_at?: string | null
         }
