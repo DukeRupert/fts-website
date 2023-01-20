@@ -11,8 +11,9 @@
 	import Reviews from '$lib/sections/Reviews.svelte';
 	import Videos from '$lib/sections/Videos.svelte';
 	import ModalForm from '$lib/components/ModalForm.svelte';
-	import { modalStore, toastStore } from '@skeletonlabs/skeleton';
+	import { modalStore } from '@skeletonlabs/skeleton';
 	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
+	import { onMount, onDestroy } from 'svelte';
 
 	export let data: PageData;
 
@@ -31,6 +32,27 @@
 		};
 		modalStore.trigger(d);
 	}
+
+	let main: HTMLElement | null;
+	let yScroll;
+	let promoTrigger = true;
+
+	function scrollHandler(e: any): void {
+		yScroll = e.target.scrollTop;
+		if (data?.promo && yScroll > 300 && promoTrigger) {
+			promoTrigger = false;
+			triggerCustomModal();
+		}
+	}
+
+	onMount(() => {
+		main = document.getElementById('page');
+		main?.addEventListener('scroll', scrollHandler);
+	});
+
+	onDestroy(() => {
+		main?.removeEventListener('scroll', scrollHandler);
+	});
 </script>
 
 <SvelteSeo
@@ -54,7 +76,7 @@
 />
 
 <Hero />
-<button on:click={triggerCustomModal} class="btn-filled-primary">Modal</button>
+<!-- <button on:click={triggerCustomModal} class="btn-filled-primary">Modal</button> -->
 <AlternatingFeatures />
 <ServiceArea />
 <Reviews />

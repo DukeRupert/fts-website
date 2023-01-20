@@ -72,8 +72,10 @@
 </script>
 
 <div class={cBase}>
-	<h2 class="mt-6 text-center">Save $150</h2>
-	<p>Join our mailing list and save on your next project!</p>
+	<h2 class="mt-6 text-bold text-4xl text-center">
+		<span class="text-success-500">Save $150</span>
+	</h2>
+	<p class="text-center">Join our mailing list and save on your next project!</p>
 	<!-- Enable for debugging: -->
 	<!-- <pre>{JSON.stringify(formData, null, 2)}</pre> -->
 	<form method="POST" action="/?/sendVerification" class="modal-form {cForm}" use:enhance>

@@ -1,8 +1,18 @@
 <script lang="ts">
 	import Stars from '$lib/components/Stars.svelte';
 	import { fade } from 'svelte/transition';
-	import { quartIn, quartOut } from 'svelte/easing';
-	import type { Review } from '$lib/types';
+	import { quartIn } from 'svelte/easing';
+
+	interface Review {
+		review: string;
+		rating: number;
+		image: {
+			src: string;
+			alt: string;
+		};
+		firstName: string;
+		lastName: string;
+	}
 
 	export let items: Review[] = [];
 

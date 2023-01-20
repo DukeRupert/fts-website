@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	// import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 	import '@skeletonlabs/skeleton/styles/all.css';
 	import '../theme.postcss';
@@ -9,7 +9,6 @@
 	import Drawer from '$lib/components/Drawer.svelte';
 	import { navigating } from '$app/stores';
 	import { mobileMenu } from '$lib/stores';
-	import { modalStore } from '@skeletonlabs/skeleton';
 
 	$: if ($navigating) {
 		$mobileMenu = false;
@@ -35,11 +34,3 @@
 	<!-- <svelte:fragment slot="footer">Footer</svelte:fragment> -->
 </AppShell>
 <Toast />
-
-<!-- <Header />
-<div class="bg-white">
-	<main>
-		<slot />
-	</main>
-</div>
-<Footer /> -->
