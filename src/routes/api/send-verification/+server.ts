@@ -8,8 +8,8 @@ import Postmark from '$lib/postmarkClient';
 import { Supabase } from '$lib/db';
 
 const FormData = z.object({
-	first_name: z.string().min(1).max(20, { message: 'Must be less than 21 characters' }),
-	last_name: z.string().min(1).max(20, { message: 'Must be less than 21 characters' }),
+	first_name: z.string(),
+	last_name: z.string(),
 	email: z.string().email()
 });
 
@@ -36,7 +36,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	const support_email = 'service@fts-excavation.com';
 	const payload = data?.email ?? 'logan@firefly.llc';
 	const token = jwt.sign(payload, PROMO_SECRET);
-	const action_url = 'https://fts-excavation.com/validate/' + token;
+	const action_url = 'https://fts-excavation.com/api/validate/' + token;
 	const model: LeadModel = {
 		...data,
 		action_url,

@@ -14,6 +14,7 @@
 	import { modalStore } from '@skeletonlabs/skeleton';
 	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
 	import { onMount, onDestroy } from 'svelte';
+	import Newsletter from '$lib/components/Newsletter.svelte';
 
 	export let data: PageData;
 
@@ -89,6 +90,7 @@
 <ServiceArea />
 <Reviews />
 <Videos />
+<Newsletter />
 <Projects posts={data.data} />
 <GradientFeatures />
 <CallToAction />
