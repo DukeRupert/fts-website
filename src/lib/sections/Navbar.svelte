@@ -3,13 +3,38 @@
 	import { page } from '$app/stores';
 	import { LINKS, COMPANY } from '$lib/constants';
 	import drawerOpen from '$lib/utils/drawer';
+	import { slide } from 'svelte/transition';
 
 	let pathname;
 	$: ({ pathname } = $page.url);
+
+	let banner = true;
+	function handleClick() {
+		banner = false;
+	}
 </script>
 
 <header>
 	<div class="relative bg-white">
+		{#if banner}
+			<div transition:slide class="bg-primary-500 h-16 w-full flex justify-center items-center ">
+				<div class="w-full text-center">
+					<a href="/projects/home-garden" class="md:hidden">
+						<span class="text-on-primary-token underline">Free tickets to Home+Garden!</span>
+					</a>
+					<a href="/projects/home-garden" class="hidden md:block">
+						<span class="text-on-primary-token underline"
+							>Free tickets to Home+Garden at the Tacoma Dome!</span
+						>
+					</a>
+				</div>
+				<button
+					type="button"
+					class="md:mr-4 flex-0 btn-icon text-on-primary-token"
+					on:click={handleClick}>X</button
+				>
+			</div>
+		{/if}
 		<div
 			class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8"
 		>
