@@ -8,7 +8,7 @@
 	let pathname;
 	$: ({ pathname } = $page.url);
 
-	let banner = true;
+	let banner = false;
 	function handleClick() {
 		banner = false;
 	}
