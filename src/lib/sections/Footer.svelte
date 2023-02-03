@@ -2,11 +2,47 @@
 <script lang="ts">
 	import { COMPANY, LINKS } from '$lib/constants';
 	import SocialMedia from '$lib/components/SocialMedia.svelte';
-	//   import ChamberOfCommerce from './ChamberOfCommerce.svelte'
+
+	interface Affiliate {
+		name: string;
+		href: string;
+		img: {
+			src: string;
+			alt: string;
+		};
+	}
+	const affiliations: Affiliate[] = [
+		{
+			name: 'Puyallup / Sumner Chamber of Commerce',
+			href: 'https://www.puyallupsumnerchamber.com/',
+			img: {
+				src: '/image/PSChamberLogo_2016_Square.webp',
+				alt: 'Puyallup / Sumner Chamber of Commerce logo'
+			}
+		},
+		{
+			name: 'Generous Network',
+			href: 'https://countercultureleaders.com/generous-network',
+			img: {
+				src: '/image/GenerousNetwork.png',
+				alt: 'Generous Network logo'
+			}
+		},
+		{
+			name: 'Tacoma/Pierce County Association of REALTORS',
+			href: 'https://www.tpcar.org/',
+			img: {
+				src: '/image/TPCAR_affiliate_logo_2023_01.png',
+				alt: 'Tacoma/Pierce County Association of REALTORS logo'
+			}
+		}
+	];
 </script>
 
-<footer class="bg-white dark:bg-gray-800">
-	<div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+<footer>
+	<div
+		class="bg-gray-50 dark:bg-gray-800 max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8"
+	>
 		<nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
 			{#each LINKS as { href, label }}
 				<div class="px-5 py-2">
@@ -48,19 +84,15 @@
 				Design by <span class="text-blue-600 hover:text-blue-700">Firefly Software</span>
 			</p>
 		</a>
-		<div class="mt-8 flex flex-col text-center items-center justify-center border-t ">
-			<p class="mt-8">Proud Member of</p>
-			<a
-				href="https://www.puyallupsumnerchamber.com/"
-				target="_blank"
-				rel="noreferrer"
-				class="no-underline"
-			>
-				<img
-					src="/image/PSChamberLogo_2016_Square.webp"
-					alt="Puyallup / Sumner Chamber of Commerce"
-				/>
-			</a>
+	</div>
+	<div class="bg-white dark:bg-gray-900 mx-auto max-w-7xl py-12 px-6 lg:py-16 lg:px-8">
+		<p class="text-center text-lg font-semibold text-gray-600">A proud member of</p>
+		<div class="mt-6 grid grid-cols-1 gap-0.5 md:grid-cols-2 lg:grid-cols-3 lg:mt-8">
+			{#each affiliations as { name, href, img }}
+				<div class="col-span-1 flex justify-center bg-white-50 py-8 px-8">
+					<a {href}> <img class="max-h-28" src={img.src} alt={img.alt} /></a>
+				</div>
+			{/each}
 		</div>
 	</div>
 </footer>
