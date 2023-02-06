@@ -1,3 +1,6 @@
+<script lang="ts">
+</script>
+
 <div class="relative overflow-hidden pt-16 pb-32">
 	<div class="relative">
 		<div
