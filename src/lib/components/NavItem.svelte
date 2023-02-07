@@ -1,7 +1,4 @@
 <script lang="ts">
-	import { slide } from 'svelte/transition';
-	import { quartOut } from 'svelte/easing';
-
 	interface Subitem {
 		title: string;
 		href: string;

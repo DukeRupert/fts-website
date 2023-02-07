@@ -53,7 +53,7 @@
 						.toString(),
 					width: width,
 					height: height,
-					alt: data.title
+					alt: data.mainImage.alt
 				}
 			]
 		}}

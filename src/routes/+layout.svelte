@@ -11,7 +11,6 @@
 	import { drawerClose } from '$lib/utils/drawer';
 
 	$: if ($navigating === null) {
-		console.log($navigating);
 		drawerClose();
 	}
 </script>
