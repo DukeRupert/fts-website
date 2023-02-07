@@ -14,9 +14,9 @@
 				{value?.heading}
 			</h1>
 
-			<h2 class="mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">
+			<h3 class="mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">
 				{value?.title}
-			</h2>
+			</h3>
 			<p class="max-w-xl mt-4 mx-auto text-xl">{value?.tagline}</p>
 		</div>
 	</div>
@@ -52,7 +52,7 @@
 								/>
 							</div>
 							<div>
-								<h4 class="text-lg font-bold">{item.title}</h4>
+								<h2 class="text-lg font-bold">{item.title}</h2>
 								<p class="mt-1">
 									{item.description}
 								</p>
@@ -65,7 +65,7 @@
 						<div class="relative pl-9">
 							<dt class="inline font-semibold text-gray-900">
 								<span class="text-primary-500">{@html item.icon.svg}</span>
-								{item.title}
+								<h2>{item.title}</h2>
 							</dt>
 							<dd class="inline">
 								{item.description}{#if item?.link}
