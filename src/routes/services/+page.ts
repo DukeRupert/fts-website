@@ -6,7 +6,7 @@ export const load: PageLoad = async ({ url }) => {
 	const { pathname } = url;
 
 	const q = `*[_type == "page" && path == $pathname]
-        {title, metaDescription, mainImage, 
+        {_type, title, metaDescription, mainImage, 
             pageBuilder[]
                 {..., features[]
                     {..., icon->{title, size, svg, _type}

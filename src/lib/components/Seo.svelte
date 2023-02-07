@@ -1,66 +1,61 @@
 <script lang="ts">
 	import SvelteSeo from 'svelte-seo';
+	import { urlFor } from '$lib/sanity/sanityImage';
+	import type { SanityPage } from '$lib/types/sanity';
+	import type { Post } from '$lib/types/sanity';
 
-	interface SeoData {
-		type: string;
-		url: string;
-		title: string;
-		metaDescription: string;
-		publishedAt?: string;
-		image: {
-			url: string;
-			height: number;
-			width: number;
-			alt: string;
-		};
-	}
-
-	export let seo: SeoData;
+	export let data: SanityPage | Post;
+	export let url: string;
 	export let noindex = false;
+	export let width = 1200;
+	export let height = 630;
 </script>
 
-{#if seo.type == 'article'}
+{#if data._type == 'post'}
 	<SvelteSeo
-		title={seo.title}
-		description={seo.metaDescription}
+		title={data.title}
+		description={data?.excerpt}
 		{noindex}
 		openGraph={{
-			title: seo.title,
-			description: seo.metaDescription,
-			url: seo.url,
+			title: data.title,
+			description: data.excerpt,
+			url: url,
 			type: 'article',
 			article: {
-				publishedTime: seo.publishedAt
+				publishedTime: data?.publishedAt
 			},
 			images: [
 				{
-					url: seo.image.url,
-					width: seo.image.width,
-					height: seo.image.height,
-					alt: seo.image.alt
+					url: urlFor(data.image.asset).width(width).height(height).format('webp').url().toString(),
+					width: width,
+					height: height,
+					alt: data.image.alt
 				}
 			]
 		}}
 	/>
-{:else if seo.type == 'page'}
+{:else if data._type == 'page'}
 	<SvelteSeo
-		title={seo.title}
-		description={seo.metaDescription}
+		title={data.title}
+		description={data.metaDescription}
 		openGraph={{
-			title: seo.title,
-			description: seo.metaDescription,
-			url: seo.url,
+			title: data.title,
+			description: data.metaDescription,
+			url: url,
 			type: 'website',
 			images: [
 				{
-					url: seo.image.url,
-					width: seo.image.width,
-					height: seo.image.height,
-					alt: seo.image.alt
+					url: urlFor(data.mainImage.asset)
+						.width(width)
+						.height(height)
+						.format('webp')
+						.url()
+						.toString(),
+					width: width,
+					height: height,
+					alt: data.title
 				}
 			]
 		}}
 	/>
-{:else}
-	<SvelteSeo title={seo.title} description={seo.metaDescription} />
 {/if}
