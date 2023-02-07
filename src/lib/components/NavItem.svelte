@@ -59,31 +59,33 @@
 			<div class="ml-4 text-base font-medium text-gray-900 dark:text-gray-100">{label}</div>
 		</a>
 	{:else}
-		<div
-			class="w-full flex items-center"
-			on:click={() => (toggle = !toggle)}
-			on:keypress={() => (toggle = !toggle)}
-		>
+		<a {href}>
 			<div
-				class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-primary-500 to-primary-700 text-cream-500"
+				class="w-full flex items-center"
+				on:click={() => (toggle = !toggle)}
+				on:keypress={() => (toggle = !toggle)}
 			>
-				<svg
-					class="h-6 w-6"
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox={svg.viewbox}
-					stroke="currentColor"
-					aria-hidden="true"
+				<div
+					class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-primary-500 to-primary-700 text-cream-500"
 				>
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={svg.path} />
-				</svg>
+					<svg
+						class="h-6 w-6"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox={svg.viewbox}
+						stroke="currentColor"
+						aria-hidden="true"
+					>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={svg.path} />
+					</svg>
+				</div>
+				<div class="ml-4 text-base font-medium text-gray-900 dark:text-gray-100">{label}</div>
 			</div>
-			<div class="ml-4 text-base font-medium text-gray-900 dark:text-gray-100">{label}</div>
-		</div>
+		</a>
 
 		<span
-			on:click={() => (toggle = !toggle)}
-			on:keypress={() => (toggle = !toggle)}
+			on:click|stopPropagation={() => (toggle = !toggle)}
+			on:keypress|stopPropagation={() => (toggle = !toggle)}
 			class="flex flex-col justify-center ml-auto mr-2"
 		>
 			<!-- plus -->
