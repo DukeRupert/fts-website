@@ -1,5 +1,5 @@
 <script>
-	import { urlFor } from './sanityClient';
+	import { urlFor } from './sanity/sanityClient';
 
 	export let image;
 	export let maxWidth = 1200;

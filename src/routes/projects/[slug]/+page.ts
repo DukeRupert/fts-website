@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
-import type { Post } from '$lib/types';
-import Sanity from '$lib/sanityClient';
+import type { Post } from '$lib/types/sanity';
+import Sanity from '$lib/sanity/sanityClient';
 import { error } from '@sveltejs/kit';
 
 export const load: PageLoad = async ({ params, fetch }) => {

@@ -16,7 +16,7 @@
 
 <header>
 	<div class="relative bg-white">
-		{#if banner}
+		<!-- {#if banner}
 			<div transition:slide class="bg-primary-500 h-16 w-full flex justify-center items-center ">
 				<div class="w-full text-center">
 					<a href="/projects/home-garden" class="md:hidden">
@@ -34,7 +34,7 @@
 					on:click={handleClick}>X</button
 				>
 			</div>
-		{/if}
+		{/if} -->
 		<div
 			class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8"
 		>

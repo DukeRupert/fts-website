@@ -1,11 +1,12 @@
 import type { PageLoad } from './$types';
 import type { SanityPage } from '$lib/types/sanity';
-import Sanity from '$lib/sanityClient';
+import Sanity from '$lib/sanity/sanityClient';
 
-export const load: PageLoad = async ({ params, url }) => {
+export const load: PageLoad = async ({ url }) => {
 	const { pathname } = url;
+
 	const q = `*[_type == "page" && path == $pathname]
-        {title, metaDescription, title, 
+        {title, metaDescription, mainImage, 
             pageBuilder[]
                 {..., features[]
                     {..., icon->{title, size, svg, _type}
@@ -16,8 +17,6 @@ export const load: PageLoad = async ({ params, url }) => {
 		pathname
 	};
 	const data: SanityPage[] = await Sanity.fetch(q, p);
-
-	// Check for promo
 
 	return {
 		page: data[0]

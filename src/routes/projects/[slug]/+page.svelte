@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SvelteSeo from 'svelte-seo';
 	import { page } from '$app/stores';
-	import { urlFor } from '$lib/sanityClient';
+	import { urlFor } from '$lib/sanity/sanityClient';
 	import { PortableText } from '@portabletext/svelte';
 	import Code from '$lib/portableText/Code.svelte';
 	import Link from '$lib/portableText/Link.svelte';
