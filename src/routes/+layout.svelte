@@ -8,10 +8,11 @@
 	import Footer from '$lib/sections/Footer.svelte';
 	import Drawer from '$lib/components/Drawer.svelte';
 	import { navigating } from '$app/stores';
-	import { mobileMenu } from '$lib/stores';
+	import { drawerClose } from '$lib/utils/drawer';
 
-	$: if ($navigating) {
-		$mobileMenu = false;
+	$: if ($navigating === null) {
+		console.log($navigating);
+		drawerClose();
 	}
 </script>
 
