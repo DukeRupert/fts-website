@@ -6,7 +6,6 @@
 	import { page } from '$app/stores';
 	export let data: PageData;
 	const { page: pageData } = data;
-	console.log(pageData);
 </script>
 
 <Seo data={pageData} url={$page.url.toString()} />
