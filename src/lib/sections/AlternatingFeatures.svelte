@@ -42,8 +42,8 @@
 							installation.
 						</p>
 						<div class="mt-6">
-							<a href="/services/drainage" class="inline-flex btn btn-ringed-primary no-underline">
-								Learn More
+							<a href="/services" class="inline-flex btn btn-ringed-primary no-underline">
+								Services
 							</a>
 						</div>
 					</div>
@@ -122,8 +122,8 @@
 							some of our past excavaction projects to see what we mean.
 						</p>
 						<div class="mt-6">
-							<a href="/contact-us" class="inline-flex btn btn-ringed-primary no-underline">
-								Contact Us
+							<a href="/projects" class="inline-flex btn btn-ringed-primary no-underline">
+								Projects
 							</a>
 						</div>
 					</div>
