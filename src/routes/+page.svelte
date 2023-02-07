@@ -3,7 +3,6 @@
 	import type { PageData } from './$types';
 	import SvelteSeo from 'svelte-seo';
 	import AlternatingFeatures from '$lib/sections/AlternatingFeatures.svelte';
-	import GradientFeatures from '$lib/sections/GradientFeatures.svelte';
 	import Hero from '$lib/sections/Hero.svelte';
 	import Projects from '$lib/sections/Projects.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
@@ -92,5 +91,4 @@
 <Videos />
 <Newsletter />
 <Projects posts={data.data} />
-<GradientFeatures />
 <CallToAction />
