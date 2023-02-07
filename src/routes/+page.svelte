@@ -88,7 +88,6 @@
 <AlternatingFeatures />
 <ServiceArea />
 <Reviews />
-<Videos />
 <Newsletter />
 <Projects posts={data.data} />
 <CallToAction />
