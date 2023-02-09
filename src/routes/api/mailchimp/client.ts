@@ -29,9 +29,10 @@ export async function addListMember(listId: string, member: AddListMemberBody) {
 	try {
 		const response = mailchimp.lists.addListMember(listId, member);
 		console.log('Success in addListMember()');
-		return new Response(JSON.stringify({ success: true }), { status: 200 });
+		return response;
 	} catch (err) {
 		console.log('Error in addListMember()');
+		console.log(err);
 		throw error(400, JSON.stringify({ success: false }));
 	}
 }

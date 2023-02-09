@@ -19,6 +19,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	const body = await request.json();
 	const valid = FormData.safeParse(body);
 	if (!valid.success) {
+		console.log('Validation failed');
 		return json(
 			{ success: false },
 			{
@@ -28,6 +29,8 @@ export const POST: RequestHandler = async ({ request }) => {
 	}
 
 	const { data } = valid;
+	console.log('Insert data into SupaBase');
+	console.log(data);
 	const { error: err } = await Supabase.from('leads').insert(data);
 	if (err) {
 		throw fail(400, { message: JSON.stringify(err.message) });
@@ -45,6 +48,8 @@ export const POST: RequestHandler = async ({ request }) => {
 		company_name: 'FtS Excavation'
 	};
 
+	console.log('Send confirmation email');
+
 	const res = await Postmark.sendEmailWithTemplate({
 		TemplateId: 30415525,
 		TemplateModel: model,
@@ -55,8 +60,10 @@ export const POST: RequestHandler = async ({ request }) => {
 	});
 
 	if (res.ErrorCode !== 0) {
+		console.log(res);
 		throw fail(400, { message: 'Failed to send email' });
 	}
+	console.log('Success');
 
 	return json(model, { status: 200 });
 };
