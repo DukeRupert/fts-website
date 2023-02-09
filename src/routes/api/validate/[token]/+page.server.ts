@@ -103,7 +103,7 @@ export const load: PageServerLoad = async ({ params }) => {
 
 	console.log(`Adding verified member to mailchimp : ${JSON.stringify(member, null, 2)}`);
 	const mailChimpResponse = await fetch(
-		`https://fts-excavation.com/api/mailchimp/${mailChimpListId}/addMember`,
+		`https://www.fts-excavation.com/api/mailchimp/${mailChimpListId}/addMember`,
 		{
 			method: 'POST',
 			body: JSON.stringify(member),
