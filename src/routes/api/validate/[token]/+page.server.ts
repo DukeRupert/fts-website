@@ -101,13 +101,16 @@ export const load: PageServerLoad = async ({ params }) => {
 		}
 	};
 
-	const mailChimpResponse = await fetch(`/api/mailchimp/${mailChimpListId}/addMember`, {
-		method: 'POST',
-		body: JSON.stringify(member),
-		headers: {
-			'content-type': 'application/json'
+	const mailChimpResponse = await fetch(
+		`https://www.fts-excavation.com/api/mailchimp/${mailChimpListId}/addMember`,
+		{
+			method: 'POST',
+			body: JSON.stringify(member),
+			headers: {
+				'content-type': 'application/json'
+			}
 		}
-	});
+	);
 
 	if (res.ErrorCode !== 0) {
 		return { success: false, message: 'An error occured when sending promo code email.' };
