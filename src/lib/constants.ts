@@ -111,3 +111,6 @@ export const LINKS = [
 		subitems: []
 	}
 ];
+
+// name: FTS Excavation
+export const mailChimpListId = '30f791302d';

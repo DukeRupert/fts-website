@@ -5,6 +5,7 @@ import type { PageServerLoad } from './$types';
 import { Supabase } from '$lib/db';
 import type { PromoModel } from '$lib/types/postmark';
 import Postmark from '$lib/postmarkClient';
+import { mailChimpListId } from '$lib/constants';
 
 export interface Payload {
 	email: string;
@@ -55,18 +56,20 @@ export const load: PageServerLoad = async ({ params }) => {
 		return { success: false, message: 'This email has already been validated.' };
 	}
 
-	// update record
+	// update Supabase record
 	const code = generateCode(5);
-	const { error: err } = await Supabase.from('leads')
+	const { data: record, error: err } = await Supabase.from('leads')
 		.update({
 			verified: true,
 			verified_at: new Date().toUTCString(),
 			promo_waive_equipment_fee: code
 		})
-		.eq('email', validEmail);
+		.eq('email', validEmail)
+		.select()
+		.single();
 	if (err) return { success: false, message: 'Failure updating record' };
 
-	// Send email
+	// Send promo email
 	const model: PromoModel = {
 		first_name: data?.first_name ?? 'Valued',
 		last_name: data?.last_name ?? 'Customer',
@@ -85,6 +88,25 @@ export const load: PageServerLoad = async ({ params }) => {
 		To: validEmail,
 		MessageStream: 'outbound',
 		TrackOpens: true
+	});
+
+	// add to mailchimp list
+	const member = {
+		email_address: record?.email,
+		status: 'subscribed',
+		email_type: 'html',
+		merge_fields: {
+			FNAME: record?.first_name ?? '',
+			LNAME: record?.last_name ?? ''
+		}
+	};
+
+	const mailChimpResponse = await fetch(`/api/mailchimp/${mailChimpListId}/addMember`, {
+		method: 'POST',
+		body: JSON.stringify(member),
+		headers: {
+			'content-type': 'application/json'
+		}
 	});
 
 	if (res.ErrorCode !== 0) {

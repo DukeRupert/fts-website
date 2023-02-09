@@ -66,11 +66,11 @@
 
 <SvelteSeo
 	title="FtS Excavation - Puyallup's excavation experts"
-	description="Professional excavators serving both residential and commercial clients. Services include drainage, site prepartion and land development. Serving the greater Puget Sound region."
+	description="Professional excavators serving both residential and commercial clients. Services include drainage, site preparation and land development. Serving the greater Puget Sound region."
 	keywords="excavation land clearing foundations leveling dirt removal residential construction utility installation tacoma puyallup"
 	openGraph={{
 		title: "FtS Excavation - Puyallup's excavation experts",
-		description: `Professional excavators serving both residential and commercial clients. Services include drainage, site prepartion and land development. Serving the greater Puget Sound region.`,
+		description: `Professional excavators serving both residential and commercial clients. Services include drainage, site preparation and land development. Serving the greater Puget Sound region.`,
 		url: $page.url.href,
 		type: 'website',
 		images: [
