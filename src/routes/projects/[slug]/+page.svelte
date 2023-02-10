@@ -1,7 +1,6 @@
 <script lang="ts">
-	import SvelteSeo from 'svelte-seo';
 	import { page } from '$app/stores';
-	import { urlFor } from '$lib/sanity/sanityClient';
+	import Seo from '$lib/components/Seo.svelte';
 	import { PortableText } from '@portabletext/svelte';
 	import Code from '$lib/portableText/Code.svelte';
 	import Link from '$lib/portableText/Link.svelte';
@@ -14,28 +13,7 @@
 </script>
 
 {#if post}
-	<SvelteSeo
-		title={post.title}
-		description={post.excerpt}
-		keywords="excavation construction services contractor puget sound puyallup drainage grading"
-		openGraph={{
-			title: post.title,
-			description: post.excerpt,
-			url: $page.url.href,
-			type: 'article',
-			article: {
-				publishedTime: post.publishedAt
-			},
-			images: [
-				{
-					url: urlFor(post.image).width(600).height(600),
-					width: 600,
-					height: 600,
-					alt: post.image.alt
-				}
-			]
-		}}
-	/>
+	<Seo data={post} url={$page.url.toString()} />
 {/if}
 
 <div class="relative py-16 bg-white overflow-hidden">
