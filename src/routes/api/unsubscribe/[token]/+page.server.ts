@@ -48,7 +48,7 @@ export const load: PageServerLoad = async ({ params }) => {
 
 	console.log(`Unsubscribe member from mailchimp : ${JSON.stringify(member, null, 2)}`);
 	const mailChimpResponse = await fetch(
-		`http://localhost:5173/api/mailchimp/${mailChimpListId}/members/${subscriberHash}`,
+		`https://www.fts-excavation.com/api/mailchimp/${mailChimpListId}/members/${subscriberHash}`,
 		{
 			method: 'POST',
 			body: JSON.stringify(member),
