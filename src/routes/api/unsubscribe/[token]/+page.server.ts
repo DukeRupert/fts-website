@@ -44,8 +44,6 @@ export const load: PageServerLoad = async ({ params }) => {
 		status: 'unsubscribed'
 	};
 
-	// `https://www.fts-excavation.com/api/mailchimp/${mailChimpListId}/addMember`
-
 	console.log(`Unsubscribe member from mailchimp : ${JSON.stringify(member, null, 2)}`);
 	const mailChimpResponse = await fetch(
 		`https://www.fts-excavation.com/api/mailchimp/${mailChimpListId}/members/${subscriberHash}`,
@@ -58,15 +56,6 @@ export const load: PageServerLoad = async ({ params }) => {
 		}
 	);
 	if (mailChimpResponse?.status == 200) console.log('Success, member updated.');
-
-	// const { error: err } = await Supabase.from('leads')
-	// 	.update({
-	// 		unsubscribed: true,
-	// 		unsubscribed_at: new Date().toUTCString()
-	// 	})
-	// 	.eq('email', validEmail);
-
-	// if (err) return { success: false, message: 'Failure updating record' };
 
 	return {
 		success: true,
