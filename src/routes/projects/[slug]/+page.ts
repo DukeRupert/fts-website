@@ -8,6 +8,7 @@ export const load: PageLoad = async ({ params, fetch }) => {
 	const filter = `*[_type == "post" && slug.current == "${slug}"][0]`;
 	const projection = `{
                         ...,
+						mainImage{..., asset->},
                         body[] {
                           ...,
                           

@@ -1,5 +1,5 @@
 <script>
-	import SanityImage from '$lib/SanityImage.svelte';
+	import SanityImage from '$lib/sanity/SanityImage.svelte';
 
 	export let portableText;
 

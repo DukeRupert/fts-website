@@ -1,6 +1,6 @@
 <script lang="ts">
 	import SvelteSeo from 'svelte-seo';
-	import { urlFor } from '$lib/sanity/sanityImage';
+	import { urlFor } from '$lib/sanity/urlFor';
 	import type { SanityPage } from '$lib/types/sanity';
 	import type { Post } from '$lib/types/sanity';
 
@@ -13,12 +13,12 @@
 
 {#if data._type == 'post'}
 	<SvelteSeo
-		title={data.title}
+		title={data?.title}
 		description={data?.excerpt}
 		{noindex}
 		openGraph={{
-			title: data.title,
-			description: data.excerpt,
+			title: data?.title,
+			description: data?.excerpt,
 			url: url,
 			type: 'article',
 			article: {
@@ -26,26 +26,7 @@
 			},
 			images: [
 				{
-					url: urlFor(data.image.asset).width(width).height(height).format('webp').url().toString(),
-					width: width,
-					height: height,
-					alt: data.image.alt
-				}
-			]
-		}}
-	/>
-{:else if data._type == 'page'}
-	<SvelteSeo
-		title={data.title}
-		description={data.metaDescription}
-		openGraph={{
-			title: data.title,
-			description: data.metaDescription,
-			url: url,
-			type: 'website',
-			images: [
-				{
-					url: urlFor(data.mainImage.asset)
+					url: urlFor(data?.mainImage?.asset)
 						.width(width)
 						.height(height)
 						.format('webp')
@@ -53,7 +34,31 @@
 						.toString(),
 					width: width,
 					height: height,
-					alt: data.mainImage.alt
+					alt: data?.mainImage?.alt ?? data?.title
+				}
+			]
+		}}
+	/>
+{:else if data._type == 'page'}
+	<SvelteSeo
+		title={data?.title}
+		description={data?.metaDescription}
+		openGraph={{
+			title: data?.title,
+			description: data?.metaDescription,
+			url: url,
+			type: 'website',
+			images: [
+				{
+					url: urlFor(data?.mainImage?.asset)
+						.width(width)
+						.height(height)
+						.format('webp')
+						.url()
+						.toString(),
+					width: width,
+					height: height,
+					alt: data?.mainImage?.alt ?? data?.title
 				}
 			]
 		}}

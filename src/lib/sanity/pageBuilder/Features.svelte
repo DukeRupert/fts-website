@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { urlFor } from '$lib/sanity/sanityImage';
+	import { urlFor } from '$lib/sanity/urlFor';
 	import type { CustomBlockComponentProps } from '@portabletext/svelte';
 	import type { Feature } from '$lib/types/sanity';
 
