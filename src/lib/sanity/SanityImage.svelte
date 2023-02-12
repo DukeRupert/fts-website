@@ -4,6 +4,9 @@
 	export let image: Image;
 	export let maxWidth = 1200;
 	export let alt = '';
+	let className: string;
+	export { className as class };
+
 	// Example image document ID: image-cc93b69600f5cd1abce97fd0d4aa71793dbbba76-1350x900-png
 	// Structure: image-${storedImgId}-${dimensions}-${format}
 
@@ -16,15 +19,21 @@
 
 	// Once loaded, the image will transition to full opacity
 	let loaded = false;
+	function onLoad() {
+		loaded = true;
+		console.log(loaded);
+	}
 </script>
 
 {#if image}
 	<img
-		class="w-full h-full object-center object-cover sm:w-full sm:h-full"
+		class={className ? className : 'w-full h-full object-center object-cover sm:w-full sm:h-full'}
 		loading="lazy"
 		src={urlFor(image.asset).width(maxWidth).fit('fillmax').url()}
 		{alt}
-		style="aspect-ratio: {aevergreentio}; opacity: {loaded ? 1 : 0}; transition: .2s opacity;"
-		on:load={() => (loaded = true)}
+		style="aspect-ratio: {aevergreentio}; opacity: {loaded
+			? 1
+			: 0}; transition: .3s cubic-bezier(0.11, 0, 0.5, 0) opacity;"
+		on:load={onLoad}
 	/>
 {/if}

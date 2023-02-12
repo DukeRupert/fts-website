@@ -5,7 +5,7 @@ import Sanity from '$lib/sanity/sanityClient';
 export const load: PageLoad = async ({ url }) => {
 	const { pathname } = url;
 
-	const q = `*[_type == "page" && path == $pathname]
+	const q = `*[_type == "page" && path == $pathname][0]
         {_type, title, metaDescription, mainImage, 
             pageBuilder[]
                 {..., features[]
@@ -16,9 +16,9 @@ export const load: PageLoad = async ({ url }) => {
 	const p = {
 		pathname
 	};
-	const data: SanityPage[] = await Sanity.fetch(q, p);
+	const data: SanityPage = await Sanity.fetch(q, p);
 
 	return {
-		page: data[0]
+		page: data
 	};
 };
