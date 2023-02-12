@@ -28,7 +28,7 @@
 			{/await}
 		</div>
 		<div class="mt-8 flex justify-center">
-			<a {href} class="btn btn-filled-primary no-underline"> View Channel </a>
+			<a {href} class="btn variant-filled-primary no-underline"> View Channel </a>
 		</div>
 	</div>
 </section>

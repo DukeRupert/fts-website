@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { Divider } from '@skeletonlabs/skeleton';
 	import { LINKS, COMPANY } from '$lib/constants';
 	import NavItem from '$lib/components/NavItem.svelte';
 	import SocialMedia from '$lib/components/SocialMedia.svelte';
@@ -15,12 +14,12 @@
 			{/each}
 		{/if}
 	</div>
-	<Divider />
+	<hr />
 	<div class="flex justify-center space-x-6 pt-5 pb-6 px-5 border-none">
 		<SocialMedia color="text-evergreen-500" hover="hover:text-evergreen-700" />
 	</div>
 	<div class="flex flex-col mt-6">
-		<a href="/contact-us" class="w-full btn btn-filled-primary" on:click={() => drawerClose()}>
+		<a href="/contact-us" class="w-full btn variant-filled-primary" on:click={() => drawerClose()}>
 			<span
 				><svg
 					class="h-6 w-6"
@@ -40,7 +39,7 @@
 			<span>Contact Us</span>
 		</a>
 		<div class="mt-6">
-			<a href={COMPANY.contact.phone.href} class="w-full btn btn-filled-tertiary">
+			<a href={COMPANY.contact.phone.href} class="w-full btn variant-filled-tertiary">
 				<span
 					><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path

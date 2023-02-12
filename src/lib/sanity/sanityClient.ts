@@ -1,5 +1,6 @@
 import sanityClient from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
+import type { SanityAsset } from '@sanity/image-url/lib/types/types';
 
 const projectId = 'pciykl66';
 const dataset = 'production';
@@ -15,7 +16,7 @@ const Sanity = sanityClient({
 
 const builder = imageUrlBuilder(Sanity);
 
-export const urlFor = (source: string) => {
+export const urlFor = (source: string | SanityAsset) => {
 	return builder.image(source);
 };
 

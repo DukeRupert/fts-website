@@ -1,9 +1,10 @@
-<script>
+<script lang="ts">
 	import SanityImage from '$lib/sanity/SanityImage.svelte';
+	import type { Image } from '$lib/types/sanity';
 
 	export let portableText;
 
-	$: ({ value } = portableText);
+	const value = portableText?.value as Image;
 </script>
 
 {#if value.asset}

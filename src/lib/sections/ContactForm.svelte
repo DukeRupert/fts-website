@@ -219,7 +219,7 @@
 
 	<div class="pt-5">
 		<div class="flex justify-end">
-			<button type="submit" class="btn btn-filled-primary">
+			<button type="submit" class="btn variant-filled-primary">
 				{#if pending}
 					<span class="sr-only">Loading...</span>
 					<span

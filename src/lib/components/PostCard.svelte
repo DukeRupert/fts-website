@@ -6,7 +6,7 @@
 </script>
 
 <article class="group relative border rounded-lg flex flex-col overflow-hidden">
-	<a data-sveltekit-preload-data href="/projects/{post.slug.current}" class="no-underline">
+	<a data-sveltekit-preload-data href="/projects/{post.slug.current}" class="unstyled no-underline">
 		<div class="aspect-w-3 aspect-h-4 bg-gray-200 group-hover:opacity-90 sm:aspect-none sm:h-96">
 			{#if post.mainImage}
 				<MainImage image={post.mainImage} maxWidth={600} />

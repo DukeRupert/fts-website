@@ -73,7 +73,7 @@
 				ad and content network privacy policy.
 			</p>
 			<div class="flex justify-center">
-				<a class="mt-8 btn btn-filled-primary no-underline" href="/">Return Home</a>
+				<a class="mt-8 btn variant-filled-primary no-underline" href="/">Return Home</a>
 			</div>
 		</article>
 	</div>

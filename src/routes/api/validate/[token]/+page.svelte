@@ -35,7 +35,7 @@
 				</div>
 			{/if}
 			<div class="mx-auto mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
-				<a href="/" class="btn btn-filled-primary">Return Home</a>
+				<a href="/" class="btn variant-filled-primary">Return Home</a>
 			</div>
 		</main>
 	</div>

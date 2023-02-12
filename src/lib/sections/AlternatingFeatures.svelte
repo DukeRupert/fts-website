@@ -42,7 +42,10 @@
 							installation.
 						</p>
 						<div class="mt-6">
-							<a href="/services" class="inline-flex btn btn-ringed-primary no-underline">
+							<a
+								href="/services"
+								class="inline-flex btn variant-ringed-primary hover:variant-soft-primary no-underline"
+							>
 								Services
 							</a>
 						</div>
@@ -58,13 +61,6 @@
 						</div>
 						<footer class="mt-3">
 							<div class="flex items-center space-x-3">
-								<!-- <div class="flex-shrink-0">
-									<img
-										class="h-6 w-6 rounded-full"
-										src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-										alt=""
-									/>
-								</div> -->
 								<div class="text-base font-medium text-gray-700">
 									Demetrius S. - Bonney Lake, WA
 								</div>
@@ -122,7 +118,7 @@
 							some of our past excavaction projects to see what we mean.
 						</p>
 						<div class="mt-6">
-							<a href="/projects" class="inline-flex btn btn-ringed-primary no-underline">
+							<a href="/projects" class="inline-flex btn variant-ringed-primary no-underline">
 								Projects
 							</a>
 						</div>

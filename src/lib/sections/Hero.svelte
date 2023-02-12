@@ -30,13 +30,15 @@
 					height={COMPANY.logo.img.height}
 					width={COMPANY.logo.img.width}
 				/>
-				<h1 class="mt-6 max-w-lg mx-auto text-center text-xl lg:text-2xl sm:max-w-3xl text-white">
-					Professional drainage solutions, excavation and site preparation services. Based in
-					Puyallup and proudly serving the Puget Sound & King County.
+				<h1
+					class="unstyled mt-6 max-w-lg mx-auto text-center text-xl lg:text-2xl sm:max-w-3xl text-white"
+				>
+					Professional drainage, excavation and site preparation services. Based in Puyallup and
+					proudly serving the Puget Sound & King County.
 				</h1>
 				<div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
 					<div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-						<a href="/contact-us" class="flex btn btn-filled-primary btn-base">
+						<a href="/contact-us" class="flex btn variant-filled-primary btn-base">
 							<svg
 								class="h-6 w- mr-2"
 								width="24"
@@ -55,7 +57,7 @@
 							>
 							Contact
 						</a>
-						<a href={COMPANY.contact.phone.href} class="flex btn btn-filled-tertiary"
+						<a href={COMPANY.contact.phone.href} class="flex btn variant-filled-tertiary"
 							><svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
 									stroke-linecap="round"

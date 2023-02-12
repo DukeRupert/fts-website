@@ -10,7 +10,7 @@
 <div class="py-24 sm:py-32">
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="text-center">
-			<h1 class="text-base font-semibold text-primary-500 tracking-wide uppercase">
+			<h1 class="unstyled text-base font-semibold text-primary-500 tracking-wide uppercase">
 				{value?.heading}
 			</h1>
 
@@ -57,7 +57,10 @@
 									{item.description}
 								</p>
 								{#if item?.link}
-									<a class="mt-2" href={item.link}>Learn More</a>
+									<a
+										class="unstyled mt-2 btn btn-sm variant-ringed-primary hover:variant-filled-primary"
+										href={item.link}>Learn More</a
+									>
 								{/if}
 							</div>
 						</div>

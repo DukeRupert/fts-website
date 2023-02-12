@@ -37,33 +37,86 @@
 			}
 		}
 	];
+
+	// const links = [
+	// 	{
+	// 		label: 'Services',
+	// 		href: '/services',
+	// 		svg: wrench,
+	// 		subitems: [{ title: 'Drainage', href: '/services/drainage' }]
+	// 	},
+	// 	{
+	// 		label: 'Projects',
+	// 		href: '/projects',
+	// 		svg: star,
+	// 		subitems: []
+	// 	},
+	// 	{ label: 'About', href: '/about-us', svg: heart, subitems: [] },
+	// 	{
+	// 		label: 'Contact',
+	// 		href: '/contact-us',
+	// 		svg: mail,
+	// 		subitems: []
+	// 	},
+	// 	{
+	// 		label: 'Jobs',
+	// 		href: '/jobs',
+	// 		svg: job,
+	// 		subitems: []
+	// 	}
+	// ];
 </script>
 
 <footer>
 	<div
-		class="bg-gray-50 dark:bg-gray-800 max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8"
+		class="bg-gradient-to-r from-primary-500 to-primary-700 max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8"
 	>
 		<nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
-			{#each LINKS as { href, label }}
-				<div class="px-5 py-2">
-					<a {href} class="text-base text-gray-500 hover:text-gray-700"> {label} </a>
-				</div>
-			{/each}
+			<div class="px-5 py-2">
+				<a href="/services" class="unstyled text-on-primary-token capitalize">services</a>
+			</div>
+			<div class="px-5 py-2">
+				<a href="/projects" class="unstyled text-on-primary-token capitalize">projects</a>
+			</div>
+			<div class="px-5 py-2">
+				<a href="/contact-us" class="unstyled text-on-primary-token capitalize">contact us</a>
+			</div>
+			<div class="px-5 py-2">
+				<a href="/jobs" class="unstyled text-on-primary-token capitalize">jobs</a>
+			</div>
+			<div class="px-5 py-2">
+				<a href="/about-us" class="unstyled text-on-primary-token capitalize">about us</a>
+			</div>
 		</nav>
 		<div class="mt-8 flex justify-center space-x-6">
 			<SocialMedia
 				size={{ height: 6, width: 6 }}
-				color="text-gray-500"
+				color="text-on-primary-token"
 				hover="hover:text-gray-600"
 			/>
 		</div>
 		<a
 			href="https://www.google.com/maps/place/FtS-Excavation,+LLC/@47.1761259,-122.2630845,10z/data=!4m5!3m4!1s0x0:0xb896498a4891ace9!8m2!3d47.1761259!4d-122.2630845"
-			class="mt-8 block text-center">12714 151st St E Puyallup, WA 98374</a
+			class="unstyled text-on-primary-token mt-8 flex mx-auto items-center justify-center text-center"
+			><svg
+				class="mr-2 h-6 w-6"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				stroke-width="2"
+				stroke="currentColor"
+				fill="none"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			>
+				<path stroke="none" d="M0 0h24v24H0z" /> <polyline points="5 12 3 12 12 3 21 12 19 12" />
+				<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+				<path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg
+			>12714 151st St E Puyallup, WA 98374</a
 		>
 		<a
 			href={COMPANY.contact.phone.href}
-			class="mt-8 flex mx-auto items-center justify-center text-center"
+			class="unstyled text-on-primary-token mt-8 flex mx-auto items-center justify-center text-center"
 		>
 			<svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path
@@ -76,12 +129,12 @@
 
 			{COMPANY.contact.phone.string}
 		</a>
-		<p class="mt-8 text-center text-base text-gray-500">
+		<p class="mt-8 text-center text-base text-on-primary-token">
 			&copy; 2021 FTS Excavation, LLC. All rights reserved.
 		</p>
-		<a href="https://www.firefly.llc">
-			<p class="mt-8 text-center text-base text-gray-500">
-				Design by <span class="text-blue-600 hover:text-blue-700">Firefly Software</span>
+		<a href="https://www.firefly.llc" class="unstyled text-on-primary-token">
+			<p class="mt-8 text-center">
+				Design by <span class="text-blue-400 hover:text-blue-300">Firefly Software</span>
 			</p>
 		</a>
 	</div>

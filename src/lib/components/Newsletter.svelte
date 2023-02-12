@@ -88,7 +88,7 @@
 					<button
 						type="button"
 						on:click={onFormSubmit}
-						class="mt-3 w-full  sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0 btn btn-filled-tertiary"
+						class="mt-3 w-full  sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0 btn variant-filled-tertiary"
 						>Notify me</button
 					>
 				</form>

@@ -6,6 +6,10 @@
 
 	// Once loaded, the image will transition to full opacity
 	let loaded = false;
+	function onLoad() {
+		loaded = true;
+		console.log(loaded);
+	}
 </script>
 
 {#if image}
@@ -14,7 +18,7 @@
 		loading="lazy"
 		src={urlFor(image.asset.url).width(maxWidth).fit('fillmax').url()}
 		alt={image.alt}
-		style="opacity: {loaded ? 1 : 0}; transition: .5s opacity;"
-		on:load={() => (loaded = true)}
+		style="opacity: {loaded ? 1 : 0}; transition: .3s cubic-bezier(0.11, 0, 0.5, 0) opacity;"
+		on:load={onLoad}
 	/>
 {/if}

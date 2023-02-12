@@ -7,7 +7,7 @@
 </script>
 
 <div class="text-center">
-	<h1 class="text-base font-semibold text-primary-500 tracking-wide uppercase">
+	<h1 class="unstyled text-base font-semibold text-primary-500 tracking-wide uppercase">
 		{value?.heading ?? 'Error'}
 	</h1>
 	<h2 class="mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">

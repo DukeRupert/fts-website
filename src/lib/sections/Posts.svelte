@@ -14,6 +14,6 @@
 </div>
 {#if cta}
 	<div class="mt-8 flex justify-center">
-		<a href="/projects" class="btn btn-filled-primary"> View Projects </a>
+		<a href="/projects" class="btn variant-filled-primary"> View Projects </a>
 	</div>
 {/if}

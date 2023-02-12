@@ -15,7 +15,7 @@
 			>
 		</h2>
 		<div class="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
-			<a href="/contact-us" class="btn btn-filled-primary">
+			<a href="/contact-us" class="btn variant-filled-primary">
 				<svg
 					class="h-6 w- mr-2"
 					width="24"
@@ -32,7 +32,7 @@
 				>
 				Contact
 			</a>
-			<a href={COMPANY.contact.phone.href} class="btn btn-filled-tertiary">
+			<a href={COMPANY.contact.phone.href} class="btn variant-filled-tertiary">
 				<svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path
 						stroke-linecap="round"

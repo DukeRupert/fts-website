@@ -3,14 +3,18 @@
 	import { page } from '$app/stores';
 	import { LINKS, COMPANY } from '$lib/constants';
 	import drawerOpen from '$lib/utils/drawer';
-	import { slide } from 'svelte/transition';
+	// import { slide } from 'svelte/transition';
 
-	let pathname;
+	let pathname: string;
 	$: ({ pathname } = $page.url);
 
-	let banner = false;
-	function handleClick() {
-		banner = false;
+	// let banner = false;
+	// function handleClick() {
+	// 	banner = false;
+	// }
+
+	function openMenu() {
+		drawerOpen({ id: 'navigation' });
 	}
 </script>
 
@@ -57,7 +61,7 @@
 					type="button"
 					class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
 					aria-expanded="false"
-					on:click={() => drawerOpen({ id: 'navigation' })}
+					on:click={openMenu}
 				>
 					<span class="sr-only">Open menu</span>
 					<!-- Heroicon name: outline/menu -->
@@ -80,13 +84,13 @@
 			</div>
 			<nav class="hidden md:flex space-x-10">
 				{#each LINKS as { href, label }}
-					<a {href}>
+					<a {href} class="unstyled no-underline text-lg hover:underline">
 						{label}
 					</a>
 				{/each}
 			</nav>
 			<div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-				<a href={COMPANY.contact.phone.href} class="btn btn-filled-tertiary btn-base">
+				<a href={COMPANY.contact.phone.href} class="btn variant-filled-tertiary btn-base">
 					<span
 						><svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							<path

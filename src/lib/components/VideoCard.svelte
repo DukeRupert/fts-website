@@ -28,7 +28,9 @@
 		</div>
 	</div>
 	<footer>
-		<a href="https://www.youtube.com/watch?v={id}" class="btn btn-outline-primary no-underline mb-4"
+		<a
+			href="https://www.youtube.com/watch?v={id}"
+			class="btn variant-outline-primary hover:variant-filled-primary no-underline mb-4 transition-all duration-300 ease-expo-out"
 			><span>Watch</span><span>></span></a
 		>
 	</footer>
