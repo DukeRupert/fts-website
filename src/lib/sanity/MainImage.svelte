@@ -8,7 +8,6 @@
 	let loaded = false;
 	function onLoad() {
 		loaded = true;
-		console.log(loaded);
 	}
 </script>
 

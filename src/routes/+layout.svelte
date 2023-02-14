@@ -24,13 +24,13 @@
 </svelte:head>
 
 <Modal />
-<AppShell>
-	<svelte:fragment slot="header"><Header /></svelte:fragment>
-	<svelte:fragment slot="sidebarRight"><Drawer /></svelte:fragment>
-	<!-- Router Slot -->
-	<slot />
-	<!-- ---- / ---- -->
-	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
-	<!-- <svelte:fragment slot="footer">Footer</svelte:fragment> -->
-</AppShell>
+<div id="parent" class="parent"><Header /><slot /><Footer /></div>
+<Drawer />
 <Toast />
+
+<style>
+	.parent {
+		display: grid;
+		grid-template-rows: auto 1fr;
+	}
+</style>
