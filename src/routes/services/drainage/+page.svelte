@@ -1,13 +1,18 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import SvelteSeo from 'svelte-seo';
+	import type { InputValue } from '@portabletext/svelte/ptTypes';
 	import { page } from '$app/stores';
+	import { PortableText } from '@portabletext/svelte';
+	import Features from '../Features.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 	import Posts from '$lib/sections/Posts.svelte';
 	import Feature from '$lib/components/Feature.svelte';
 	import Header from '$lib/components/Header.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	export let data: PageData;
+	const { page: pageData, posts } = data;
+	const blocks = pageData?.pageBuilder as InputValue;
 
 	const headerData = {
 		title: 'Drainage',
@@ -50,28 +55,10 @@
 	};
 </script>
 
-<SvelteSeo
-	title="Drainage"
-	description="FtS Excavation are drainage experts capable of solving any excess water problems you may face in the Puget Sound."
-	keywords="excavation land clearing foundations leveling dirt removal residential construction utility installation tacoma puyallup"
-	openGraph={{
-		title: 'Drainage',
-		description: `There is ALWAYS a solution. We have many different techniques to effectively solve your drainage problems.`,
-		url: $page.url.href,
-		type: 'website',
-		images: [
-			{
-				url: `${$page.url.host}/image/drainage.webp`,
-				width: 961,
-				height: 640,
-				alt: 'A white gravel drain installed in a green lawn.'
-			}
-		]
-	}}
-/>
-
+<Seo data={pageData} url={$page.url.toString()} />
 <div class="relative">
-	<Header data={headerData} />
+	<PortableText value={blocks} components={{ types: { features: Features } }} />
+	<!-- <Header data={headerData} />
 	<div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
 		<Feature data={featureData} />
 		<div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
@@ -79,11 +66,9 @@
 				<h2 class="text-3xl font-bold tracking-tight ">Drainage Projects</h2>
 				<p class="mt-4 text-lg ">Check out the results of some of our past drainage projects.</p>
 			</div>
-			<div class="pt-16 pb-32">
-				<Posts posts={data.data} cta={false} />
-			</div>
+		
 
 			<CallToAction />
 		</div>
-	</div>
+	</div> -->
 </div>

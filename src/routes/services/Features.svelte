@@ -67,7 +67,7 @@
 					{:else if item.useIcon && item.icon}
 						<div class="relative pl-9">
 							<dt class="inline font-semibold text-gray-900">
-								<span class="text-primary-500">{@html item.icon.svg}</span>
+								<span class="absolute left-0 text-primary-500">{@html item.icon.svg}</span>
 								<h2>{item.title}</h2>
 							</dt>
 							<dd class="inline">
