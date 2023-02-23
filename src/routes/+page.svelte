@@ -7,7 +7,7 @@
 	import Projects from '$lib/sections/Projects.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 	import ServiceArea from '$lib/sections/ServiceArea.svelte';
-	import Reviews from '$lib/sections/Reviews.svelte';
+	import Reviews from '$lib/components/Reviews/index.svelte';
 	import Videos from '$lib/sections/Videos.svelte';
 	import ModalForm from '$lib/components/ModalForm.svelte';
 	import { modalStore } from '@skeletonlabs/skeleton';
@@ -86,8 +86,8 @@
 
 <Hero />
 <AlternatingFeatures />
-<ServiceArea />
 <Reviews />
+<ServiceArea />
 <Videos />
 <Newsletter />
 <Projects posts={data.data} />

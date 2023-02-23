@@ -6,11 +6,4 @@
 	export let height = '450';
 </script>
 
-<GenericEmbed
-	{width}
-	{height}
-	title="Google map"
-	src={COMPANY.mapEmbed}
-	frameborder="0"
-	SameSite="None"
-/>
+<GenericEmbed {height} title="Google map" src={COMPANY.mapEmbed} frameborder="0" SameSite="None" />

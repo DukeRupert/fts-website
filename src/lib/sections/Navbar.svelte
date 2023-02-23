@@ -40,14 +40,14 @@
 			</div>
 		{/if} -->
 		<div
-			class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8"
+			class="flex justify-between items-center max-w-7xl mx-auto px-4 py-2 sm:px-6 md:justify-start md:space-x-10 lg:px-8"
 		>
 			<div class="flex justify-start lg:w-0 lg:flex-1">
 				<div class="flex justify-start lg:w-0 lg:flex-1">
 					<a href="/">
 						<span class="sr-only">{COMPANY.logo.label}</span>
 						<img
-							class="h-20 w-auto bg-evergreen-500 rounded-md"
+							class="h-16 w-auto bg-evergreen-500 rounded-md"
 							src="/logo/FtS_Logo_Cream.webp"
 							alt="FtS Excavation logo"
 							width="390"

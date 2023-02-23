@@ -38,7 +38,7 @@ specifiers:
   svelte-intersection-observer: ^0.10.0
   svelte-preprocess: ^5.0.0
   svelte-seo: ^1.4.1
-  sveltekit-embed: ^0.0.10
+  sveltekit-embed: ^0.0.12
   tailwindcss: ^3.2.4
   tslib: ^2.4.1
   typescript: ^4.9.4
@@ -86,7 +86,7 @@ devDependencies:
   svelte-intersection-observer: 0.10.0
   svelte-preprocess: 5.0.0_awginupsaj455aehf5x365sh44
   svelte-seo: 1.4.1_typescript@4.9.4
-  sveltekit-embed: 0.0.10
+  sveltekit-embed: 0.0.12
   tailwindcss: 3.2.4_postcss@8.4.21
   tslib: 2.4.1
   typescript: 4.9.4
@@ -3380,8 +3380,8 @@ packages:
     resolution: {integrity: sha512-S+87/P0Ve67HxKkEV23iCdAh/SX1xiSfjF1HOglno/YTbSTW7RniICMCofWGdJJbdjw3S+0PfFb1JtGfTXE0oQ==}
     engines: {node: '>= 8'}
 
-  /sveltekit-embed/0.0.10:
-    resolution: {integrity: sha512-DQa5JYg44bID+cJlk9pr+05PkTj1ownSXo+1sprVYkvet0Jvc8+0F8wb3RCAo0KzzM6REUFUzuKhDZQKoTQYHA==}
+  /sveltekit-embed/0.0.12:
+    resolution: {integrity: sha512-77GiPxkn4ZyF5tcq+YuosYjiFTrjYwA+sOMUiWoN+8sTCM0vJVi9sxHpIHWK6Cvmn0fAeaHagV//2i+tFmELkA==}
     dev: true
 
   /tailwindcss/3.2.4_postcss@8.4.21:
