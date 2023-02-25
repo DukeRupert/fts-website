@@ -28,14 +28,8 @@ export const POST: RequestHandler = async ({ request }) => {
 		);
 	}
 
+	// Generate data to send
 	const { data } = valid;
-	console.log('Insert data into SupaBase');
-	console.log(data);
-	const { error: err } = await Supabase.from('leads').insert(data);
-	if (err) {
-		throw fail(400, { message: JSON.stringify(err.message) });
-	}
-
 	const support_email = 'service@fts-excavation.com';
 	const payload = data?.email ?? 'logan@firefly.llc';
 	const token = jwt.sign(payload, PROMO_SECRET);
@@ -48,8 +42,8 @@ export const POST: RequestHandler = async ({ request }) => {
 		company_name: 'FtS Excavation'
 	};
 
+	// Send confirmation email
 	console.log('Send confirmation email');
-
 	const res = await Postmark.sendEmailWithTemplate({
 		TemplateId: 30415525,
 		TemplateModel: model,
@@ -62,6 +56,14 @@ export const POST: RequestHandler = async ({ request }) => {
 	if (res.ErrorCode !== 0) {
 		console.log(res);
 		throw fail(400, { message: 'Failed to send email' });
+	}
+	console.log('Success');
+
+	// Insert record into Supabase
+	console.log('Insert data into SupaBase');
+	const { error: err } = await Supabase.from('leads').insert(data);
+	if (err) {
+		throw fail(400, { message: JSON.stringify(err.message) });
 	}
 	console.log('Success');
 

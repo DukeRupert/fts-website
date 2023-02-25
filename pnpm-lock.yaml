@@ -6,7 +6,7 @@ specifiers:
   '@portabletext/svelte': ^1.0.1
   '@sanity/client': ^3.4.1
   '@sanity/image-url': ^1.0.1
-  '@skeletonlabs/skeleton': ^0.124.2
+  '@skeletonlabs/skeleton': ^0.132.5
   '@square/svelte-store': ^1.0.13
   '@supabase/supabase-js': ^2.4.0
   '@sveltejs/adapter-auto': 1.0.0-next.90
@@ -60,7 +60,7 @@ dependencies:
 
 devDependencies:
   '@portabletext/svelte': 1.0.1_svelte@3.55.1
-  '@skeletonlabs/skeleton': 0.124.2
+  '@skeletonlabs/skeleton': 0.132.5
   '@sveltejs/adapter-auto': 1.0.0-next.90
   '@sveltejs/adapter-vercel': 1.0.5_oogoraclbppcquiitsbqrelvd4
   '@sveltejs/kit': 1.0.0-next.587_svelte@3.55.1+vite@4.0.4
@@ -501,8 +501,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /@skeletonlabs/skeleton/0.124.2:
-    resolution: {integrity: sha512-SQ0tgXXEj/QJ5BSA+UwKdSMADW5Xt+5iNpks1y94YnX2iwAY80MlffEfip+//VXYayeGvzx4xiU4//MpK9+Zgg==}
+  /@skeletonlabs/skeleton/0.132.5:
+    resolution: {integrity: sha512-xbw/2hWw7/BjIYjEw9fDNG/to9/nML6Lc7m/PPSHG7cP6+pQ5CwvNxAXhErCkIGICuAKXiesYglhw2PrZY6M2A==}
     dependencies:
       svelte: 3.55.1
     dev: true

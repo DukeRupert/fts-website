@@ -84,11 +84,13 @@
 	}}
 />
 
-<Hero />
-<AlternatingFeatures />
-<Reviews />
-<ServiceArea />
-<Videos />
-<Newsletter />
-<Projects posts={data.data} />
-<CallToAction />
+<div class="relative sm:mt-5 md:mt-10">
+	<Hero />
+	<AlternatingFeatures />
+	<Reviews />
+	<ServiceArea />
+	<Videos />
+	<Newsletter />
+	<Projects posts={data.data} />
+	<CallToAction />
+</div>

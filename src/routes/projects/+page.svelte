@@ -34,10 +34,10 @@
 			<h1 class="unstyled text-base font-semibold text-primary-500 tracking-wide uppercase">
 				Projects
 			</h1>
-			<h2 class="mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">
+			<h2 class="unstyled mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">
 				See what we do
 			</h2>
-			<p class="max-w-xl mt-4 mx-auto text-xl">
+			<p class="unstyled max-w-xl mt-4 mx-auto text-xl">
 				We are proud to showcase a few examples of the work we are doing in the Greater Puget Sound
 				region.
 			</p>

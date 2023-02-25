@@ -14,10 +14,10 @@
 				{value?.heading}
 			</h1>
 
-			<h3 class="mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">
+			<h3 class="unstyled mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">
 				{value?.title}
 			</h3>
-			<p class="max-w-xl mt-4 mx-auto text-xl">{value?.tagline}</p>
+			<p class="unstyled max-w-xl mt-4 mx-auto text-xl">{value?.tagline}</p>
 		</div>
 	</div>
 	<div class="relative overflow-hidden pt-16">

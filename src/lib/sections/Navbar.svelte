@@ -19,7 +19,7 @@
 </script>
 
 <header>
-	<div class="relative bg-white">
+	<div class="relative bg-primary-500">
 		<!-- {#if banner}
 			<div transition:slide class="bg-primary-500 h-16 w-full flex justify-center items-center ">
 				<div class="w-full text-center">
@@ -59,7 +59,7 @@
 			<div class="-mr-2 -my-2 md:hidden z-10">
 				<button
 					type="button"
-					class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+					class="bg-primary-500 rounded-md p-2 inline-flex items-center justify-center text-tertiary-500 hover:text-tertiary-600 hover:bg-tertiary-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-tertiary-500"
 					aria-expanded="false"
 					on:click={openMenu}
 				>
@@ -84,13 +84,13 @@
 			</div>
 			<nav class="hidden md:flex space-x-10">
 				{#each LINKS as { href, label }}
-					<a {href} class="unstyled no-underline text-lg hover:underline">
+					<a {href} class="unstyled text-on-primary-token text-lg hover:underline">
 						{label}
 					</a>
 				{/each}
 			</nav>
 			<div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-				<a href={COMPANY.contact.phone.href} class="btn variant-filled-tertiary btn-base">
+				<a href={COMPANY.contact.phone.href} class="btn variant-filled-secondary btn-base">
 					<span
 						><svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							<path

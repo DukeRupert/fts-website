@@ -14,7 +14,7 @@
 				>Let's talk!</span
 			>
 		</h2>
-		<div class="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
+		<div class="mt-6 space-y-4 sm:space-y-0 sm:flex space-x-3 sm:space-x-5 ">
 			<a href="/contact-us" class="btn variant-filled-primary">
 				<svg
 					class="h-6 w- mr-2"
@@ -32,7 +32,7 @@
 				>
 				Contact
 			</a>
-			<a href={COMPANY.contact.phone.href} class="btn variant-filled-tertiary">
+			<a href={COMPANY.contact.phone.href} class="btn variant-filled-secondary">
 				<svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path
 						stroke-linecap="round"

@@ -57,7 +57,7 @@
 							>
 							Contact
 						</a>
-						<a href={COMPANY.contact.phone.href} class="flex btn variant-filled-tertiary"
+						<a href={COMPANY.contact.phone.href} class="flex btn variant-filled-secondary"
 							><svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
 									stroke-linecap="round"

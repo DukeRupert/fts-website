@@ -28,7 +28,7 @@
 </script>
 
 <div class="-m-3 p-3 flex items-center rounded-lg hover:bg-primary-300">
-	<a {href} class="w-full flex items-center">
+	<a {href} class="w-full flex items-center !no-underline">
 		<div
 			class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-primary-500 to-primary-700 text-cream-500"
 		>
@@ -50,8 +50,8 @@
 	<ul aria-labelledby="mobile-featured-heading-0" class="mt-6 pl-4 space-y-6">
 		{#each subitems as { href, title }}
 			<li class="flex">
-				<a {href}>
-					{title}
+				<a {href} class="!no-underline">
+					- {title}
 				</a>
 			</li>
 		{/each}

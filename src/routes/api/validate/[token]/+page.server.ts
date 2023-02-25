@@ -56,8 +56,9 @@ export const load: PageServerLoad = async ({ params }) => {
 		return { success: false, message: 'This email has already been validated.' };
 	}
 
-	// update Supabase record
+	// Generate code
 	const code = generateCode(5);
+	// update Supabase record
 	const { data: record, error: err } = await Supabase.from('leads')
 		.update({
 			verified: true,

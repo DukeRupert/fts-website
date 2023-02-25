@@ -39,7 +39,7 @@
 			<span>Contact Us</span>
 		</a>
 		<div class="mt-6">
-			<a href={COMPANY.contact.phone.href} class="w-full btn variant-filled-tertiary">
+			<a href={COMPANY.contact.phone.href} class="w-full btn variant-filled-secondary">
 				<span
 					><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path

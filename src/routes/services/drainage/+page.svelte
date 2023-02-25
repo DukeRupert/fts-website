@@ -13,6 +13,7 @@
 	export let data: PageData;
 	const { page: pageData, posts } = data;
 	const blocks = pageData?.pageBuilder as InputValue;
+	console.log(blocks);
 
 	const headerData = {
 		title: 'Drainage',

@@ -27,14 +27,18 @@
 	}}
 />
 
-<div class="relative">
+<div class="relative mt-20">
 	<div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
 		<div class="text-center">
-			<h1 class="text-base font-semibold text-primary-500 tracking-wide uppercase">Contact Us</h1>
-			<h2 class="mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">
+			<h1 class="unstyled text-base font-semibold text-primary-500 tracking-wide uppercase">
+				Contact Us
+			</h1>
+			<h2 class="unstyled mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">
 				Let's get started
 			</h2>
-			<p class="max-w-xl mt-4 mx-auto text-xl">No commitment, just a conversation starter.</p>
+			<p class="unstyled max-w-xl mt-4 mx-auto text-xl">
+				No commitment, just a conversation starter.
+			</p>
 		</div>
 		<div
 			class="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8"
