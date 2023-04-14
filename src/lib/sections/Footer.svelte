@@ -87,6 +87,9 @@
 			<div class="px-5 py-2">
 				<a href="/about-us" class="unstyled text-on-primary-token capitalize">about us</a>
 			</div>
+			<div class="px-5 py-2">
+				<a href="/financing" class="unstyled text-on-primary-token capitalize">financing</a>
+			</div>
 		</nav>
 		<div class="mt-8 flex justify-center space-x-6">
 			<SocialMedia

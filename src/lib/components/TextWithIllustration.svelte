@@ -15,9 +15,11 @@
 	</h2>
 	<p class="unstyled max-w-xl mt-4 mx-auto text-xl">{value?.excerpt ?? 'Loading data from cms'}</p>
 </div>
-<SanityImage
-	image={value?.image}
-	alt={value?.image?.alt}
-	class="max-w-md w-full rounded-md mx-auto mt-8 lg:mt-12"
-	maxWidth={610}
-/>
+{#if value?.image}
+	<SanityImage
+		image={value?.image}
+		alt={value?.image?.alt}
+		class="max-w-md w-full rounded-md mx-auto mt-8 lg:mt-12"
+		maxWidth={610}
+	/>
+{/if}

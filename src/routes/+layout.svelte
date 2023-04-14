@@ -4,6 +4,7 @@
 	import '../theme.postcss';
 	import '../app.postcss';
 	import { AppShell, Modal, Toast } from '@skeletonlabs/skeleton';
+	import Banner from '$lib/components/Banner.svelte';
 	import Header from '$lib/sections/Navbar.svelte';
 	import Footer from '$lib/sections/Footer.svelte';
 	import Drawer from '$lib/components/Drawer.svelte';
@@ -12,6 +13,12 @@
 
 	$: if ($navigating === null) {
 		drawerClose();
+	}
+
+	let is_banner_visible = true;
+
+	function hide_banner() {
+		is_banner_visible = false;
 	}
 </script>
 
@@ -24,6 +31,7 @@
 </svelte:head>
 
 <Modal />
+<Banner on:click={hide_banner} {is_banner_visible} />
 <div id="parent" class="parent"><Header /><slot /><Footer /></div>
 <Drawer />
 <Toast />
