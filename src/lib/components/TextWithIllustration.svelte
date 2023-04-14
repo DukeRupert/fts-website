@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SanityImage from '$lib/sanity/SanityImage.svelte';
 	import type { CustomBlockComponentProps } from '@portabletext/svelte';
-	import type { TextWithIllustration } from './types';
+	import type { TextWithIllustration } from './TextWithIllustration';
 	export let portableText: CustomBlockComponentProps<TextWithIllustration>;
 	const { value } = portableText;
 </script>

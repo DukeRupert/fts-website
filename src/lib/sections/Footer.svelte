@@ -21,6 +21,14 @@
 			}
 		},
 		{
+			name: 'Master builders association member',
+			href: 'https://mbamemberzone.tacomawebsite.net/list/member/fts-excavation-4695',
+			img: {
+				src: '/image/Proud-Member-Badge-Web.png',
+				alt: 'Proud member badge of the Master builders association'
+			}
+		},
+		{
 			name: 'Generous Network',
 			href: 'https://countercultureleaders.com/generous-network',
 			img: {
