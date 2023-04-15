@@ -64,6 +64,46 @@
 	});
 </script>
 
+<svelte:head>
+	<script type="application/ld+json">
+{
+	"@context": "http://schema.org/",
+	"@type": "LocalBusiness",
+	"name": "FtS Excavation",
+	"image": "https://cdn.sanity.io/images/pciykl66/production/7f2eb7913226d6fe2576964d215ff9bc3f90913f-2988x1992.webp?w=1200&h=800&fm=webp",
+	"telephone": "+12534398003",
+	"url": "https://www.fts-excavation.com/",
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "12714 151ST ST E",
+		"addressLocality": "Puyallup",
+		"addressRegion": "WA",
+		"postalCode": "98374",
+		"addressCountry": "United States"
+	},
+	"review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Henny Baker"
+        },
+	"openingHoursSpecification": [
+		{
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+			"opens": "07:00",
+			"closes": "18:00"
+		}
+	]
+}
+	</script>
+</svelte:head>
+
 <SvelteSeo
 	title="FtS Excavation - Puyallup's excavation experts"
 	description="Professional excavators serving both residential and commercial clients. Services include drainage, site preparation and land development. Serving the greater Puget Sound region."
