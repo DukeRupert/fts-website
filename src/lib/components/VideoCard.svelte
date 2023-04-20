@@ -15,6 +15,7 @@
 			width={thumbnail.width}
 			class="bg-black/50 w-full aspect-[4/3]"
 			alt="Post"
+			loading="lazy"
 		/>
 	</header>
 	<div class="p-4">

@@ -10,6 +10,8 @@
 			src: string;
 			alt: string;
 		};
+		height: number;
+		width: number;
 	}
 	const affiliations: Affiliate[] = [
 		{
@@ -18,7 +20,9 @@
 			img: {
 				src: '/image/PSChamberLogo_2016_Square.webp',
 				alt: 'Puyallup / Sumner Chamber of Commerce logo'
-			}
+			},
+			height: 112,
+			width: 112
 		},
 		{
 			name: 'Master builders association member',
@@ -26,7 +30,9 @@
 			img: {
 				src: '/image/Proud-Member-Badge-Web.png',
 				alt: 'Proud member badge of the Master builders association'
-			}
+			},
+			height: 112,
+			width: 112
 		},
 		{
 			name: 'Generous Network',
@@ -34,7 +40,9 @@
 			img: {
 				src: '/image/GenerousNetwork.png',
 				alt: 'Generous Network logo'
-			}
+			},
+			height: 112,
+			width: 112
 		},
 		{
 			name: 'Tacoma/Pierce County Association of REALTORS',
@@ -42,37 +50,11 @@
 			img: {
 				src: '/image/TPCAR_affiliate_logo_2023_01.png',
 				alt: 'Tacoma/Pierce County Association of REALTORS logo'
-			}
+			},
+			height: 112,
+			width: 224
 		}
 	];
-
-	// const links = [
-	// 	{
-	// 		label: 'Services',
-	// 		href: '/services',
-	// 		svg: wrench,
-	// 		subitems: [{ title: 'Drainage', href: '/services/drainage' }]
-	// 	},
-	// 	{
-	// 		label: 'Projects',
-	// 		href: '/projects',
-	// 		svg: star,
-	// 		subitems: []
-	// 	},
-	// 	{ label: 'About', href: '/about-us', svg: heart, subitems: [] },
-	// 	{
-	// 		label: 'Contact',
-	// 		href: '/contact-us',
-	// 		svg: mail,
-	// 		subitems: []
-	// 	},
-	// 	{
-	// 		label: 'Jobs',
-	// 		href: '/jobs',
-	// 		svg: job,
-	// 		subitems: []
-	// 	}
-	// ];
 </script>
 
 <footer>
@@ -152,9 +134,9 @@
 	<div class="bg-white dark:bg-gray-900 mx-auto max-w-7xl py-12 px-6 lg:py-16 lg:px-8">
 		<p class="text-center text-lg font-semibold text-gray-600">A proud member of</p>
 		<div class="mt-6 grid grid-cols-1 gap-0.5 md:grid-cols-2 lg:grid-cols-3 lg:mt-8">
-			{#each affiliations as { name, href, img }}
+			{#each affiliations as { name, href, img, height, width }}
 				<div class="col-span-1 flex justify-center bg-white-50 py-8 px-8">
-					<a {href}> <img class="max-h-28" src={img.src} alt={img.alt} /></a>
+					<a {href}> <img class="max-h-28" {height} {width} src={img.src} alt={img.alt} /></a>
 				</div>
 			{/each}
 		</div>
