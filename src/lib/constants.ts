@@ -89,7 +89,10 @@ export const LINKS = [
 		label: 'Services',
 		href: '/services',
 		svg: wrench,
-		subitems: [{ title: 'Drainage', href: '/services/drainage' }]
+		subitems: [
+			{ title: 'Drainage', href: '/services/drainage' },
+			{ title: 'Site preparation', href: '/services/site-preparation' }
+		]
 	},
 	{
 		label: 'Projects',
