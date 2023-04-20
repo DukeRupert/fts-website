@@ -12,7 +12,10 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		prerender: {
+			entries: ['*', '/services/drainage', '/services/site-preparation']
+		}
 	}
 };
 
