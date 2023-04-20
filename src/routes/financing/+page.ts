@@ -2,9 +2,10 @@ import type { PageLoad } from './$types';
 import type { SanityPage } from '$lib/types/sanity';
 import Sanity from '$lib/sanity/sanityClient';
 
+export const prerender = true;
+
 export const load: PageLoad = async ({ url }) => {
 	const { pathname } = url;
-	console.log(`Pathname : ${pathname}`);
 
 	// Get page data from Sanity
 	const q = `*[_type == "page" && path == $pathname][0]

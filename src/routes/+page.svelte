@@ -34,12 +34,6 @@
 		modalStore.trigger(d);
 	}
 
-	// Check URL for tradeshow and trigger leads modal
-	const promo = $page.url.searchParams.get('promo');
-	$: if (promo && promo === 'tradeshow') {
-		triggerCustomModal();
-	}
-
 	// Trigger leads modal if
 	// user is new & scroll > 300 & trigger hasn't fired already
 	let main: HTMLElement | null;
@@ -57,6 +51,11 @@
 	onMount(() => {
 		main = document.getElementById('page');
 		main?.addEventListener('scroll', scrollHandler);
+		// Check URL for tradeshow and trigger leads modal
+		const promo = $page.url.searchParams.get('promo');
+		if (promo && promo === 'tradeshow') {
+			triggerCustomModal();
+		}
 	});
 
 	onDestroy(() => {

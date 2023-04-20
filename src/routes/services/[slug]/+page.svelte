@@ -5,9 +5,6 @@
 	import { PortableText } from '@portabletext/svelte';
 	import Features from '../Features.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
-	import Posts from '$lib/sections/Posts.svelte';
-	import Feature from '$lib/components/Feature.svelte';
-	import Header from '$lib/components/Header.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 
 	export let data: PageData;
