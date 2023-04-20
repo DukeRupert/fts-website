@@ -2,7 +2,9 @@ import type { PageLoad } from './$types';
 import type { Post } from '$lib/types/sanity';
 import Sanity from '$lib/sanity/sanityClient';
 
-export const load: PageLoad = async ({ params }) => {
+export const prerender = true;
+
+export const load: PageLoad = async () => {
 	const filter = '*[_type == "post" && publishedAt < now()] | order(publishedAt desc) [0..2]';
 	const projection = `
 		{ 

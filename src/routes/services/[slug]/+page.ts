@@ -7,7 +7,6 @@ export const prerender = true;
 
 export const load: PageLoad = async ({ url, params }) => {
 	const { slug } = params;
-	console.log(`Slug : ${slug}`);
 	const pathname = `/services/${slug}`;
 
 	// Get page data from Sanity
