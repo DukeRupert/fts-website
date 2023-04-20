@@ -266,7 +266,9 @@
 			<fieldset class="mt-6">
 				<div>
 					<legend class="text-base font-medium text-gray-900"> Work History </legend>
-					<p class="text-sm text-gray-500">Please list your prior work experience.</p>
+					<p class="text-sm text-gray-500">
+						Please provide the last 5 years of your work experience.
+					</p>
 				</div>
 				{#each jobs as job, index}
 					<div class="mt-4 space-y-4">
