@@ -28,7 +28,7 @@
 			name: 'Master builders association member',
 			href: 'https://mbamemberzone.tacomawebsite.net/list/member/fts-excavation-4695',
 			img: {
-				src: '/image/Proud-Member-Badge-Web.png',
+				src: '/image/Proud-Member-Badge-Web.webp',
 				alt: 'Proud member badge of the Master builders association'
 			},
 			height: 112,
@@ -38,7 +38,7 @@
 			name: 'Generous Network',
 			href: 'https://countercultureleaders.com/generous-network',
 			img: {
-				src: '/image/GenerousNetwork.png',
+				src: '/image/GenerousNetwork.webp',
 				alt: 'Generous Network logo'
 			},
 			height: 112,
@@ -48,7 +48,7 @@
 			name: 'Tacoma/Pierce County Association of REALTORS',
 			href: 'https://www.tpcar.org/',
 			img: {
-				src: '/image/TPCAR_affiliate_logo_2023_01.png',
+				src: '/image/TPCAR_affiliate_logo_2023_01.webp',
 				alt: 'Tacoma/Pierce County Association of REALTORS logo'
 			},
 			height: 112,
@@ -136,7 +136,7 @@
 		<div class="mt-6 grid grid-cols-1 gap-0.5 md:grid-cols-2 lg:grid-cols-3 lg:mt-8">
 			{#each affiliations as { name, href, img, height, width }}
 				<div class="col-span-1 flex justify-center bg-white-50 py-8 px-8">
-					<a {href}> <img class="max-h-28" {height} {width} src={img.src} alt={img.alt} /></a>
+					<a {href}> <img class="h-28" {height} {width} src={img.src} alt={img.alt} /></a>
 				</div>
 			{/each}
 		</div>
