@@ -5,6 +5,7 @@ import { error } from '@sveltejs/kit';
 
 export const load: PageLoad = async ({ params, fetch }) => {
 	const { slug } = params ?? '';
+	console.log(slug);
 	const filter = `*[_type == "post" && slug.current == "${slug}"][0]`;
 	const projection = `{
                         ...,

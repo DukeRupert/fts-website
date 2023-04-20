@@ -3,9 +3,10 @@ import type { Post } from '$lib/types/sanity';
 import Sanity from '$lib/sanity/sanityClient';
 import type { SanityPage } from '$lib/types/sanity';
 
-export const load: PageLoad = async ({ url }) => {
-	const { pathname } = url;
-	console.log(`Pathname : ${pathname}`);
+export const load: PageLoad = async ({ url, params }) => {
+	const { slug } = params;
+	console.log(`Slug : ${slug}`);
+	const pathname = `/services/${slug}`;
 
 	// Get page data from Sanity
 	const q = `*[_type == "page" && path == $pathname][0]
