@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { urlFor } from './sanityClient';
 	import type { Image } from '../types/sanity';
+	import { onMount } from 'svelte';
 	export let image: Image;
 	export let maxWidth = 1200;
 	export let alt = '';
@@ -23,6 +24,11 @@
 		loaded = true;
 		console.log(loaded);
 	}
+
+	onMount(() => {
+		// Fallback if load event doesn't fire
+		setTimeout(() => (loaded = true), 250);
+	});
 </script>
 
 {#if image}
