@@ -14,7 +14,7 @@
 	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
 	import { onMount, onDestroy } from 'svelte';
 	import Newsletter from '$lib/components/Newsletter.svelte';
-
+	import Instagram from './Instagram.svelte';
 	export let data: PageData;
 
 	// Trigger leads modal
@@ -127,6 +127,7 @@
 <div class="relative sm:mt-5 md:mt-10">
 	<Hero />
 	<AlternatingFeatures />
+	<Instagram />
 	<Reviews />
 	<ServiceArea />
 	<Videos />
