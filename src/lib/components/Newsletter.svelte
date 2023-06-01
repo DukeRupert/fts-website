@@ -44,7 +44,7 @@
 </script>
 
 <div>
-	<div class="mx-auto max-w-7xl py-12 px-6 lg:py-16 lg:px-8">
+	<div class="mx-auto max-w-7xl">
 		<div
 			class="rounded-lg bg-gradient-to-r from-primary-500 to-primary-700 px-6 py-6 md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center"
 		>
@@ -88,7 +88,7 @@
 					<button
 						type="button"
 						on:click={onFormSubmit}
-						class="mt-3 w-full  sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0 btn variant-filled-secondary"
+						class="mt-3 w-full sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0 btn variant-filled-secondary"
 						>Notify me</button
 					>
 				</form>
