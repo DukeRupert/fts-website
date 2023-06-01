@@ -8,13 +8,13 @@
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 	import ServiceArea from '$lib/sections/ServiceArea.svelte';
 	import Reviews from '$lib/components/Reviews/index.svelte';
-	import Videos from '$lib/sections/Videos.svelte';
 	import ModalForm from '$lib/components/ModalForm.svelte';
 	import { modalStore } from '@skeletonlabs/skeleton';
 	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
 	import { onMount, onDestroy } from 'svelte';
 	import Newsletter from '$lib/components/Newsletter.svelte';
 	import Instagram from './Instagram.svelte';
+	import Section from '$lib/components/Section.svelte';
 	export let data: PageData;
 
 	// Trigger leads modal
@@ -127,11 +127,18 @@
 <div class="relative sm:mt-5 md:mt-10">
 	<Hero />
 	<AlternatingFeatures />
-	<Instagram />
-	<Reviews />
-	<ServiceArea />
-	<Videos />
-	<Newsletter />
-	<Projects posts={data.data} />
+	<Section id="instagram-feed">
+		<Instagram />
+	</Section>
+	<Section id="reviews">
+		<Reviews />
+	</Section>
+	<Section id="service-area">
+		<ServiceArea />
+	</Section>
+	<Section id="newsletter"><Newsletter /></Section>
+	<Section id="projects">
+		<Projects posts={data.data} />
+	</Section>
 	<CallToAction />
 </div>
