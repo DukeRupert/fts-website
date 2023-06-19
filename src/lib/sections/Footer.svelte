@@ -90,7 +90,7 @@
 		</div>
 		<a
 			href="https://www.google.com/maps/place/FtS-Excavation,+LLC/@47.1761259,-122.2630845,10z/data=!4m5!3m4!1s0x0:0xb896498a4891ace9!8m2!3d47.1761259!4d-122.2630845"
-			class="unstyled text-on-primary-token mt-8 flex mx-auto items-center justify-center text-center"
+			class="hidden unstyled text-on-primary-token mt-8 flex mx-auto items-center justify-center text-center"
 			><svg
 				class="mr-2 h-6 w-6"
 				width="24"
