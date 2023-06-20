@@ -15,6 +15,7 @@
 	import Newsletter from '$lib/components/Newsletter.svelte';
 	import Instagram from './Instagram.svelte';
 	import Section from '$lib/components/Section.svelte';
+	import LogoCloud from '$lib/components/LogoCloud/LogoCloud.svelte';
 	export let data: PageData;
 
 	// Trigger leads modal
@@ -130,8 +131,12 @@
 	<Section id="instagram-feed">
 		<Instagram />
 	</Section>
+
 	<Section id="reviews">
 		<Reviews />
+	</Section>
+	<Section id="logo-cloud">
+		<LogoCloud />
 	</Section>
 	<Section id="service-area">
 		<ServiceArea />
