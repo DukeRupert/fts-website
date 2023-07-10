@@ -3,9 +3,10 @@
 	import '@skeletonlabs/skeleton/styles/all.css';
 	import '../theme.postcss';
 	import '../app.postcss';
-	import { AppShell, Modal, Toast } from '@skeletonlabs/skeleton';
+	import { Modal, Toast } from '@skeletonlabs/skeleton';
+
 	import Banner from '$lib/components/Banner.svelte';
-	import Header from '$lib/sections/Navbar.svelte';
+	import Header from '$lib/components/Navigation/Header.svelte';
 	import Footer from '$lib/sections/Footer.svelte';
 	import Drawer from '$lib/components/Drawer.svelte';
 	import { navigating } from '$app/stores';
@@ -31,14 +32,7 @@
 </svelte:head>
 
 <Modal />
-<Banner on:click={hide_banner} {is_banner_visible} />
-<div id="parent" class="parent"><Header /><slot /><Footer /></div>
+<!-- <Banner on:click={hide_banner} {is_banner_visible} /> -->
+<div class="bg-white"><Header /><slot /><Footer /></div>
 <Drawer />
 <Toast />
-
-<style>
-	.parent {
-		display: grid;
-		grid-template-rows: auto 1fr;
-	}
-</style>

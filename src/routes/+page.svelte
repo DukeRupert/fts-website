@@ -3,7 +3,7 @@
 	import type { PageData } from './$types';
 	import SvelteSeo from 'svelte-seo';
 	import AlternatingFeatures from '$lib/sections/AlternatingFeatures.svelte';
-	import Hero from '$lib/sections/Hero.svelte';
+	import Hero from '$lib/components/Hero/AngledRight.svelte';
 	import Projects from '$lib/sections/Projects.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 	import ServiceArea from '$lib/sections/ServiceArea.svelte';
@@ -171,25 +171,23 @@
 	}}
 />
 
-<div class="relative sm:mt-5 md:mt-10">
-	<Hero />
-	<AlternatingFeatures />
-	<Section id="instagram-feed">
+<Hero />
+<AlternatingFeatures />
+<!-- <Section id="instagram-feed">
 		<Instagram />
-	</Section>
+	</Section> -->
 
-	<Section id="reviews">
-		<Reviews />
-	</Section>
-	<Section id="logo-cloud">
-		<LogoCloud />
-	</Section>
-	<Section id="service-area">
-		<ServiceArea />
-	</Section>
-	<Section id="newsletter"><Newsletter /></Section>
-	<Section id="projects">
+<Section id="reviews">
+	<Reviews />
+</Section>
+<Section id="logo-cloud">
+	<LogoCloud />
+</Section>
+<Section id="service-area">
+	<ServiceArea />
+</Section>
+<Section id="newsletter"><Newsletter /></Section>
+<!-- <Section id="projects">
 		<Projects posts={data.data} />
-	</Section>
-	<CallToAction />
-</div>
+	</Section> -->
+<CallToAction />
