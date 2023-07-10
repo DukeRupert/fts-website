@@ -4,6 +4,7 @@
 	import SvelteSeo from 'svelte-seo';
 	import AlternatingFeatures from '$lib/sections/AlternatingFeatures.svelte';
 	import Hero from '$lib/components/Hero/AngledRight.svelte';
+	import Services from '$lib/components/Services/3Column.svelte';
 	import Projects from '$lib/sections/Projects.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 	import ServiceArea from '$lib/sections/ServiceArea.svelte';
@@ -172,7 +173,8 @@
 />
 
 <Hero />
-<AlternatingFeatures />
+<Services />
+<!-- <AlternatingFeatures /> -->
 <!-- <Section id="instagram-feed">
 		<Instagram />
 	</Section> -->

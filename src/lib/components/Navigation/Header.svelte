@@ -115,7 +115,7 @@
 									</svg>
 								</div>
 								<div class="flex-auto">
-									<a href="#" class="block font-semibold text-gray-900">
+									<a href="/services/site-development" class="block font-semibold text-gray-900">
 										Site development
 										<span class="absolute inset-0" />
 									</a>
@@ -145,7 +145,7 @@
 									</svg>
 								</div>
 								<div class="flex-auto">
-									<a href="#" class="block font-semibold text-gray-900">
+									<a href="/services/hardscape" class="block font-semibold text-gray-900">
 										Hardscape
 										<span class="absolute inset-0" />
 									</a>
@@ -173,7 +173,7 @@
 									</svg>
 								</div>
 								<div class="flex-auto">
-									<a href="#" class="block font-semibold text-gray-900">
+									<a href="/services/drainage" class="block font-semibold text-gray-900">
 										Drainage
 										<span class="absolute inset-0" />
 									</a>
