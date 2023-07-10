@@ -1,4 +1,5 @@
 <script>
+	import fts_logo from '$lib/assets/logo/FtS_Excavation_logo_green_white.png?run&width=80&format=webp;avif;jpg';
 	import fts_excavation_land_clearing from '$lib/assets/images/FtS-Excavation_5.webp?run';
 	import Img from '@zerodevx/svelte-img';
 
@@ -11,15 +12,6 @@
 <div class="relative">
 	<div class="mx-auto max-w-7xl">
 		<div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
-			<svg
-				class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-white lg:block"
-				viewBox="0 0 100 100"
-				preserveAspectRatio="none"
-				aria-hidden="true"
-			>
-				<polygon points="0,0 90,0 50,100 0,100" />
-			</svg>
-
 			<div class="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
 				<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
 					<div class="hidden sm:mb-10 sm:flex">
@@ -36,7 +28,7 @@
 					</div>
 					<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
 						<span
-							class="bg-clip-text text-transparent box-decoration-clone bg-gradient-to-br from-primary-700 via-primary-500 to-secondary-500"
+							class="bg-clip-text text-transparent box-decoration-clone bg-gradient-to-br from-secondary-300 via-secondary-500 to-secondary-900"
 							>{name}</span
 						> <br />
 						{title}
