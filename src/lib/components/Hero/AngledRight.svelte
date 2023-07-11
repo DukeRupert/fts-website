@@ -32,7 +32,7 @@
 						> <br />
 						{title}
 					</h1>
-					<p class="mt-6 text-lg leading-8 text-gray-600">
+					<p class="mt-6 max-w-lg text-lg leading-8 text-gray-600">
 						{description}
 					</p>
 					<div class="mt-10 flex items-center gap-x-6">

@@ -60,7 +60,7 @@
 				<span class="sr-only">FtS Excavation</span>
 				<Img class="h-16 w-16 rounded-sm" src={fts_logo} alt="FtS Excavation logo" />
 			</a>
-			<div class="hidden lg:flex lg:gap-x-12">
+			<div class="hidden lg:flex lg:gap-x-8">
 				<div class="relative">
 					<button
 						type="button"
@@ -119,7 +119,7 @@
 										Site development
 										<span class="absolute inset-0" />
 									</a>
-									<p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
+									<p class="mt-1 text-gray-600">Both commercial and residential</p>
 								</div>
 							</div>
 							<div
@@ -149,7 +149,7 @@
 										Hardscape
 										<span class="absolute inset-0" />
 									</a>
-									<p class="mt-1 text-gray-600">Speak directly to your customers</p>
+									<p class="mt-1 text-gray-600">Transform your property today</p>
 								</div>
 							</div>
 							<div
@@ -177,14 +177,14 @@
 										Drainage
 										<span class="absolute inset-0" />
 									</a>
-									<p class="mt-1 text-gray-600">Your customers’ data will be safe and secure</p>
+									<p class="mt-1 text-gray-600">Repair or prevent erosion</p>
 								</div>
 							</div>
 						</div>
 						<div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
 							<a
 								href="/contact-us"
-								class="unstyled flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+								class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
 							>
 								<svg
 									class="h-5 w-5 flex-none text-gray-400"
