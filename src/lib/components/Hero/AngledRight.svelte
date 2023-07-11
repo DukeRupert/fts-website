@@ -1,5 +1,4 @@
 <script>
-	import fts_logo from '$lib/assets/logo/FtS_Excavation_logo_green_white.png?run&width=80&format=webp;avif;jpg';
 	import fts_excavation_land_clearing from '$lib/assets/images/FtS-Excavation_5.webp?run';
 	import Img from '@zerodevx/svelte-img';
 
@@ -9,7 +8,7 @@
 		'Skilled professionals, advanced equipment, and reliable service. Residential, commercial, and industrial excavation. Contact us for a free consultation.';
 </script>
 
-<div class="relative">
+<div id="hero" class="relative">
 	<div class="mx-auto max-w-7xl">
 		<div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
 			<div class="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
