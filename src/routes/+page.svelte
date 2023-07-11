@@ -17,6 +17,7 @@
 	import Instagram from './Instagram.svelte';
 	import Section from '$lib/components/Section.svelte';
 	import LogoCloud from '$lib/components/LogoCloud/LogoCloud.svelte';
+	import TestimonialGrid from '$lib/components/TestimonialGrid/TestimonialGrid.svelte';
 	export let data: PageData;
 
 	// Trigger leads modal
@@ -178,10 +179,10 @@
 <!-- <Section id="instagram-feed">
 		<Instagram />
 	</Section> -->
-
-<Section id="reviews">
+<TestimonialGrid />
+<!-- <Section id="reviews">
 	<Reviews />
-</Section>
+</Section> -->
 <Section id="logo-cloud">
 	<LogoCloud />
 </Section>

@@ -5,7 +5,7 @@
 <div id="services" class="bg-white py-24 sm:py-32">
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="mx-auto max-w-2xl lg:text-center">
-			<h2 class="text-base font-semibold leading-7 text-secondary-500">Our Services</h2>
+			<h2 class="text-base font-semibold leading-7 text-primary-600">Our Services</h2>
 			<p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
 				Precision + Integrity. We pride ourselves on the excellence of our work.
 			</p>
@@ -73,8 +73,7 @@
 						<p class="flex-auto">
 							Transform your outdoor space into a captivating oasis with our exceptional hardscape
 							services. Our skilled team combines artistry and functionality to craft stunning
-							landscapes that elevate your property's aesthetics and leave a lasting impression on
-							anyone who sets foot in it.
+							landscapes that leave a lasting impression on anyone who sets foot in it.
 						</p>
 						<p class="mt-6">
 							<a
@@ -104,10 +103,9 @@
 					</dt>
 					<dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
 						<p class="flex-auto">
-							Say goodbye to water woes and protect your property with our top-notch drainage
-							services. Our team of experts designs and implements tailored drainage solutions that
-							effectively channel water away, preventing costly damage and ensuring a dry and stable
-							environment for your property to thrive.
+							Protect your property with our top-notch drainage services. Our team of experts
+							designs and implements tailored drainage solutions that effectively channel water
+							away, preventing costly damage and ensuring a dry and stable environment.
 						</p>
 						<p class="mt-6">
 							<a
