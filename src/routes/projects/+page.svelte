@@ -29,7 +29,7 @@
 />
 
 <div class="relative">
-	<div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+	<div class="max-w-7xl mx-auto py-16 px-4 sm:py-32 sm:px-6 lg:px-8">
 		<div class="text-center">
 			<h1 class="unstyled text-base font-semibold text-primary-500 tracking-wide uppercase">
 				Projects

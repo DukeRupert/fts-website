@@ -7,6 +7,7 @@ export const load: PageLoad = async () => {
 	const projection = `
 		{ 
 			...,
+			categories[]->{...},
 			mainImage{..., asset->},
 	  	}`;
 	const query = filter + projection;

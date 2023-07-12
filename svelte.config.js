@@ -14,7 +14,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		prerender: {
-			entries: ['*', '/services/drainage', '/services/site-preparation'],
+			entries: ['*'],
 			handleMissingId: 'warn'
 		}
 	}

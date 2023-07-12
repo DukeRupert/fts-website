@@ -11,10 +11,7 @@
 	} from 'svelte/transition';
 	import { quadOut, quadIn } from 'svelte/easing';
 	import { COMPANY } from '$lib/constants';
-
-	let is_open = false;
-	let is_services_open = false;
-	let is_mobile_services_open = false;
+	import { is_open, is_services_open, is_mobile_services_open } from '$lib/stores';
 
 	const fade_in: FadeParams = {
 		delay: 0,
@@ -51,6 +48,8 @@
 		duration: 150,
 		easing: quadIn
 	};
+
+	console.log($is_open);
 </script>
 
 <header class="absolute inset-x-0 top-0 z-50">
@@ -64,13 +63,13 @@
 				<div class="relative">
 					<button
 						type="button"
-						on:click={() => (is_services_open = !is_services_open)}
+						on:click={() => ($is_services_open = !$is_services_open)}
 						class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
 						aria-expanded="false"
 					>
 						Product
 						<svg
-							class="h-5 w-5 flex-none text-gray-400 transform {is_services_open
+							class="h-5 w-5 flex-none text-gray-400 transform {$is_services_open
 								? 'ease-out duration-200 rotate-180'
 								: 'ease-in duration-150 rotate-0'}"
 							viewBox="0 0 20 20"
@@ -87,7 +86,7 @@
 
 					<!-- 'Product' flyout menu, show/hide based on flyout menu state. -->
 					<div
-						class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition {is_services_open
+						class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition {$is_services_open
 							? 'ease-out duration-200 opacity-100 translate-y-0'
 							: 'ease-in duration-150 opacity-0 translate-y-1'}"
 					>
@@ -115,8 +114,8 @@
 									</svg>
 								</div>
 								<div class="flex-auto">
-									<a href="/services/site-development" class="block font-semibold text-gray-900">
-										Site development
+									<a href="/services/site-preparation" class="block font-semibold text-gray-900">
+										Site preparation
 										<span class="absolute inset-0" />
 									</a>
 									<p class="mt-1 text-gray-600">Both commercial and residential</p>
@@ -241,7 +240,7 @@
 		<div class="flex lg:hidden">
 			<button
 				type="button"
-				on:click={() => (is_open = true)}
+				on:click={() => ($is_open = true)}
 				class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
 			>
 				<span class="sr-only">Open main menu</span>
@@ -263,7 +262,7 @@
 		</div>
 	</nav>
 	<!-- Mobile menu, show/hide based on menu open state. -->
-	{#if is_open}
+	{#if $is_open}
 		<div class="lg:hidden" role="dialog" aria-modal="true">
 			<!-- Background backdrop, show/hide based on slide-over state. -->
 			<div in:fade={fade_in} out:fade={fade_out} class="fixed inset-0 z-10 bg-gray-900/25" />
@@ -278,7 +277,7 @@
 						<Img class="h-16 w-16 rounded-sm" src={fts_logo} alt="FtS Excavation logo" />
 					</a>
 					<button
-						on:click={() => (is_open = false)}
+						on:click={() => ($is_open = false)}
 						type="button"
 						class="-m-2.5 rounded-md p-2.5 text-gray-700"
 					>
@@ -301,7 +300,7 @@
 							<div class="-mx-3">
 								<button
 									type="button"
-									on:click={() => (is_mobile_services_open = !is_mobile_services_open)}
+									on:click={() => ($is_mobile_services_open = !$is_mobile_services_open)}
 									class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
 									aria-controls="disclosure-1"
 									aria-expanded="false"
@@ -309,7 +308,7 @@
 									Services
 									<!-- Expand/collapse icon, toggle classes based on menu open state. -->
 									<svg
-										class="h-5 w-5 flex-none transform {is_services_open
+										class="h-5 w-5 flex-none transform {$is_mobile_services_open
 											? 'ease-out duration-200 rotate-180'
 											: 'ease-in duration-150 rotate-0'}"
 										viewBox="0 0 20 20"
@@ -324,7 +323,7 @@
 									</svg>
 								</button>
 								<!-- 'Product' sub-menu, show/hide based on menu state. -->
-								{#if is_mobile_services_open}
+								{#if $is_mobile_services_open}
 									<div
 										in:slide={slide_in}
 										out:slide={slide_out}
@@ -332,9 +331,9 @@
 										id="disclosure-1"
 									>
 										<a
-											href="/services/site-development"
+											href="/services/site-preparation"
 											class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:underline"
-											>Site development</a
+											>Site preparation</a
 										>
 										<a
 											href="/services/hardscape"

@@ -5,7 +5,7 @@
 	import { PortableText } from '@portabletext/svelte';
 	import Features from '../Features.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
-	import Seo from '$lib/components/Seo.svelte';
+	import Seo from 'svelte-seo';
 
 	export let data: PageData;
 	const { page: pageData, posts } = data;

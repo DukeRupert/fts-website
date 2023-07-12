@@ -20,15 +20,13 @@ export const load: PageLoad = async ({ params, fetch }) => {
                       }`;
 	const query = filter + projection;
 
-	try {
-		const post: Post = await Sanity.fetch(query);
+	const post: Post = await Sanity.fetch(query);
 
-		if (post) {
-			return {
-				post
-			};
-		}
-	} catch (err) {
-		throw error(400, `Query failed`);
+	if (post) {
+		return {
+			post
+		};
 	}
+
+	throw error(400, `Query failed`);
 };

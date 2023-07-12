@@ -3,14 +3,13 @@
 	import { urlFor } from '$lib/sanity/urlFor';
 
 	export let data: Post;
-	console.log(data);
 </script>
 
 <article
 	class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 transition-all duration-150 ease-out hover:brightness-125"
 >
 	<img
-		src={urlFor(data.mainImage.asset).fit('crop').width(360).format('webp').quality(80).toString()}
+		src={urlFor(data.mainImage.asset).fit('crop').width(480).format('webp').quality(80).toString()}
 		alt={data.mainImage.alt ?? 'fts project photo'}
 		class="absolute inset-0 -z-10 h-full w-full object-cover"
 	/>

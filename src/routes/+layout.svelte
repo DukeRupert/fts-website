@@ -11,9 +11,14 @@
 	import Drawer from '$lib/components/Drawer.svelte';
 	import { navigating } from '$app/stores';
 	import { drawerClose } from '$lib/utils/drawer';
+	import { is_open, is_services_open, is_mobile_services_open } from '$lib/stores';
 
+	// Close all menus when navigating
 	$: if ($navigating === null) {
 		drawerClose();
+		$is_open = false;
+		$is_services_open = false;
+		$is_mobile_services_open = false;
 	}
 
 	let is_banner_visible = true;

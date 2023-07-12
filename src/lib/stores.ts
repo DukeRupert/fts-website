@@ -2,7 +2,12 @@ import { writable } from 'svelte/store';
 import { asyncReadable, type Loadable } from '@square/svelte-store';
 import type { SearchListResponse, Video } from '$lib/types/youtube';
 
-export const mobileMenu = writable(false);
+// Navigation stores
+export const is_open = writable(false);
+export const is_services_open = writable(false);
+export const is_mobile_services_open = writable(false);
+
+// Contact form stores
 export const First_Name = writable('');
 export const Last_Name = writable('');
 
