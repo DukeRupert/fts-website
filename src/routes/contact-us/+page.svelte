@@ -27,7 +27,7 @@
 	}}
 />
 
-<div class="relative mt-20">
+<div class="relative mt-28">
 	<div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
 		<div class="text-center">
 			<h1 class="unstyled text-base font-semibold text-primary-500 tracking-wide uppercase">

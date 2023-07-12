@@ -1,24 +1,5 @@
-import type { PageLoad } from './$types';
-import type { SanityPage } from '$lib/types/sanity';
-import Sanity from '$lib/sanity/sanityClient';
+import { redirect } from '@sveltejs/kit';
 
-export const load: PageLoad = async ({ url }) => {
-	const { pathname } = url;
-
-	const q = `*[_type == "page" && path == $pathname][0]
-        {_type, title, metaDescription, mainImage, 
-            pageBuilder[]
-                {..., features[]
-                    {..., icon->{title, size, svg, _type}
-                }
-            }
-        }`;
-	const p = {
-		pathname
-	};
-	const data: SanityPage = await Sanity.fetch(q, p);
-
-	return {
-		page: data
-	};
-};
+export function load() {
+	throw redirect(303, '/services/drainage');
+}

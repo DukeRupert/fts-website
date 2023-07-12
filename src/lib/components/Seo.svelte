@@ -1,66 +1,31 @@
 <script lang="ts">
-	import SvelteSeo from 'svelte-seo';
-	import { urlFor } from '$lib/sanity/urlFor';
-	import type { SanityPage } from '$lib/types/sanity';
-	import type { Post } from '$lib/types/sanity';
+	interface SeoData {
+		title: string;
+		description: string;
+		url: string;
+		og: {
+			src: string;
+			alt: string;
+			mimeType: string;
+			width: number;
+			height: number;
+		};
+	}
 
-	export let data: SanityPage | Post;
-	export let url: string;
-	export let noindex = false;
-	export let width = 1200;
-	export let height = 630;
+	export let data: SeoData;
 </script>
 
-{#if data._type == 'post'}
-	<SvelteSeo
-		title={data?.title}
-		description={data?.excerpt}
-		{noindex}
-		openGraph={{
-			title: data?.title,
-			description: data?.excerpt,
-			url: url,
-			type: 'article',
-			article: {
-				publishedTime: data?.publishedAt
-			},
-			images: [
-				{
-					url: urlFor(data?.mainImage?.asset)
-						.width(width)
-						.height(height)
-						.format('webp')
-						.url()
-						.toString(),
-					width: width,
-					height: height,
-					alt: data?.mainImage?.alt ?? data?.title
-				}
-			]
-		}}
-	/>
-{:else if data._type == 'page'}
-	<SvelteSeo
-		title={data?.title}
-		description={data?.metaDescription}
-		openGraph={{
-			title: data?.title,
-			description: data?.metaDescription,
-			url: url,
-			type: 'website',
-			images: [
-				{
-					url: urlFor(data?.mainImage?.asset)
-						.width(width)
-						.height(height)
-						.format('webp')
-						.url()
-						.toString(),
-					width: width,
-					height: height,
-					alt: data?.mainImage?.alt ?? data?.title
-				}
-			]
-		}}
-	/>
-{/if}
+<svelte:head>
+	<title>{data.title}</title>
+	<meta name="description" content={data.description} />
+	<meta property="og:title" content={data.title} />
+	<meta property="og:description" content={data.description} />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={data.url} />
+	<meta property="og:image:url" content={data.og.src} />
+	<meta property="og:image:alt" content={data.og.alt} />
+	<meta property="og:image:type" content={data.og.mimeType} />
+	<meta property="og:image:width" content={data.og.width.toString()} />
+	<meta property="og:image:height" content={data.og.height.toString()} />
+	<link rel="canonical" href={data.url} />
+</svelte:head>

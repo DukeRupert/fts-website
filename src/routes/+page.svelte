@@ -6,19 +6,17 @@
 	import SvelteSeo from 'svelte-seo';
 	import Hero from '$lib/components/Hero/AngledRight.svelte';
 	import Services from '$lib/components/Services/3Column.svelte';
-	import Projects from '$lib/sections/Projects.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 	import ServiceArea from '$lib/sections/ServiceArea.svelte';
 	import ModalForm from '$lib/components/ModalForm.svelte';
 	import { modalStore } from '@skeletonlabs/skeleton';
 	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
 	import { onMount, onDestroy } from 'svelte';
-	import Newsletter from '$lib/components/Newsletter.svelte';
-	import Instagram from './Instagram.svelte';
-	import Section from '$lib/components/Section.svelte';
+
 	import LogoCloud from '$lib/components/LogoCloud/LogoCloud.svelte';
 	import TestimonialGrid from '$lib/components/TestimonialGrid/TestimonialGrid.svelte';
-	import Blog from '$lib/components/Blog/3Column.svelte';
+
+	import Seo from '$lib/components/Seo.svelte';
 
 	export let data: PageData;
 
@@ -66,6 +64,19 @@
 	onDestroy(() => {
 		main?.removeEventListener('scroll', scrollHandler);
 	});
+
+	// const seoData = {
+	// 	title: "FtS Excavation | Puyallup's excavation experts | Home",
+	// 	description: string;
+	// 	url: string;
+	// 	og: {
+	// 		src: string;
+	// 		alt: string;
+	// 		mimeType: string;
+	// 		width: number;
+	// 		height: number;
+	// 	};
+	// }
 </script>
 
 <svelte:head>
@@ -91,6 +102,8 @@
 		]
 	}}
 />
+
+<!-- <Seo data={} /> -->
 
 <Hero />
 <Services />
