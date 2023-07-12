@@ -4,10 +4,8 @@
 	import '../theme.postcss';
 	import '../app.postcss';
 	import { Modal, Toast } from '@skeletonlabs/skeleton';
-
-	import Banner from '$lib/components/Banner.svelte';
 	import Header from '$lib/components/Navigation/Header.svelte';
-	import Footer from '$lib/sections/Footer.svelte';
+	import Footer from '$lib/components/Footer/Footer.svelte';
 	import Drawer from '$lib/components/Drawer.svelte';
 	import { navigating } from '$app/stores';
 	import { drawerClose } from '$lib/utils/drawer';
@@ -38,7 +36,6 @@
 </svelte:head>
 
 <Modal />
-<!-- <Banner on:click={hide_banner} {is_banner_visible} /> -->
 <div class="bg-white"><Header /><slot /><Footer /></div>
 <Drawer />
 <Toast />

@@ -67,7 +67,7 @@
 		<div class="flex items-center gap-x-8">
 			<a href="/" class="-m-1.5 p-1.5">
 				<span class="sr-only">FtS Excavation</span>
-				<Img class="h-16 w-16 rounded-sm" src={fts_logo} alt="FtS Excavation logo" />
+				<Img class="h-16 w-16 rounded-sm" src={fts_logo} alt="FtS Excavation" />
 			</a>
 			<div class="hidden lg:flex lg:gap-x-8 lg:items-center">
 				<div class="relative">
