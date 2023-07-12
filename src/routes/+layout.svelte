@@ -19,12 +19,6 @@
 		$is_about_open = false;
 		$is_mobile_services_open = false;
 	}
-
-	let is_banner_visible = true;
-
-	function hide_banner() {
-		is_banner_visible = false;
-	}
 </script>
 
 <svelte:head>

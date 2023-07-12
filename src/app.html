@@ -9,9 +9,41 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 		<link rel="manifest" href="/site.webmanifest" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<!--
+		- 1. Preemptively warm up the fonts’ origin.
+		-
+		- 2. Initiate a high-priority, asynchronous fetch for the CSS file. Works in
+		-    most modern browsers.
+		-
+		- 3. Initiate a low-priority, asynchronous fetch that gets applied to the page
+		-    only after it’s arrived. Works in all browsers with JavaScript enabled.
+		-
+		- 4. In the unlikely event that a visitor has intentionally disabled
+		-    JavaScript, fall back to the original method. The good news is that,
+		-    although this is a render-blocking request, it can still make use of the
+		-    preconnect which makes it marginally faster than the default.
+		-->
+
+		<!-- [1] -->
+		<link rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+
+		<!-- [2] -->
+		<link rel="preload"
+			as="style"
+			href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
+
+		<!-- [3] -->
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			media="print" onload="this.media='all'" />
+
+		<!-- [4] -->
+		<noscript>
+		<link rel="stylesheet"
+				href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
+		</noscript>
 		<!-- behold -->
 		<script src="https://w.behold.so/widget.js" type="module"></script>
 		%sveltekit.head%

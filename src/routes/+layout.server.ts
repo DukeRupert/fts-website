@@ -11,6 +11,6 @@ export const load: LayoutServerLoad = async ({ cookies }) => {
 	}
 
 	return {
-		promo: false
+		promo: true
 	};
 };
