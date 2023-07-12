@@ -7,12 +7,13 @@ export const load: PageLoad = async () => {
 	const projection = `
 		{ 
 			...,
+			categories[]->{...},
 			mainImage{..., asset->},
 	  	}`;
 	const query = filter + projection;
 	const data: Post[] = await Sanity.fetch(query);
 
 	return {
-		data
+		posts: data
 	};
 };

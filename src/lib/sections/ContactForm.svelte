@@ -203,7 +203,7 @@
 					</div>
 
 					<div class="sm:col-span-3">
-						<label for="location" class="block text-sm ">Service</label>
+						<label for="location" class="block text-sm">Service</label>
 						<select id="service" name="service" class="mt-1 block w-full">
 							<option selected>Site Preparation</option>
 							<option>Drainage</option>
@@ -219,7 +219,7 @@
 
 	<div class="pt-5">
 		<div class="flex justify-end">
-			<button type="submit" class="btn variant-filled-primary">
+			<button type="submit" class="btn variant-filled-secondary min-w-[150px]">
 				{#if pending}
 					<span class="sr-only">Loading...</span>
 					<span

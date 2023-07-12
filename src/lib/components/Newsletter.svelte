@@ -96,7 +96,7 @@
 					<span class="text-on-primary-token"
 						>We care about the protection of your data. Read our</span
 					>
-					<a href="/privacy-policy" class="unstyled no-underline"
+					<a href="/privacy-policy-policy" class="unstyled no-underline"
 						><span class="text-secondary-300">Privacy Policy.</span></a
 					>
 				</p>
