@@ -6,7 +6,7 @@
 		title: 'Privacy Policy | FtS Excavation',
 		description:
 			'FtS Excavation brings skilled professionals, advanced equipment, and reliable service to all residential, commercial, and industrial excavation projects in the Puget Sound.',
-		url: 'https://www.fts-excavation.com/privacy-policy',
+		url: 'https://www.fts-excavation.com/privacy-policy-policy',
 		og: {
 			src: 'https://www.fts-excavation.com/image/seo/FtS-Excavation_1200.jpg',
 			alt: 'FtS Excavation clearing land in the Puget Sound region.',

@@ -119,8 +119,9 @@
 						<h3 class="text-sm font-semibold leading-6 text-gray-900">Legal</h3>
 						<ul role="list" class="mt-6 space-y-4">
 							<li>
-								<a href="/privacy" class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-									>Privacy</a
+								<a
+									href="/privacy-policy"
+									class="text-sm leading-6 text-gray-600 hover:text-gray-900">Privacy</a
 								>
 							</li>
 						</ul>
