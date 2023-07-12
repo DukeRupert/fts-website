@@ -326,11 +326,8 @@
 	</div>
 
 	<div class="pt-5">
-		<div class="flex items-center justify-center">
-			<button
-				type="submit"
-				class="ml-3 inline-flex justify-center py-2 px-8 border border-transparent shadow-sm text-base font-medium rounded-md text-black hover:text-cream-500 bg-gradient-to-r from-actionorange-500 to-actionorange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-actionorange-500 hover:from-actionorange-500 hover:to-actionorange-300"
-			>
+		<div class="flex justify-end">
+			<button type="submit" class="btn variant-filled-secondary min-w-[150px]">
 				{#if pending}
 					<span class="sr-only">Loading...</span>
 					<svg
