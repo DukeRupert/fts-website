@@ -3,7 +3,6 @@
 	import { jsonld_schema } from './seo';
 	import { page } from '$app/stores';
 	import type { PageData } from './$types';
-	import SvelteSeo from 'svelte-seo';
 	import Hero from '$lib/components/Hero/AngledRight.svelte';
 	import Services from '$lib/components/Services/3Column.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
@@ -12,7 +11,6 @@
 	import { modalStore } from '@skeletonlabs/skeleton';
 	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
 	import { onMount, onDestroy } from 'svelte';
-
 	import LogoCloud from '$lib/components/LogoCloud/LogoCloud.svelte';
 	import TestimonialGrid from '$lib/components/TestimonialGrid/TestimonialGrid.svelte';
 
@@ -65,46 +63,26 @@
 		main?.removeEventListener('scroll', scrollHandler);
 	});
 
-	// const seoData = {
-	// 	title: "FtS Excavation | Puyallup's excavation experts | Home",
-	// 	description: string;
-	// 	url: string;
-	// 	og: {
-	// 		src: string;
-	// 		alt: string;
-	// 		mimeType: string;
-	// 		width: number;
-	// 		height: number;
-	// 	};
-	// }
+	const seoData = {
+		title: "FtS Excavation | Puyallup's excavation experts | Home",
+		description:
+			'FtS-Excavation: Your trusted Puyallup excavation experts. Skilled professionals, advanced equipment, and reliable service. Residential, commercial, and industrial excavation. Contact us for a free consultation.',
+		url: 'https://www.fts-excavation.com/',
+		og: {
+			src: 'https://www.fts-excavation.com/image/seo/FtS-Excavation_1200.jpg',
+			alt: 'FtS Excavation clearing land in the Puget Sound region.',
+			mimeType: 'jpeg',
+			width: 1200,
+			height: 675
+		}
+	};
 </script>
 
 <svelte:head>
 	{@html serializeSchema(jsonld_schema)}
 </svelte:head>
 
-<SvelteSeo
-	title="FtS Excavation - Puyallup's excavation experts"
-	description="Professional excavators serving both residential and commercial clients. Services include drainage, site preparation and land development. Serving the greater Puget Sound region."
-	keywords="excavation land clearing foundations leveling dirt removal residential construction utility installation tacoma puyallup"
-	openGraph={{
-		title: "FtS Excavation - Puyallup's excavation experts",
-		description: `Professional excavators serving both residential and commercial clients. Services include drainage, site preparation and land development. Serving the greater Puget Sound region.`,
-		url: $page.url.href,
-		type: 'website',
-		images: [
-			{
-				url: `${$page.url.host}/image/P53_900.webp`,
-				width: 960,
-				height: 600,
-				alt: 'FtS Excavation excavator leveling a driveway for a residential customer in Puyallup.'
-			}
-		]
-	}}
-/>
-
-<!-- <Seo data={} /> -->
-
+<Seo data={seoData} />
 <Hero />
 <Services />
 <TestimonialGrid />

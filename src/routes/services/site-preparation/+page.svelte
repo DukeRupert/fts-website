@@ -4,6 +4,7 @@
 	import Blog from '$lib/components/Blog/3Column.svelte';
 	import type { PageData } from './$types';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	export let data: PageData;
 
@@ -33,8 +34,23 @@
 			body: 'We are properly licensed and insured to perform the work required.'
 		}
 	];
+
+	const seoData = {
+		title: 'Site Preparation | FtS Excavation',
+		description:
+			'We clear, grade, and prepare sites for construction projects with precision and efficiency. Trust us for reliable and comprehensive site preparation.',
+		url: 'https://www.fts-excavation.com/services/site-preparation',
+		og: {
+			src: 'https://www.fts-excavation.com/image/seo/FtS-Excavation_1200.jpg',
+			alt: 'FtS Excavation clearing land in the Puget Sound region.',
+			mimeType: 'jpeg',
+			width: 1200,
+			height: 675
+		}
+	};
 </script>
 
+<Seo data={seoData} />
 <div class="bg-white py-24 sm:py-32">
 	<div class="bg-white px-6 py-24 sm:py-32 lg:px-8">
 		<div class="mx-auto max-w-2xl text-center">

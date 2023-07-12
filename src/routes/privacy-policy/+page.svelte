@@ -1,29 +1,25 @@
 <!-- about-us.svelte -->
 <script lang="ts">
-	import SvelteSeo from 'svelte-seo';
-	import { page } from '$app/stores';
+	import Seo from '$lib/components/Seo.svelte';
+
+	const seoData = {
+		title: 'Privacy Policy | FtS Excavation',
+		description:
+			'FtS Excavation brings skilled professionals, advanced equipment, and reliable service to all residential, commercial, and industrial excavation projects in the Puget Sound.',
+		url: 'https://www.fts-excavation.com/privacy-policy',
+		og: {
+			src: 'https://www.fts-excavation.com/image/seo/FtS-Excavation_1200.jpg',
+			alt: 'FtS Excavation clearing land in the Puget Sound region.',
+			mimeType: 'jpeg',
+			width: 1200,
+			height: 675
+		}
+	};
 </script>
 
-<SvelteSeo
-	title="Privacy Policy"
-	description="FtS Excavation privacy policy."
-	openGraph={{
-		title: 'Privacy Policy',
-		description: 'FtS Excavation privacy policy.',
-		url: $page.url.href,
-		type: 'website',
-		images: [
-			{
-				url: `${$page.url.host}/image/BandF.webp`,
-				width: 479,
-				height: 479,
-				alt: 'Frank and Beverly Sharp, FtS Excavation Owners'
-			}
-		]
-	}}
-/>
+<Seo data={seoData} />
 
-<div class="relative">
+<div class="relative mt-28">
 	<div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
 		<div class="text-center">
 			<h1 class="text-base font-semibold text-primary-500 tracking-wide uppercase">

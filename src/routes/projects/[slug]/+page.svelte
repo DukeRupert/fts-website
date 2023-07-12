@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import Seo from '$lib/components/Seo.svelte';
 	import { PortableText } from '@portabletext/svelte';
+	import { urlFor } from '$lib/sanity/urlFor';
 	import Code from '$lib/portableText/Code.svelte';
 	import Link from '$lib/portableText/Link.svelte';
 	import ImageBlock from '$lib/portableText/ImageBlock.svelte';
@@ -11,8 +11,29 @@
 
 	export let data: PageData;
 	const { post } = data;
+
+	const seoData = {
+		title: `FtS Excavation | ${post.title}`,
+		description: `${post.excerpt}`,
+		url: `https://www.fts-excavation.com/projects/${post.slug.current}`,
+		og: {
+			src: urlFor(post.mainImage.asset)
+				.width(1200)
+				.height(675)
+				.format('webp')
+				.crop('focalpoint')
+				.quality(80)
+				.toString(),
+			alt: post.mainImage.alt,
+			mimeType: 'webp',
+			width: 1200,
+			height: 675
+		},
+		published_at: post.publishedAt
+	};
 </script>
 
+<Seo data={seoData} type="article" />
 <div class="relative py-16 mt-28 bg-white overflow-hidden">
 	<div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
 		<div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">

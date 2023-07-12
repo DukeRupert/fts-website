@@ -4,7 +4,7 @@
 	import Blog from '$lib/components/Blog/3Column.svelte';
 	import type { PageData } from './$types';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
-
+	import Seo from '$lib/components/Seo.svelte';
 	export let data: PageData;
 
 	const solutions = [
@@ -33,8 +33,23 @@
 			body: 'Your best ally in the fight against excess water is land. We integrate and support natural solutions through erosion control.'
 		}
 	];
+
+	const seoData = {
+		title: 'Drainage | FtS Excavation',
+		description:
+			'Protect your property with our top-notch drainage services. Our team of experts designs and implements tailored drainage solutions that effectively channel water away, preventing costly damage and ensuring a dry and stable environment.',
+		url: 'https://www.fts-excavation.com/services/drainage',
+		og: {
+			src: 'https://www.fts-excavation.com/image/seo/FtS-Excavation_1200.jpg',
+			alt: 'FtS Excavation clearing land in the Puget Sound region.',
+			mimeType: 'jpeg',
+			width: 1200,
+			height: 675
+		}
+	};
 </script>
 
+<Seo data={seoData} />
 <div class="bg-white py-24 sm:py-32">
 	<div class="bg-white px-6 py-24 sm:py-32 lg:px-8">
 		<div class="mx-auto max-w-2xl text-center">
