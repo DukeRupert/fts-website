@@ -14,6 +14,6 @@ export const load: PageLoad = async () => {
 	const data: Post[] = await Sanity.fetch(query);
 
 	return {
-		data
+		posts: data
 	};
 };

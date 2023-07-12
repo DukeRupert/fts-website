@@ -13,7 +13,9 @@
 		<div class="xl:grid xl:grid-cols-3 xl:gap-8">
 			<div class="space-y-8">
 				<Img class="h-16 w-16 rounded-sm" src={fts_logo} alt="FtS Excavation" />
-				<p class="text-sm leading-6 text-gray-600">Precision + Integrity</p>
+				<p class="text-sm leading-6 text-gray-600">
+					Precision + Integrity. Your trusted Puyallup excavation experts.
+				</p>
 				<div class="flex space-x-6">
 					<a href={COMPANY.social.facebook} class="text-gray-400 hover:text-gray-500">
 						<span class="sr-only">Facebook</span>
