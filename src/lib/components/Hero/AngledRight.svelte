@@ -13,13 +13,15 @@
 		<div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
 			<div class="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
 				<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-					<div class="hidden sm:mb-10 sm:flex">
+					<div class="flex mb-10">
 						<div
 							class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
 						>
-							Need it done today? We offer financing options. &nbsp;<a
-								href="/financing"
-								class="whitespace-nowrap font-semibold text-indigo-600"
+							<span class="hidden md:inline-block">Need it done today?</span><span
+								class="inline-block"
+							>
+								&nbsp; We offer financing options. &nbsp;</span
+							><a href="/financing" class="whitespace-nowrap font-semibold !text-primary-600"
 								><span class="absolute inset-0" aria-hidden="true" />Learn more
 								<span aria-hidden="true">&rarr;</span></a
 							>
@@ -50,6 +52,7 @@
 			class="aspect-[3/2] object-cover object-left lg:aspect-auto lg:h-full lg:w-full"
 			src={fts_excavation_land_clearing}
 			alt="An FtS Excavator hard at work clearing land in Washington state."
+			loading="eager"
 		/>
 	</div>
 </div>

@@ -507,6 +507,16 @@
 								>Projects</a
 							>
 							<a
+								href="/financing"
+								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+								>Financing</a
+							>
+							<a
+								href="/jobs"
+								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+								>Jobs</a
+							>
+							<a
 								href="/contact-us"
 								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
 								>Contact us</a

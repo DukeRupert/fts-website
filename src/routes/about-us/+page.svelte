@@ -21,7 +21,7 @@
 </script>
 
 <Seo data={seoData} />
-<div class="bg-white py-24 sm:py-32">
+<div class="bg-white py-16 sm:py-32">
 	<article id="about-us" class="bg-white px-6 py-24 sm:py-32 lg:px-8">
 		<div class="mx-auto max-w-2xl text-center">
 			<h1 class="unstyled text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">About Us</h1>

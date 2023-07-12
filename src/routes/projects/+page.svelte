@@ -2,7 +2,6 @@
 	import type { PageData } from './$types';
 	import Card from '$lib/components/Blog/Card.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
-	import Posts from '$lib/sections/Posts.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 
 	export let data: PageData;
@@ -26,7 +25,7 @@
 <Seo data={seoData} />
 
 <div class="relative mt-28">
-	<div class="bg-white py-24 sm:py-32">
+	<div class="bg-white py-16 sm:py-32">
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
 			<div class="mx-auto max-w-2xl text-center">
 				<h1 class="unstyled text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
