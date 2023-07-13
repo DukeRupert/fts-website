@@ -1,5 +1,5 @@
 <script>
-	import GoogleMap from '$lib/components/GoogleMap.svelte';
+	import GoogleMap from './GoogleMap.svelte';
 </script>
 
 <div id="service-area" class="bg-white py-24 sm:py-32">
@@ -9,10 +9,6 @@
 			<p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
 				Based in Puyallup, WA we proudly serve the South Puget Sound and parts of King County.
 			</p>
-			<!-- <p class="mt-6 text-lg leading-8 text-gray-600">
-				Based in Puyallup, WA we proudly serve the South Puget Sound and parts of King County.
-			</p> -->
-
 			<div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24">
 				<GoogleMap />
 			</div>

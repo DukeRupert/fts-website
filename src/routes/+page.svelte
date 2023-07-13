@@ -6,14 +6,13 @@
 	import Hero from '$lib/components/Hero/AngledRight.svelte';
 	import Services from '$lib/components/Services/3Column.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
-	import ServiceArea from '$lib/sections/ServiceArea.svelte';
+	import ServiceArea from '$lib/components/ServiceArea/ServiceArea.svelte';
 	import ModalForm from '$lib/components/ModalForm.svelte';
 	import { modalStore } from '@skeletonlabs/skeleton';
 	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
 	import { onMount, onDestroy } from 'svelte';
 	import LogoCloud from '$lib/components/LogoCloud/LogoCloud.svelte';
 	import TestimonialGrid from '$lib/components/TestimonialGrid/TestimonialGrid.svelte';
-
 	import Seo from '$lib/components/Seo.svelte';
 
 	export let data: PageData;
@@ -24,7 +23,7 @@
 			// Pass a reference to your custom component
 			ref: ModalForm,
 			// Add your props as key/value pairs
-			props: { background: 'bg-red-500' },
+			props: { background: '!bg-red-500' },
 			// Provide default slot content as a template literal
 			slot: '<p>Skeleton</p>'
 		};

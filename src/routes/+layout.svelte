@@ -6,7 +6,6 @@
 	import { Modal, Toast } from '@skeletonlabs/skeleton';
 	import Header from '$lib/components/Navigation/Header.svelte';
 	import Footer from '$lib/components/Footer/Footer.svelte';
-	import Drawer from '$lib/components/Drawer.svelte';
 	import { navigating } from '$app/stores';
 	import { drawerClose } from '$lib/utils/drawer';
 	import { is_open, is_services_open, is_about_open, is_mobile_services_open } from '$lib/stores';
@@ -31,5 +30,4 @@
 
 <Modal />
 <div class="bg-white"><Header /><slot /><Footer /></div>
-<Drawer />
 <Toast />

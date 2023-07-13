@@ -8,7 +8,6 @@
 			src="https://www.greensky.com/merchantkit/images/finance_buttons/headers/header_320.jpg?v=3.0.6
 12"
 			alt="Financing Options from GreenSky a Goldman Sachs Company"
-			tabindex="0"
 		/>
 	</div>
 	<div>
@@ -17,7 +16,6 @@
 roduct_header_320.jpg?v=3.0.612"
 			width="320"
 			alt="Finance Your Project"
-			tabindex="0"
 		/>
 	</div>
 	<div>
@@ -57,7 +55,6 @@ ealerplan=4069&channel=External-Button-03"
 Opportunity Lenders. GreenSky® is a registered trademark of GreenSky, LLC, a subsidiary of Goldman
 Sachs Bank USA. NMLS #1416362. Loans originated by Goldman Sachs are issued by Goldman Sachs
 Bank USA, Salt Lake City Branch. NMLS #208156. www.nmlsconsumeraccess.org"
-			tabindex="0"
 		/>
 	</div>
 </div>

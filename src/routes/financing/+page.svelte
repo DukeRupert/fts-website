@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Seo from '$lib/components/Seo.svelte';
-	import FinancingModule from '$lib/components/FinancingModule.svelte';
+	import FinancingModule from './FinancingModule.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 
 	const seoData = {
