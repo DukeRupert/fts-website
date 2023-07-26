@@ -24,7 +24,7 @@
 	<script
 		defer
 		data-domain="fts-excavation.com"
-		src="https://plausible.io/js/plausible.js"
+		src="https://plausible.io/js/script.tagged-events.js"
 	></script>
 </svelte:head>
 

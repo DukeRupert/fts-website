@@ -212,7 +212,7 @@
 							</a>
 							<a
 								href={COMPANY.contact.phone.href}
-								class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+								class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100 plausible-event-name=Call+Clicked"
 							>
 								<svg
 									class="h-5 w-5 flex-none text-gray-400"
@@ -342,7 +342,7 @@
 							</a>
 							<a
 								href={COMPANY.contact.phone.href}
-								class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+								class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100 plausible-event-name=Call+Clicked"
 							>
 								<svg
 									class="h-5 w-5 flex-none text-gray-400"
@@ -525,7 +525,7 @@
 						<div class="flex flex-col gap-y-2 py-6">
 							<a
 								href={COMPANY.contact.phone.href}
-								class="unstyled btn variant-filled-primary w-full"
+								class="unstyled btn variant-filled-primary w-full plausible-event-name=Call+Clicked"
 								><svg
 									class="h-4 w-4 mr-2 flex-none"
 									viewBox="0 0 20 20"
