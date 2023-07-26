@@ -32,7 +32,7 @@
 				>
 				Contact
 			</a>
-			<a href={COMPANY.contact.phone.href} class="btn variant-filled-secondary">
+			<a href={COMPANY.contact.phone.href} class="btn variant-filled-secondary plausible-event-name=Call+Clicked">
 				<svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path
 						stroke-linecap="round"

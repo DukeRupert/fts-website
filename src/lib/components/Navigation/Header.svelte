@@ -212,7 +212,7 @@
 							</a>
 							<a
 								href={COMPANY.contact.phone.href}
-								class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100 plausible-event-name=Call+Clicked"
+								class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 plausible-event-name=Call+Clicked hover:bg-gray-100"
 							>
 								<svg
 									class="h-5 w-5 flex-none text-gray-400"
@@ -342,7 +342,7 @@
 							</a>
 							<a
 								href={COMPANY.contact.phone.href}
-								class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100 plausible-event-name=Call+Clicked"
+								class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 plausible-event-name=Call+Clicked hover:bg-gray-100"
 							>
 								<svg
 									class="h-5 w-5 flex-none text-gray-400"

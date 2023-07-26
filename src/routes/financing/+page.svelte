@@ -34,7 +34,7 @@
 			<div
 				class="max-w-4xl mx-auto flex justify-center px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8"
 			>
-				<div class="h-[546px]">
+				<div class="h-[546px] plausible-event-name=Finance+Link+Clicked">
 					<FinancingModule />
 				</div>
 			</div>

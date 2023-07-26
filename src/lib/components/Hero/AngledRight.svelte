@@ -38,7 +38,7 @@
 						{description}
 					</p>
 					<div class="mt-10 flex items-center gap-x-6">
-						<a href="/contact-us#" class="btn variant-filled-primary">Get started</a>
+						<a href="/contact-us" class="btn variant-filled-primary">Get started</a>
 						<a href="#services" class="btn variant-ringed-primary"
 							>Learn more <span aria-hidden="true">→</span></a
 						>
