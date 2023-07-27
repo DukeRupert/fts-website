@@ -54,6 +54,7 @@
 			type="video/mp4"
 			class="aspect-[3/2] object-cover object-right lg:aspect-auto lg:h-full lg:w-full"
 			autoplay
+			muted
 			loop
 			preload="auto"
 		>
