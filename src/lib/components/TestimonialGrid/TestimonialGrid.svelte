@@ -6,9 +6,10 @@
 	import deAnne_davidson from '$lib/assets/reviews/deAnne_davidson.png?run&width=40&format=webp;avif;jpg';
 	import Img from '@zerodevx/svelte-img';
 	import StarRating from './StarRating.svelte';
+	import FadeIn from '$lib/components/FadeIn.svelte';
 </script>
 
-<div id="reviews" class="relative isolate bg-white pb-32 pt-24 sm:pt-32">
+<div id="reviews" class="relative isolate pb-32 pt-24 sm:pt-32">
 	<div
 		class="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
 		aria-hidden="true"
@@ -28,12 +29,14 @@
 		/>
 	</div>
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
-		<div class="mx-auto max-w-xl text-center">
-			<h2 class="text-lg font-semibold leading-8 tracking-tight text-primary-600">Reviews</h2>
-			<p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-				We love hearing that we have made a customer's day better
-			</p>
-		</div>
+		<FadeIn>
+			<div class="mx-auto max-w-xl text-center">
+				<h2 class="text-lg font-semibold leading-8 tracking-tight text-primary-600">Reviews</h2>
+				<p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+					We love hearing that we have made a customer's day better
+				</p>
+			</div>
+		</FadeIn>
 		<div
 			class="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4"
 		>

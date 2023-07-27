@@ -417,7 +417,7 @@
 			<div
 				in:fly={fly_in}
 				out:fly={fade_out}
-				class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+				class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-br from-primary-500 to-primary-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
 			>
 				<div class="flex items-center justify-between">
 					<a href="/" class="-m-1.5 p-1.5">
@@ -449,7 +449,7 @@
 								<button
 									type="button"
 									on:click={() => ($is_mobile_services_open = !$is_mobile_services_open)}
-									class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+									class="unstyled flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-50"
 									aria-controls="disclosure-1"
 									aria-expanded="false"
 								>
@@ -480,17 +480,17 @@
 									>
 										<a
 											href="/services/site-preparation"
-											class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:underline"
+											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-50 hover:underline"
 											>Site preparation</a
 										>
 										<a
 											href="/services/hardscape"
-											class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:underline"
+											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-50 hover:underline"
 											>Hardscape</a
 										>
 										<a
 											href="/services/drainage"
-											class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:underline"
+											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-50 hover:underline"
 											>Drainage</a
 										>
 									</div>
@@ -498,34 +498,34 @@
 							</div>
 							<a
 								href="/about-us"
-								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-50"
 								>About us</a
 							>
 							<a
 								href="/projects"
-								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-50"
 								>Projects</a
 							>
 							<a
 								href="/financing"
-								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-50"
 								>Financing</a
 							>
 							<a
 								href="/jobs"
-								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-50"
 								>Jobs</a
 							>
 							<a
 								href="/contact-us"
-								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-50"
 								>Contact us</a
 							>
 						</div>
 						<div class="flex flex-col gap-y-2 py-6">
 							<a
 								href={COMPANY.contact.phone.href}
-								class="unstyled btn variant-filled-primary w-full plausible-event-name=Call+Clicked"
+								class="unstyled btn variant-filled-secondary w-full plausible-event-name=Call+Clicked"
 								><svg
 									class="h-4 w-4 mr-2 flex-none"
 									viewBox="0 0 20 20"

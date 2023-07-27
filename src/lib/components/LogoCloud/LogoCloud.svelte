@@ -1,4 +1,5 @@
 <script lang="ts">
+	import FadeIn from '$lib/components/FadeIn.svelte';
 	interface Affiliate {
 		name: string;
 		href: string;
@@ -67,21 +68,25 @@
 <div id="logo-cloud" class="bg-white py-24 sm:py-32">
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="mx-auto max-w-2xl lg:max-w-none">
-			<h2 class="text-center text-lg font-semibold leading-8 text-gray-900">
-				A proud member of these Puget Sound organizations
-			</h2>
+			<FadeIn
+				><h2 class="text-center text-lg font-semibold leading-8 text-gray-900">
+					A proud member of these Puget Sound organizations
+				</h2></FadeIn
+			>
 			<div
 				class="mx-auto mt-10 grid grid-cols-4 items-center gap-x-8 gap-y-10 sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:grid-cols-5"
 			>
-				{#each affiliations as { href, img, height, width }}
-					<a {href} class="col-span-2 w-full object-contain object-left lg:col-span-1">
-						<img
-							class="w-full max-h-24 object-contain object-center"
-							{height}
-							{width}
-							src={img.src}
-							alt={img.alt}
-						/></a
+				{#each affiliations as { href, img, height, width }, i}
+					<FadeIn i={i * 150}>
+						<a {href} class="col-span-2 w-full object-contain object-left lg:col-span-1">
+							<img
+								class="w-full max-h-24 object-contain object-center"
+								{height}
+								{width}
+								src={img.src}
+								alt={img.alt}
+							/></a
+						></FadeIn
 					>
 				{/each}
 			</div>

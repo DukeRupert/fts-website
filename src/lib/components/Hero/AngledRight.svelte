@@ -48,11 +48,16 @@
 		</div>
 	</div>
 	<div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-		<Img
-			class="aspect-[3/2] object-cover object-left lg:aspect-auto lg:h-full lg:w-full"
-			src={fts_excavation_land_clearing}
-			alt="An FtS Excavator hard at work clearing land in Washington state."
-			loading="eager"
-		/>
+		<video
+			poster="/image/poster.webp"
+			src="/video/excavator_720p.mp4"
+			type="video/mp4"
+			class="aspect-[3/2] object-cover object-right lg:aspect-auto lg:h-full lg:w-full"
+			autoplay
+			loop
+			preload="auto"
+		>
+			<p>Your browser cannot play the provided video file.</p>
+		</video>
 	</div>
 </div>
