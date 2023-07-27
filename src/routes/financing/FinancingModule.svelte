@@ -23,6 +23,7 @@ roduct_header_320.jpg?v=3.0.612"
 			href="https://projects.greensky.com/MerchantLoanApplication?apptype=short&merchant=81097654&d
 ealerplan=2720&channel=External-Button-03"
 			target="_blank"
+			class="plausible-event-name=Finance+Link+Clicked"
 			tabindex="0"
 			><img
 				src="https://www.greensky.com/merchantkit/images/finance_buttons/plans/2720_320x100.jpg?v=3.0.6
@@ -37,6 +38,7 @@ ealerplan=2720&channel=External-Button-03"
 			href="https://projects.greensky.com/MerchantLoanApplication?apptype=short&merchant=81097654&d
 ealerplan=4069&channel=External-Button-03"
 			target="_blank"
+			class="plausible-event-name=Finance+Link+Clicked"
 			tabindex="0"
 			><img
 				src="https://www.greensky.com/merchantkit/images/finance_buttons/plans/4069_320x100.jpg?v=3.0.6
