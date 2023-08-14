@@ -427,7 +427,7 @@
 					<button
 						on:click={() => ($is_open = false)}
 						type="button"
-						class="-m-2.5 rounded-md p-2.5 text-gray-700"
+						class="-m-2.5 rounded-md p-2.5 text-gray-200"
 					>
 						<span class="sr-only">Close menu</span>
 						<svg
@@ -449,7 +449,7 @@
 								<button
 									type="button"
 									on:click={() => ($is_mobile_services_open = !$is_mobile_services_open)}
-									class="unstyled flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-50"
+									class="unstyled flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-500"
 									aria-controls="disclosure-1"
 									aria-expanded="false"
 								>
@@ -480,17 +480,17 @@
 									>
 										<a
 											href="/services/site-preparation"
-											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-50 hover:underline"
+											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-500 hover:underline"
 											>Site preparation</a
 										>
 										<a
 											href="/services/hardscape"
-											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-50 hover:underline"
+											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-500 hover:underline"
 											>Hardscape</a
 										>
 										<a
 											href="/services/drainage"
-											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-50 hover:underline"
+											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-500 hover:underline"
 											>Drainage</a
 										>
 									</div>
@@ -498,27 +498,27 @@
 							</div>
 							<a
 								href="/about-us"
-								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-50"
+								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-500"
 								>About us</a
 							>
 							<a
 								href="/projects"
-								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-50"
+								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-500"
 								>Projects</a
 							>
 							<a
 								href="/financing"
-								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-50"
+								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-500"
 								>Financing</a
 							>
 							<a
 								href="/jobs"
-								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-50"
+								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-500"
 								>Jobs</a
 							>
 							<a
 								href="/contact-us"
-								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-50"
+								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-500"
 								>Contact us</a
 							>
 						</div>

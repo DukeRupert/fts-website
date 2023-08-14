@@ -12,7 +12,7 @@
 	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
 	import { onMount, onDestroy } from 'svelte';
 	import LogoCloud from '$lib/components/LogoCloud/LogoCloud.svelte';
-	import TestimonialGrid from '$lib/components/TestimonialGrid/TestimonialGrid.svelte';
+	import TestimonialGrid from '$lib/components/TestimonialGrid.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 
 	export let data: PageData;
