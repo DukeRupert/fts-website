@@ -46,7 +46,7 @@
 							</p>
 							<p class="mt-6">
 								<a
-									href="/services/site-preparation"
+									href="/site-preparation"
 									class="unstyled text-sm font-semibold leading-6 text-secondary-500"
 									>Learn more <span aria-hidden="true">→</span></a
 								>
@@ -82,7 +82,7 @@
 							</p>
 							<p class="mt-6">
 								<a
-									href="/services/hardscape"
+									href="/hardscape"
 									class="unstyled text-sm font-semibold leading-6 text-secondary-500"
 									>Learn more <span aria-hidden="true">→</span></a
 								>
@@ -116,7 +116,7 @@
 							</p>
 							<p class="mt-6">
 								<a
-									href="/services/drainage"
+									href="/drainage"
 									class="unstyled text-sm font-semibold leading-6 text-secondary-500"
 									>Learn more <span aria-hidden="true">→</span></a
 								>

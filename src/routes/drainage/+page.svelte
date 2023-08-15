@@ -38,7 +38,7 @@
 		title: 'Drainage | FtS Excavation',
 		description:
 			'Protect your property with our top-notch drainage services. Our team of experts designs and implements tailored drainage solutions that effectively channel water away, preventing costly damage and ensuring a dry and stable environment.',
-		url: 'https://www.fts-excavation.com/services/drainage',
+		url: 'https://www.fts-excavation.com/drainage',
 		og: {
 			src: 'https://www.fts-excavation.com/image/seo/FtS-Excavation_1200.jpg',
 			alt: 'FtS Excavation clearing land in the Puget Sound region.',

@@ -57,7 +57,7 @@ export const jsonld_schema: WithContext<Organization> = {
 					name: 'Site Preparation',
 					description:
 						'Experience expert site preparation services at FtS-Excavation. We clear, grade, and prepare sites for construction projects with precision and efficiency. From land clearing to drainage solutions, trust us for reliable and comprehensive site preparation. Contact us today for exceptional results.',
-					url: 'https://www.fts-excavation.com/services/site-preparation'
+					url: 'https://www.fts-excavation.com/site-preparation'
 				}
 			},
 			{
@@ -67,7 +67,7 @@ export const jsonld_schema: WithContext<Organization> = {
 					name: 'Drainage',
 					description:
 						'Discover effective drainage solutions tailored to your property at FtS-Excavation. Our experienced team specializes in designing and implementing custom drainage systems to prevent water-related issues. From French drains to grading, we optimize water flow and protect your property from erosion and flooding. Experience exceptional craftsmanship and reliable results. Contact us for expert drainage services.',
-					url: 'https://www.fts-excavation.com/services/drainage'
+					url: 'https://www.fts-excavation.com/drainage'
 				}
 			},
 			{

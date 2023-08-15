@@ -82,20 +82,18 @@
 						<ul role="list" class="mt-6 space-y-4">
 							<li>
 								<a
-									href="/services/site-preparation"
+									href="/site-preparation"
 									class="text-sm leading-6 text-gray-600 hover:text-gray-900">Site preparation</a
 								>
 							</li>
 							<li>
-								<a
-									href="/services/hardscape"
-									class="text-sm leading-6 text-gray-600 hover:text-gray-900">Hardscape</a
+								<a href="/hardscape" class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+									>Hardscape</a
 								>
 							</li>
 							<li>
-								<a
-									href="/services/drainage"
-									class="text-sm leading-6 text-gray-600 hover:text-gray-900">Drainage</a
+								<a href="/drainage" class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+									>Drainage</a
 								>
 							</li>
 						</ul>

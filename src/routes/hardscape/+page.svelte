@@ -39,7 +39,7 @@
 		title: 'Hardscape | FtS Excavation',
 		description:
 			'At FtS Excavation our skilled team combines artistry and functionality to craft stunning landscapes that leave a lasting impression on anyone who sets foot in it.',
-		url: 'https://www.fts-excavation.com/services/hardscape',
+		url: 'https://www.fts-excavation.com/hardscape',
 		og: {
 			src: 'https://www.fts-excavation.com/image/seo/FtS-Excavation_1200.jpg',
 			alt: 'FtS Excavation clearing land in the Puget Sound region.',

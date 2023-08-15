@@ -29,17 +29,17 @@
 		{
 			title: 'Drainage',
 			body: "Creatively solving all types of groundwater and drainage issues is a forte' of ours.",
-			href: '/services/drainage'
+			href: '/drainage'
 		},
 		{
 			title: 'Site Preparation',
 			body: 'Make sure the project passes inspection the first time whether you are an individual developer or a prime contractor.',
-			href: '/services/site-preparation'
+			href: '/site-preparation'
 		},
 		{
 			title: 'Hardscapes',
 			body: 'At FtS Excavation our skilled team combines artistry and functionality to craft stunning landscapes that leave a lasting impression on anyone who sets foot in it.',
-			href: '/services/hardscape'
+			href: '/hardscape'
 		},
 		{
 			title: 'Foundations',

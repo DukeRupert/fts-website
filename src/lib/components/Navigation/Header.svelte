@@ -136,7 +136,7 @@
 									</svg>
 								</div>
 								<div class="flex-auto">
-									<a href="/services/site-preparation" class="block font-semibold text-gray-900">
+									<a href="/site-preparation" class="block font-semibold text-gray-900">
 										Site preparation
 										<span class="absolute inset-0" />
 									</a>
@@ -166,7 +166,7 @@
 									</svg>
 								</div>
 								<div class="flex-auto">
-									<a href="/services/hardscape" class="block font-semibold text-gray-900">
+									<a href="/hardscape" class="block font-semibold text-gray-900">
 										Hardscape
 										<span class="absolute inset-0" />
 									</a>
@@ -194,7 +194,7 @@
 									</svg>
 								</div>
 								<div class="flex-auto">
-									<a href="/services/drainage" class="block font-semibold text-gray-900">
+									<a href="/drainage" class="block font-semibold text-gray-900">
 										Drainage
 										<span class="absolute inset-0" />
 									</a>
@@ -493,17 +493,17 @@
 										id="disclosure-1"
 									>
 										<a
-											href="/services/site-preparation"
+											href="/site-preparation"
 											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-500 hover:underline"
 											>Site preparation</a
 										>
 										<a
-											href="/services/hardscape"
+											href="/hardscape"
 											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-500 hover:underline"
 											>Hardscape</a
 										>
 										<a
-											href="/services/drainage"
+											href="/drainage"
 											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-500 hover:underline"
 											>Drainage</a
 										>

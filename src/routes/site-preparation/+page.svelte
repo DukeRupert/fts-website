@@ -39,7 +39,7 @@
 		title: 'Site Preparation | FtS Excavation',
 		description:
 			'We clear, grade, and prepare sites for construction projects with precision and efficiency. Trust us for reliable and comprehensive site preparation.',
-		url: 'https://www.fts-excavation.com/services/site-preparation',
+		url: 'https://www.fts-excavation.com/site-preparation',
 		og: {
 			src: 'https://www.fts-excavation.com/image/seo/FtS-Excavation_1200.jpg',
 			alt: 'FtS Excavation clearing land in the Puget Sound region.',
