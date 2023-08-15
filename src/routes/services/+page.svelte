@@ -39,7 +39,7 @@
 		{
 			title: 'Hardscapes',
 			body: 'At FtS Excavation our skilled team combines artistry and functionality to craft stunning landscapes that leave a lasting impression on anyone who sets foot in it.',
-			href: '/services/hardscapes'
+			href: '/services/hardscape'
 		},
 		{
 			title: 'Foundations',

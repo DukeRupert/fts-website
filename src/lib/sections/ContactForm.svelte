@@ -219,7 +219,10 @@
 
 	<div class="pt-5">
 		<div class="flex justify-end">
-			<button type="submit" class="btn variant-filled-secondary min-w-[150px] plausible-event-name=Contact+Form+Submission">
+			<button
+				type="submit"
+				class="btn variant-filled-primary min-w-[150px] plausible-event-name=Contact+Form+Submission"
+			>
 				{#if pending}
 					<span class="sr-only">Loading...</span>
 					<span

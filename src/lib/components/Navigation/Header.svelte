@@ -13,13 +13,23 @@
 	import { COMPANY } from '$lib/constants';
 	import { is_open, is_services_open, is_about_open, is_mobile_services_open } from '$lib/stores';
 
-	function toggle_services(): void {
-		$is_services_open = !$is_services_open;
+	function open_services(): void {
+		$is_services_open = true;
 		$is_about_open = false;
 	}
 
-	function toggle_about(): void {
-		$is_about_open = !$is_about_open;
+	function close_services(): void {
+		$is_services_open = false;
+		$is_about_open = false;
+	}
+
+	function open_about(): void {
+		$is_about_open = true;
+		$is_services_open = false;
+	}
+
+	function close_about(): void {
+		$is_about_open = false;
 		$is_services_open = false;
 	}
 
@@ -71,11 +81,12 @@
 			</a>
 			<div class="hidden lg:flex lg:gap-x-8 lg:items-center">
 				<div class="relative">
-					<button
-						type="button"
-						on:click={toggle_services}
+					<a
+						href="/services"
+						on:mouseover|stopPropagation={open_services}
+						on:focus|stopPropagation={open_services}
 						class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
-						aria-expanded="false"
+						aria-expanded={$is_services_open}
 					>
 						Services
 						<svg
@@ -92,17 +103,18 @@
 								clip-rule="evenodd"
 							/>
 						</svg>
-					</button>
+					</a>
 
 					<!-- 'Services' flyout menu, show/hide based on flyout menu state. -->
 					<div
+						on:mouseleave={close_services}
 						class="absolute pointer-events-none -left-8 top-full mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition {$is_services_open
 							? '!pointer-events-auto z-10 duration-200 opacity-100 translate-y-0'
 							: '-z-10 duration-150 opacity-0 translate-y-1'}"
 					>
 						<div class="p-4">
 							<div
-								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-primary-50"
 							>
 								<div
 									class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
@@ -132,7 +144,7 @@
 								</div>
 							</div>
 							<div
-								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-primary-50"
 							>
 								<div
 									class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
@@ -162,7 +174,7 @@
 								</div>
 							</div>
 							<div
-								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-primary-50"
 							>
 								<div
 									class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
@@ -190,13 +202,13 @@
 								</div>
 							</div>
 						</div>
-						<div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+						<div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-primary-600">
 							<a
 								href="/contact-us"
-								class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+								class="unstyled flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-tertiary-500 hover:bg-primary-500"
 							>
 								<svg
-									class="h-5 w-5 flex-none text-gray-400"
+									class="h-5 w-5 flex-none text-tertiary-500"
 									viewBox="0 0 24 24"
 									aria-hidden="true"
 									stroke-width="2"
@@ -212,10 +224,10 @@
 							</a>
 							<a
 								href={COMPANY.contact.phone.href}
-								class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 plausible-event-name=Call+Clicked hover:bg-gray-100"
+								class="unstyled flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-tertiary-500 plausible-event-name=Call+Clicked hover:bg-primary-500"
 							>
 								<svg
-									class="h-5 w-5 flex-none text-gray-400"
+									class="h-5 w-5 flex-none text-tertiary-500"
 									viewBox="0 0 20 20"
 									fill="currentColor"
 									aria-hidden="true"
@@ -233,11 +245,12 @@
 				</div>
 
 				<div class="relative">
-					<button
-						type="button"
-						on:click={toggle_about}
+					<a
+						href="/about-us"
+						on:mouseover|stopPropagation={open_about}
+						on:focus|stopPropagation={open_about}
 						class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
-						aria-expanded="false"
+						aria-expanded={$is_about_open}
 					>
 						About
 						<svg
@@ -254,17 +267,18 @@
 								clip-rule="evenodd"
 							/>
 						</svg>
-					</button>
+					</a>
 
 					<!-- 'About' flyout menu, show/hide based on flyout menu state. -->
 					<div
+						on:mouseleave={close_about}
 						class="absolute pointer-events-none -left-8 top-full mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition {$is_about_open
 							? '!pointer-events-auto z-10 ease-out duration-200 opacity-100 translate-y-0'
 							: '-z-10 ease-in duration-150 opacity-0 translate-y-1'}"
 					>
 						<div class="p-4">
 							<div
-								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-primary-50"
 							>
 								<div
 									class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
@@ -290,7 +304,7 @@
 								</div>
 							</div>
 							<div
-								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-primary-50"
 							>
 								<div
 									class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
@@ -320,10 +334,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+						<div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-primary-600">
 							<a
 								href="/contact-us"
-								class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+								class="unstyled flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-tertiary-500 hover:bg-primary-500"
 							>
 								<svg
 									class="h-5 w-5 flex-none text-gray-400"
@@ -342,7 +356,7 @@
 							</a>
 							<a
 								href={COMPANY.contact.phone.href}
-								class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 plausible-event-name=Call+Clicked hover:bg-gray-100"
+								class="unstyled flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-tertiary-500 plausible-event-name=Call+Clicked hover:bg-primary-500"
 							>
 								<svg
 									class="h-5 w-5 flex-none text-gray-400"
@@ -522,10 +536,10 @@
 								>Contact us</a
 							>
 						</div>
-						<div class="flex flex-col gap-y-2 py-6">
+						<div class="flex flex-col gap-y-4 py-6">
 							<a
 								href={COMPANY.contact.phone.href}
-								class="unstyled btn variant-filled-secondary w-full plausible-event-name=Call+Clicked"
+								class="unstyled btn variant-filled-tertiary w-full plausible-event-name=Call+Clicked"
 								><svg
 									class="h-4 w-4 mr-2 flex-none"
 									viewBox="0 0 20 20"
@@ -538,6 +552,24 @@
 										clip-rule="evenodd"
 									/>
 								</svg>Call</a
+							>
+							<a
+								href="/contact-us"
+								class="unstyled btn variant-ringed-tertiary text-tertiary-500 w-full plausible-event-name=Call+Clicked"
+							>
+								<svg
+									class="h-4 w-4 mr-2 flex-none"
+									viewBox="0 0 24 24"
+									aria-hidden="true"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path stroke="none" d="M0 0h24v24H0z" /> <line x1="10" y1="14" x2="21" y2="3" />
+									<path d="M21 3L14.5 21a.55 .55 0 0 1 -1 0L10 14L3 10.5a.55 .55 0 0 1 0 -1L21 3" />
+								</svg>Contact us</a
 							>
 						</div>
 					</div>
