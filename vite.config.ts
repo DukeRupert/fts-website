@@ -11,7 +11,12 @@ const config: UserConfig = {
 			defaultDirectives: () =>
 				new URLSearchParams('?width=240;360;480;1024;1920&format=avif;webp;jpg')
 		})
-	]
+	],
+	server: {
+		// Set `host: true` if inside GitHub Codespaces to listen on all addresses,
+		// see https://vitejs.dev/config/server-options.html#server-host
+		host: !!process.env.CODESPACES,
+	  },
 };
 
 export default config;
