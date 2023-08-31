@@ -68,8 +68,6 @@
 		duration: 150,
 		easing: quadIn
 	};
-
-	console.log($is_open);
 </script>
 
 <header class="absolute inset-x-0 top-0 z-50">
@@ -199,6 +197,37 @@
 										<span class="absolute inset-0" />
 									</a>
 									<p class="mt-1 text-gray-600">Repair or prevent erosion</p>
+								</div>
+							</div>
+							<div
+								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-primary-50"
+							>
+								<div
+									class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+								>
+									<svg
+										class="h-6 w-6 text-gray-600 group-hover:text-primary-600"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+										/>
+									</svg>
+								</div>
+								<div class="flex-auto">
+									<a href="/projects" class="block font-semibold text-gray-900">
+										Projects
+										<span class="absolute inset-0" />
+									</a>
+									<p class="mt-1 text-gray-600">View our past work</p>
 								</div>
 							</div>
 						</div>
@@ -376,11 +405,6 @@
 					</div>
 				</div>
 
-				<a
-					href="/projects"
-					class="unstyled text-sm font-semibold leading-6 text-gray-900 hover:underline">Projects</a
-				>
-
 				<a href={COMPANY.contact.phone.href} class="btn btn-sm variant-filled-secondary"
 					><span
 						><svg
@@ -395,7 +419,7 @@
 								clip-rule="evenodd"
 							/>
 						</svg></span
-					><span>Call</span></a
+					><span>{COMPANY.contact.phone.string}</span></a
 				>
 			</div>
 		</div>
@@ -551,7 +575,7 @@
 										d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"
 										clip-rule="evenodd"
 									/>
-								</svg>Call</a
+								</svg>{COMPANY.contact.phone.string}</a
 							>
 							<a
 								href="/contact-us"
