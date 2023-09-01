@@ -5,40 +5,43 @@
 	import type { PageData } from './$types';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 	import Seo from '$lib/components/Seo.svelte';
+
 	export let data: PageData;
+	const title = 'Drainage';
+	const description =
+		'Our team specializes in keeping your property dry and safe, addressing drainage issues with precision and efficiency. From stormwater management to foundation protection, we ensure that water flows where it should, providing peace of mind and preserving the integrity of your space.';
 
 	const solutions = [
 		{
-			title: 'French Drains',
-			body: 'A trench filled with gravel or rock that contains a perforated pipe that redirects surface or groundwater away from an area.'
+			title: 'Comprehensive Drainage Solutions',
+			body: 'At FtS Drainage, we specialize in comprehensive drainage solutions to keep your property safe and dry. From addressing surface water runoff to protecting foundations and basements, our expertise covers all aspects of effective drainage.'
 		},
 		{
-			title: 'Gutter Drains',
-			body: 'Gutters and drain spouts are important but they work so much better when paired with a good gutter drain system.'
+			title: 'Skilled Drainage Experts',
+			body: 'Our team of skilled drainage experts is dedicated to resolving water-related issues with precision and efficiency. With years of experience, we assess, plan, and execute drainage projects that deliver lasting results and peace of mind.'
 		},
 		{
-			title: 'Curtain Drains',
-			body: 'Similar to a french drain except that it is installed underground and often out of sight. Useful to direct water away from a home.'
+			title: 'Cutting-Edge Drainage Technology',
+			body: 'We employ cutting-edge drainage technology and methods to ensure optimal performance. From French drains to surface grading and stormwater management, we use the latest tools and techniques to keep water at bay.'
 		},
 		{
-			title: 'Dry Well',
-			body: 'A drywell is used to quickly transfer excess surface water into the subsoil. Proper location and construction are crucial.'
+			title: 'Preventative Foundation Protection',
+			body: 'Our drainage solutions go beyond surface water management. We offer preventative foundation protection services, safeguarding your property against potential damage caused by water infiltration and ensuring the longevity of your structure.'
 		},
 		{
-			title: 'Catch Basin',
-			body: 'Installing catch basins correctly is extremely important to the operation of most drainage solutions.'
+			title: 'Efficient Project Management',
+			body: 'Efficiency is paramount in our drainage services. Our expert project management ensures that your drainage issues are resolved on time and within budget, minimizing disruption to your property while maximizing effectiveness.'
 		},
 		{
-			title: 'Erosion Control',
-			body: 'Your best ally in the fight against excess water is land. We integrate and support natural solutions through erosion control.'
+			title: 'Client-Centric Approach',
+			body: 'We believe in transparent communication and collaboration with our clients. Throughout the drainage project, your input is valued, and we work closely with you to tailor our solutions to your specific needs, ensuring your complete satisfaction.'
 		}
 	];
 
 	const seoData = {
-		title: 'Drainage | FtS Excavation',
-		description:
-			'Protect your property with our top-notch drainage services. Our team of experts designs and implements tailored drainage solutions that effectively channel water away, preventing costly damage and ensuring a dry and stable environment.',
-		url: 'https://www.fts-excavation.com/drainage',
+		title: `${title} | FtS Excavation`,
+		description: description,
+		url: 'https://www.fts-excavation.com/hardscape',
 		og: {
 			src: 'https://www.fts-excavation.com/image/seo/FtS-Excavation_1200.jpg',
 			alt: 'FtS Excavation clearing land in the Puget Sound region.',
@@ -53,11 +56,11 @@
 <div class="bg-white py-16 sm:py-32">
 	<div class="bg-white px-6 py-24 sm:py-32 lg:px-8">
 		<div class="mx-auto max-w-2xl text-center">
-			<h1 class="unstyled text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Drainage</h1>
+			<h1 class="unstyled text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+				{title}
+			</h1>
 			<p class="mt-6 text-lg leading-8 text-gray-600">
-				Protect your property with our top-notch drainage services. Our team of experts designs and
-				implements tailored drainage solutions that effectively channel water away, preventing
-				costly damage and ensuring a dry and stable environment.
+				{description}
 			</p>
 		</div>
 	</div>
@@ -65,23 +68,21 @@
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
 			<Img
 				src={drainage}
-				alt="A beautiful green lawn with a graveled drainage ditch."
-				class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
+				alt="Dug out trench for building works of new house concrete foundation on construction site"
+				class="mb-[-12%] mt-8 rounded-xl shadow-2xl ring-1 ring-gray-900/10"
 			/>
 			<div class="relative" aria-hidden="true">
 				<div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
 			</div>
 		</div>
 	</div>
-	<div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
-		<dl
-			class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16"
-		>
+	<div class="mx-auto mt-16 max-w-2xl sm:mt-20 px-6 lg:px-8 lg:mt-24 lg:max-w-none">
+		<dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
 			{#each solutions as { title, body }}
-				<div class="relative pl-9">
-					<dt class="inline font-semibold text-gray-900">
+				<div class="flex flex-col">
+					<dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
 						<svg
-							class="absolute left-1 top-1 h-5 w-5 text-secondary-600"
+							class="h-5 w-5 flex-none text-secondary-600"
 							width="24"
 							height="24"
 							viewBox="0 0 24 24"
@@ -95,8 +96,8 @@
 						</svg>
 						{title}
 					</dt>
-					<dd class="inline">
-						{body}
+					<dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+						<p class="flex-auto">{body}</p>
 					</dd>
 				</div>
 			{/each}
@@ -104,8 +105,8 @@
 	</div>
 	{#if data.posts}
 		<Blog
-			title="Drainage Projects"
-			body="Discover how we have solved drainage issues all over the Puget Sound."
+			title={`${title} projects`}
+			body="See what FtS Excavation can do for you."
 			posts={data.posts}
 		/>
 	{/if}

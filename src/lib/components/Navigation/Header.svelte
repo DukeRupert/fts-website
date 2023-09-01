@@ -527,6 +527,21 @@
 											>Hardscape</a
 										>
 										<a
+											href="/foundations"
+											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-500 hover:underline"
+											>Foundations</a
+										>
+										<a
+											href="/land-clearing"
+											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-500 hover:underline"
+											>Land clearing</a
+										>
+										<a
+											href="/public-utility-extension"
+											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-500 hover:underline"
+											>Public utility extensions</a
+										>
+										<a
 											href="/drainage"
 											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-500 hover:underline"
 											>Drainage</a
@@ -534,11 +549,6 @@
 									</div>
 								{/if}
 							</div>
-							<a
-								href="/about-us"
-								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-500"
-								>About us</a
-							>
 							<a
 								href="/projects"
 								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-500"
@@ -553,6 +563,11 @@
 								href="/jobs"
 								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-500"
 								>Jobs</a
+							>
+							<a
+								href="/about-us"
+								class="unstyled -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-primary-500"
+								>About us</a
 							>
 							<a
 								href="/contact-us"

@@ -7,39 +7,40 @@
 	import Seo from '$lib/components/Seo.svelte';
 
 	export let data: PageData;
+	const title = 'Site preparation';
+	const description =  "Our comprehensive site preparation services set the stage for successful projects, whether it's clearing, grading, or utility installation. Partner with us and experience precision, efficiency, and client-centric solutions that make your project a resounding success.";
 
 	const solutions = [
-		{
-			title: 'Experience',
-			body: 'FtS Excavation brings years of experience and expertise to every job ensuring the projects success.'
-		},
-		{
-			title: 'Attention to detail',
-			body: 'We are meticulous, ensuring that all work is completed to the highest standards.'
-		},
-		{
-			title: 'Communication',
-			body: 'Our bids are transparent and clear so you know exactly what you will get.'
-		},
-		{
-			title: 'Timeliness',
-			body: 'We complete the work within the agreed-upon timeline, without unnecessary delays.'
-		},
-		{
-			title: 'Flexibility',
-			body: 'We are flexible and able to adapt to changing project requirements, without compromising on quality or safety.'
-		},
-		{
-			title: 'Licensing and Insurance',
-			body: 'We are properly licensed and insured to perform the work required.'
-		}
-	];
+  {
+    "title": "Comprehensive Site Preparation",
+    "body": "At FtS Site Prep, we specialize in comprehensive site preparation services, transforming raw land into a canvas ready for development. From clearing and grading to excavation and utility installation, we lay the groundwork for your projects' success."
+  },
+  {
+    "title": "Skilled Site Preparation Experts",
+    "body": "Our team of skilled site preparation experts brings years of experience to every project. With precision and efficiency, we meticulously plan and execute site preparation, ensuring that your land is primed for construction."
+  },
+  {
+    "title": "Cutting-Edge Equipment and Technology",
+    "body": "We utilize cutting-edge equipment and technology to deliver top-notch site preparation. From advanced grading machinery to GPS-guided excavation, our tools ensure that your project starts on the right foot."
+  },
+  {
+    "title": "Cost-Effective Solutions",
+    "body": "We provide cost-effective site preparation solutions without compromising on quality or safety. Our efficient processes and competitive pricing make your project's groundwork accessible and affordable."
+  },
+  {
+    "title": "Efficient Project Management",
+    "body": "Efficiency is at the heart of our site preparation services. Our expert project managers oversee every detail, from scheduling to resource allocation, ensuring that your site is prepared on time and within budget."
+  },
+  {
+    "title": "Client-Centric Approach",
+    "body": "We believe in open communication and collaboration with our clients throughout the site preparation process. Your input is essential, and we work closely with you to tailor our services to your project's specific requirements, delivering results that exceed your expectations."
+  }
+]
 
 	const seoData = {
-		title: 'Site Preparation | FtS Excavation',
-		description:
-			'We clear, grade, and prepare sites for construction projects with precision and efficiency. Trust us for reliable and comprehensive site preparation.',
-		url: 'https://www.fts-excavation.com/site-preparation',
+		title: `${title} | FtS Excavation`,
+		description: description,
+		url: 'https://www.fts-excavation.com/hardscape',
 		og: {
 			src: 'https://www.fts-excavation.com/image/seo/FtS-Excavation_1200.jpg',
 			alt: 'FtS Excavation clearing land in the Puget Sound region.',
@@ -55,11 +56,10 @@
 	<div class="bg-white px-6 py-24 sm:py-32 lg:px-8">
 		<div class="mx-auto max-w-2xl text-center">
 			<h1 class="unstyled text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-				Site Preparation
+				{title}
 			</h1>
 			<p class="mt-6 text-lg leading-8 text-gray-600">
-				We clear, grade, and prepare sites for construction projects with precision and efficiency.
-				Trust us for reliable and comprehensive site preparation.
+				{description}
 			</p>
 		</div>
 	</div>
@@ -68,22 +68,20 @@
 			<Img
 				src={site_preparation}
 				alt="Dug out trench for building works of new house concrete foundation on construction site"
-				class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
+				class="mb-[-12%] mt-8 rounded-xl shadow-2xl ring-1 ring-gray-900/10"
 			/>
 			<div class="relative" aria-hidden="true">
 				<div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
 			</div>
 		</div>
 	</div>
-	<div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
-		<dl
-			class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16"
-		>
+	<div class="mx-auto mt-16 max-w-2xl sm:mt-20 px-6 lg:px-8 lg:mt-24 lg:max-w-none">
+		<dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
 			{#each solutions as { title, body }}
-				<div class="relative pl-9">
-					<dt class="inline font-semibold text-gray-900">
+				<div class="flex flex-col">
+					<dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
 						<svg
-							class="absolute left-1 top-1 h-5 w-5 text-secondary-600"
+							class="h-5 w-5 flex-none text-secondary-600"
 							width="24"
 							height="24"
 							viewBox="0 0 24 24"
@@ -97,8 +95,8 @@
 						</svg>
 						{title}
 					</dt>
-					<dd class="inline">
-						{body}
+					<dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+						<p class="flex-auto">{body}</p>
 					</dd>
 				</div>
 			{/each}
@@ -106,8 +104,8 @@
 	</div>
 	{#if data.posts}
 		<Blog
-			title="Site Preparation Projects"
-			body="Our experience team has helped prepare sites all over the Puget Sound."
+			title={`${title} projects`}
+			body="See what FtS Excavation can do for you."
 			posts={data.posts}
 		/>
 	{/if}

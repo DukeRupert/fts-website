@@ -28,33 +28,33 @@
 	const services: Service[] = [
 		{
 			title: 'Drainage',
-			body: "Creatively solving all types of groundwater and drainage issues is a forte' of ours.",
+			body: 'Our team specializes in keeping your property dry and safe, addressing drainage issues with precision and efficiency. From stormwater management to foundation protection, we ensure that water flows where it should, providing peace of mind and preserving the integrity of your space.',
 			href: '/drainage'
 		},
 		{
 			title: 'Site Preparation',
-			body: 'Make sure the project passes inspection the first time whether you are an individual developer or a prime contractor.',
+			body: "Our comprehensive site preparation services set the stage for successful projects, whether it's clearing, grading, or utility installation. Partner with us and experience precision, efficiency, and client-centric solutions that make your project a resounding success.",
 			href: '/site-preparation'
 		},
 		{
 			title: 'Hardscapes',
-			body: 'At FtS Excavation our skilled team combines artistry and functionality to craft stunning landscapes that leave a lasting impression on anyone who sets foot in it.',
+			body: "Our custom hardscape designs are crafted with expert precision, using quality materials and a keen eye for functional aesthetics. Whether it's a stunning patio, a sturdy retaining wall, or an inviting outdoor oasis, we turn your outdoor dreams into beautiful, lasting realities.",
 			href: '/hardscape'
 		},
 		{
 			title: 'Foundations',
-			body: 'This is where it all begins. With our expertise you can be confident that your foundation will pass inspection the first time.',
+			body: "Choose FtS Excavation for foundations that stand firm and true. With a proven track record of excellence in excavation, we're your trusted partner for building the rock-solid foundations your projects deserve.",
 			href: '/foundations'
 		},
 		{
 			title: 'Land Clearing',
-			body: 'Do you have a project in mind for that land you own? You will need to clear it first. We clear and haul debris away fast!',
-			href: ''
+			body: "Transform your land into a canvas of possibilities with FtS Excavation's top-tier land clearing services in Puyallup, WA. Our expertise combines with cutting-edge equipment to create a clean slate for your projects, all while prioritizing environmental responsibility, safety, and seamless collaboration.",
+			href: '/land-clearing'
 		},
 		{
 			title: 'Public Utility Extension',
-			body: 'Whether its a public utility or new commercial project, FTS Excavation can safely trench and prepare the site for your power, sewer or water utility extension.',
-			href: ''
+			body: "Elevate your community with FtS Excavation's utility extension services based in Puyallup, WA. From water to electricity, we deliver reliable infrastructure expansion with expert precision and a commitment to safety.",
+			href: '/public-utility-extension'
 		}
 	];
 </script>
@@ -93,7 +93,7 @@
 						<p class="mt-1 text-gray-600">{body}</p>
 						{#if href}
 							<a class="unstyled mt-4 font-semibold text-primary-500 underline" {href}
-								>Learn more <span aria-hidden="true">&rarr;</span></a
+								>Learn more <span class="sr-only">about {title}</span> <span aria-hidden="true">&rarr;</span></a
 							>
 						{/if}
 					</div>

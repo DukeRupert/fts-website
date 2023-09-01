@@ -50,8 +50,8 @@
 </script>
 
 <Seo data={seoData} />
-<div class="bg-white py-32">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<div class="bg-white py-16 sm:py-32">
+	<div class="bg-white px-6 py-24 sm:py-32 lg:px-8">
 		<div class="mx-auto max-w-2xl text-center">
 			<h1 class="unstyled text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
 				{title}
@@ -60,7 +60,7 @@
 				{description}
 			</p>
 		</div>
-	
+	</div>
 	<div class="relative overflow-hidden">
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
 			<Img
@@ -73,7 +73,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+	<div class="mx-auto mt-16 max-w-2xl sm:mt-20 px-6 lg:px-8 lg:mt-24 lg:max-w-none">
 		<dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
 			{#each solutions as { title, body }}
 				<div class="flex flex-col">
@@ -101,5 +101,4 @@
 		</dl>
 	</div>
 	<CallToAction />
-</div>
 </div>
