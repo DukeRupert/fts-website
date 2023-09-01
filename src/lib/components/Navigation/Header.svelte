@@ -267,7 +267,7 @@
 										clip-rule="evenodd"
 									/>
 								</svg>
-								Call us
+								{COMPANY.contact.phone.string}
 							</a>
 						</div>
 					</div>
@@ -399,7 +399,7 @@
 										clip-rule="evenodd"
 									/>
 								</svg>
-								Call us
+								{COMPANY.contact.phone.string}
 							</a>
 						</div>
 					</div>
