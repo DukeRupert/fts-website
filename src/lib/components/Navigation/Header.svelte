@@ -13,8 +13,8 @@
 	import { COMPANY } from '$lib/constants';
 	import { is_open, is_services_open, is_about_open, is_mobile_services_open } from '$lib/stores';
 
-	function open_services(): void {
-		$is_services_open = true;
+	function toggle_services(): void {
+		$is_services_open = !$is_services_open;
 		$is_about_open = false;
 	}
 
@@ -23,8 +23,8 @@
 		$is_about_open = false;
 	}
 
-	function open_about(): void {
-		$is_about_open = true;
+	function toggle_about(): void {
+		$is_about_open = !$is_about_open;
 		$is_services_open = false;
 	}
 
@@ -79,10 +79,9 @@
 			</a>
 			<div class="hidden lg:flex lg:gap-x-8 lg:items-center">
 				<div class="relative">
-					<a
-						href="/services"
-						on:mouseover|stopPropagation={open_services}
-						on:focus|stopPropagation={open_services}
+					<button
+						type="button"
+						on:click={toggle_services}
 						class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
 						aria-expanded={$is_services_open}
 					>
@@ -101,24 +100,24 @@
 								clip-rule="evenodd"
 							/>
 						</svg>
-					</a>
+					</button>
 
 					<!-- 'Services' flyout menu, show/hide based on flyout menu state. -->
 					<div
 						on:mouseleave={close_services}
-						class="absolute pointer-events-none -left-8 top-full mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition {$is_services_open
+						class="absolute z-10 -left-8 mt-5 flex w-screen max-w-max px-4 {$is_services_open
 							? '!pointer-events-auto z-10 duration-200 opacity-100 translate-y-0'
 							: '-z-10 duration-150 opacity-0 translate-y-1'}"
 					>
-						<div class="p-4">
-							<div
-								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-primary-50"
-							>
+					<div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 lg:max-w-3xl">
+						<div class="grid grid-cols-1 gap-x-6 gap-y-1 p-4 lg:grid-cols-2">
+							<!-- Site preparation -->
+							<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
 								<div
-									class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+									class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
 								>
 									<svg
-										class="h-6 w-6 text-gray-600 group-hover:text-primary-600"
+										class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke-width="1.5"
@@ -133,22 +132,21 @@
 										/>
 									</svg>
 								</div>
-								<div class="flex-auto">
-									<a href="/site-preparation" class="block font-semibold text-gray-900">
+								<div>
+									<a href="/site-preparation" class="font-semibold text-gray-900">
 										Site preparation
 										<span class="absolute inset-0" />
 									</a>
 									<p class="mt-1 text-gray-600">Both commercial and residential</p>
 								</div>
 							</div>
-							<div
-								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-primary-50"
-							>
+							<!-- Hardscape -->
+							<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
 								<div
-									class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+									class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
 								>
 									<svg
-										class="h-6 w-6 text-gray-600 group-hover:text-primary-600"
+										class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke-width="1.5"
@@ -163,22 +161,21 @@
 										/>
 									</svg>
 								</div>
-								<div class="flex-auto">
-									<a href="/hardscape" class="block font-semibold text-gray-900">
+								<div>
+									<a href="/hardscape" class="font-semibold text-gray-900">
 										Hardscape
 										<span class="absolute inset-0" />
 									</a>
-									<p class="mt-1 text-gray-600">Transform your property today</p>
+									<p class="mt-1 text-gray-600">Both commercial and residential</p>
 								</div>
 							</div>
-							<div
-								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-primary-50"
-							>
+							<!-- Drainage -->
+							<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
 								<div
-									class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+									class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
 								>
 									<svg
-										class="h-6 w-6 text-gray-600 group-hover:text-primary-600"
+										class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
 										viewBox="0 0 24 24"
 										stroke-width="2"
 										stroke="currentColor"
@@ -191,22 +188,21 @@
 										<path d="M11 15v.01m0 3v.01m0 3v.01m4 -4v.01m0 3v.01" />
 									</svg>
 								</div>
-								<div class="flex-auto">
-									<a href="/drainage" class="block font-semibold text-gray-900">
+								<div>
+									<a href="/drainage" class="font-semibold text-gray-900">
 										Drainage
 										<span class="absolute inset-0" />
 									</a>
-									<p class="mt-1 text-gray-600">Repair or prevent erosion</p>
+									<p class="mt-1 text-gray-600">Both commercial and residential</p>
 								</div>
 							</div>
-							<div
-								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-primary-50"
-							>
+							<!-- Foundations -->
+							<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
 								<div
-									class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+									class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
 								>
 									<svg
-										class="h-6 w-6 text-gray-600 group-hover:text-primary-600"
+										class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
 										viewBox="0 0 24 24"
 										stroke-width="2"
 										stroke="currentColor"
@@ -214,70 +210,81 @@
 										stroke-linecap="round"
 										stroke-linejoin="round"
 									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-										/>
+										<path stroke="none" d="M0 0h24v24H0z" />
+										<path d="M7 18a4.6 4.4 0 0 1 0 -9h0a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7" />
+										<path d="M11 15v.01m0 3v.01m0 3v.01m4 -4v.01m0 3v.01" />
 									</svg>
 								</div>
-								<div class="flex-auto">
-									<a href="/projects" class="block font-semibold text-gray-900">
-										Projects
+								<div>
+									<a href="/foundations" class="font-semibold text-gray-900">
+										Foundations
 										<span class="absolute inset-0" />
 									</a>
-									<p class="mt-1 text-gray-600">View our past work</p>
+									<p class="mt-1 text-gray-600">Both commercial and residential</p>
+								</div>
+							</div>
+							<!-- Land Clearing -->
+							<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+								<div
+									class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
+								>
+									<svg
+										class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path stroke="none" d="M0 0h24v24H0z" />
+										<path d="M7 18a4.6 4.4 0 0 1 0 -9h0a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7" />
+										<path d="M11 15v.01m0 3v.01m0 3v.01m4 -4v.01m0 3v.01" />
+									</svg>
+								</div>
+								<div>
+									<a href="/land-clearing" class="font-semibold text-gray-900">
+										Land Clearing
+										<span class="absolute inset-0" />
+									</a>
+									<p class="mt-1 text-gray-600">Both commercial and residential</p>
+								</div>
+							</div>
+							<!-- Public Utility -->
+							<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+								<div
+									class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
+								>
+									<svg
+										class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path stroke="none" d="M0 0h24v24H0z" />
+										<path d="M7 18a4.6 4.4 0 0 1 0 -9h0a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7" />
+										<path d="M11 15v.01m0 3v.01m0 3v.01m4 -4v.01m0 3v.01" />
+									</svg>
+								</div>
+								<div>
+									<a href="/public-utility-extension" class="font-semibold text-gray-900">
+										Public Utility Extensions
+										<span class="absolute inset-0" />
+									</a>
+									<p class="mt-1 text-gray-600">Both commercial and residential</p>
 								</div>
 							</div>
 						</div>
-						<div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-primary-600">
-							<a
-								href="/contact-us"
-								class="unstyled flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-tertiary-500 hover:bg-primary-500"
-							>
-								<svg
-									class="h-5 w-5 flex-none text-tertiary-500"
-									viewBox="0 0 24 24"
-									aria-hidden="true"
-									stroke-width="2"
-									stroke="currentColor"
-									fill="none"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path stroke="none" d="M0 0h24v24H0z" /> <line x1="10" y1="14" x2="21" y2="3" />
-									<path d="M21 3L14.5 21a.55 .55 0 0 1 -1 0L10 14L3 10.5a.55 .55 0 0 1 0 -1L21 3" />
-								</svg>
-								Contact Us
-							</a>
-							<a
-								href={COMPANY.contact.phone.href}
-								class="unstyled flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-tertiary-500 plausible-event-name=Call+Clicked hover:bg-primary-500"
-							>
-								<svg
-									class="h-5 w-5 flex-none text-tertiary-500"
-									viewBox="0 0 20 20"
-									fill="currentColor"
-									aria-hidden="true"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"
-										clip-rule="evenodd"
-									/>
-								</svg>
-								{COMPANY.contact.phone.string}
-							</a>
-						</div>
+					</div>
 					</div>
 				</div>
 
 				<div class="relative">
-					<a
-						href="/about-us"
-						on:mouseover|stopPropagation={open_about}
-						on:focus|stopPropagation={open_about}
+					<button
+						on:click={toggle_about}
 						class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
 						aria-expanded={$is_about_open}
 					>
@@ -296,7 +303,7 @@
 								clip-rule="evenodd"
 							/>
 						</svg>
-					</a>
+					</button>
 
 					<!-- 'About' flyout menu, show/hide based on flyout menu state. -->
 					<div
@@ -310,10 +317,10 @@
 								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-primary-50"
 							>
 								<div
-									class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+									class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
 								>
 									<svg
-										class="h-6 w-6 text-gray-600 group-hover:text-primary-600"
+										class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke-width="1.5"
@@ -336,10 +343,10 @@
 								class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-primary-50"
 							>
 								<div
-									class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+									class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
 								>
 									<svg
-										class="h-6 w-6 text-gray-600 group-hover:text-primary-600"
+										class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke-width="1.5"
