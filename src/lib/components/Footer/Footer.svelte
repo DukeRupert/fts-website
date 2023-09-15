@@ -81,6 +81,10 @@
 							</li>
 
 							<li>
+								<a href="/services" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Services</a>
+							</li>
+
+							<li>
 								<a href="/projects" class="text-sm leading-6 text-gray-600 hover:text-gray-900"
 									>Projects</a
 								>
@@ -107,13 +111,29 @@
 								>
 							</li>
 							<li>
+								<a href="/drainage" class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+									>Drainage</a
+								>
+							</li>
+							<li>
 								<a href="/hardscape" class="text-sm leading-6 text-gray-600 hover:text-gray-900"
 									>Hardscape</a
 								>
 							</li>
 							<li>
-								<a href="/drainage" class="text-sm leading-6 text-gray-600 hover:text-gray-900"
-									>Drainage</a
+								<a href="/foundations" class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+									>Foundations</a
+								>
+							</li>
+							<li>
+								<a
+									href="/land-clearing"
+									class="text-sm leading-6 text-gray-600 hover:text-gray-900">Land clearing</a
+								>
+							</li>
+							<li>
+								<a href="/public-utility-extension" class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+									>Public utility extensions</a
 								>
 							</li>
 						</ul>
@@ -147,10 +167,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
+		<div class="mt-16 flex flex-col space-y-2 sm:flex-row sm:justify-between border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
 			<p class="text-xs leading-5 text-gray-500">
 				&copy; {COMPANY.year}
 				{COMPANY.name}. All rights reserved.
+			</p>
+			<p class="text-xs leading-5 text-gray-500">
+				Created by <a href="https://www.fireflysoftware.dev/" target="_blank" rel="noreferrer">Firefly Software</a>
 			</p>
 		</div>
 	</div>
