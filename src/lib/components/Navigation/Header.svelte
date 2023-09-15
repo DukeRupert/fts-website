@@ -109,176 +109,183 @@
 							? '!pointer-events-auto z-10 duration-200 opacity-100 translate-y-0'
 							: '-z-10 duration-150 opacity-0 translate-y-1'}"
 					>
-					<div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 lg:max-w-3xl">
-						<div class="grid grid-cols-1 gap-x-6 gap-y-1 p-4 lg:grid-cols-2">
-							<!-- Site preparation -->
-							<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-								<div
-									class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
-								>
-									<svg
-										class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke-width="1.5"
-										stroke="currentColor"
-										aria-hidden="true"
+						<div
+							class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 lg:max-w-3xl"
+						>
+							<div class="grid grid-cols-1 gap-x-6 gap-y-1 p-4 lg:grid-cols-2">
+								<!-- Site preparation -->
+								<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+									<div
+										class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
 									>
-										<path
+										<svg
+											class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											aria-hidden="true"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+											/>
+										</svg>
+									</div>
+									<div>
+										<a href="/site-preparation" class="font-semibold text-gray-900">
+											Site preparation
+											<span class="absolute inset-0" />
+										</a>
+										<p class="mt-1 text-gray-600">Both commercial and residential</p>
+									</div>
+								</div>
+								<!-- Hardscape -->
+								<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+									<div
+										class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
+									>
+										<svg
+											class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											aria-hidden="true"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+											/>
+										</svg>
+									</div>
+									<div>
+										<a href="/hardscape" class="font-semibold text-gray-900">
+											Hardscape
+											<span class="absolute inset-0" />
+										</a>
+										<p class="mt-1 text-gray-600">Both commercial and residential</p>
+									</div>
+								</div>
+								<!-- Drainage -->
+								<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+									<div
+										class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
+									>
+										<svg
+											class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
+											viewBox="0 0 24 24"
+											stroke-width="2"
+											stroke="currentColor"
+											fill="none"
 											stroke-linecap="round"
 											stroke-linejoin="round"
-											stroke-width="2"
-											d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-										/>
-									</svg>
+										>
+											<path stroke="none" d="M0 0h24v24H0z" />
+											<path d="M7 18a4.6 4.4 0 0 1 0 -9h0a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7" />
+											<path d="M11 15v.01m0 3v.01m0 3v.01m4 -4v.01m0 3v.01" />
+										</svg>
+									</div>
+									<div>
+										<a href="/drainage" class="font-semibold text-gray-900">
+											Drainage
+											<span class="absolute inset-0" />
+										</a>
+										<p class="mt-1 text-gray-600">Both commercial and residential</p>
+									</div>
 								</div>
-								<div>
-									<a href="/site-preparation" class="font-semibold text-gray-900">
-										Site preparation
-										<span class="absolute inset-0" />
-									</a>
-									<p class="mt-1 text-gray-600">Both commercial and residential</p>
-								</div>
-							</div>
-							<!-- Hardscape -->
-							<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-								<div
-									class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
-								>
-									<svg
-										class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke-width="1.5"
-										stroke="currentColor"
-										aria-hidden="true"
+								<!-- Foundations -->
+								<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+									<div
+										class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
 									>
-										<path
+										<svg
+											class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
+											viewBox="0 0 24 24"
+											stroke-width="2"
+											stroke="currentColor"
+											fill="none"
 											stroke-linecap="round"
 											stroke-linejoin="round"
+										>
+											<path stroke="none" d="M0 0h24v24H0z" />
+											<path
+												d="M5 4h14a1 1 0 0 1 1 1v5a1 1 0 0 1 -1 1h-7a1 1 0 0 0 -1 1v7a1 1 0 0 1 -1 1h-5a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1"
+											/> <line x1="4" y1="8" x2="6" y2="8" /> <line x1="4" y1="12" x2="7" y2="12" />
+											<line x1="4" y1="16" x2="6" y2="16" /> <line x1="8" y1="4" x2="8" y2="6" />
+											<polyline points="12 4 12 7 " /> <polyline points="16 4 16 6 " />
+										</svg>
+									</div>
+									<div>
+										<a href="/foundations" class="font-semibold text-gray-900">
+											Foundations
+											<span class="absolute inset-0" />
+										</a>
+										<p class="mt-1 text-gray-600">Both commercial and residential</p>
+									</div>
+								</div>
+								<!-- Land Clearing -->
+								<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+									<div
+										class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
+									>
+										<svg
+											class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
+											viewBox="0 0 24 24"
 											stroke-width="2"
-											d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-										/>
-									</svg>
+											stroke="currentColor"
+											fill="none"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path stroke="none" d="M0 0h24v24H0z" />
+											<path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -5v5h5" />
+											<path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 5v-5h-5" />
+										</svg>
+									</div>
+									<div>
+										<a href="/land-clearing" class="font-semibold text-gray-900">
+											Land Clearing
+											<span class="absolute inset-0" />
+										</a>
+										<p class="mt-1 text-gray-600">Both commercial and residential</p>
+									</div>
 								</div>
-								<div>
-									<a href="/hardscape" class="font-semibold text-gray-900">
-										Hardscape
-										<span class="absolute inset-0" />
-									</a>
-									<p class="mt-1 text-gray-600">Both commercial and residential</p>
-								</div>
-							</div>
-							<!-- Drainage -->
-							<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-								<div
-									class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
-								>
-									<svg
-										class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
-										viewBox="0 0 24 24"
-										stroke-width="2"
-										stroke="currentColor"
-										fill="none"
-										stroke-linecap="round"
-										stroke-linejoin="round"
+								<!-- Public Utility -->
+								<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+									<div
+										class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
 									>
-										<path stroke="none" d="M0 0h24v24H0z" />
-										<path d="M7 18a4.6 4.4 0 0 1 0 -9h0a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7" />
-										<path d="M11 15v.01m0 3v.01m0 3v.01m4 -4v.01m0 3v.01" />
-									</svg>
-								</div>
-								<div>
-									<a href="/drainage" class="font-semibold text-gray-900">
-										Drainage
-										<span class="absolute inset-0" />
-									</a>
-									<p class="mt-1 text-gray-600">Both commercial and residential</p>
-								</div>
-							</div>
-							<!-- Foundations -->
-							<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-								<div
-									class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
-								>
-									<svg
-										class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
-										viewBox="0 0 24 24"
-										stroke-width="2"
-										stroke="currentColor"
-										fill="none"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									>
-										<path stroke="none" d="M0 0h24v24H0z" />
-										<path d="M7 18a4.6 4.4 0 0 1 0 -9h0a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7" />
-										<path d="M11 15v.01m0 3v.01m0 3v.01m4 -4v.01m0 3v.01" />
-									</svg>
-								</div>
-								<div>
-									<a href="/foundations" class="font-semibold text-gray-900">
-										Foundations
-										<span class="absolute inset-0" />
-									</a>
-									<p class="mt-1 text-gray-600">Both commercial and residential</p>
-								</div>
-							</div>
-							<!-- Land Clearing -->
-							<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-								<div
-									class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
-								>
-									<svg
-										class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
-										viewBox="0 0 24 24"
-										stroke-width="2"
-										stroke="currentColor"
-										fill="none"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									>
-										<path stroke="none" d="M0 0h24v24H0z" />
-										<path d="M7 18a4.6 4.4 0 0 1 0 -9h0a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7" />
-										<path d="M11 15v.01m0 3v.01m0 3v.01m4 -4v.01m0 3v.01" />
-									</svg>
-								</div>
-								<div>
-									<a href="/land-clearing" class="font-semibold text-gray-900">
-										Land Clearing
-										<span class="absolute inset-0" />
-									</a>
-									<p class="mt-1 text-gray-600">Both commercial and residential</p>
-								</div>
-							</div>
-							<!-- Public Utility -->
-							<div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-								<div
-									class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-primary-500"
-								>
-									<svg
-										class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
-										viewBox="0 0 24 24"
-										stroke-width="2"
-										stroke="currentColor"
-										fill="none"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									>
-										<path stroke="none" d="M0 0h24v24H0z" />
-										<path d="M7 18a4.6 4.4 0 0 1 0 -9h0a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7" />
-										<path d="M11 15v.01m0 3v.01m0 3v.01m4 -4v.01m0 3v.01" />
-									</svg>
-								</div>
-								<div>
-									<a href="/public-utility-extension" class="font-semibold text-gray-900">
-										Public Utility Extensions
-										<span class="absolute inset-0" />
-									</a>
-									<p class="mt-1 text-gray-600">Both commercial and residential</p>
+										<svg
+											class="h-6 w-6 text-gray-600 group-hover:text-tertiary-400"
+											viewBox="0 0 24 24"
+											stroke-width="2"
+											stroke="currentColor"
+											fill="none"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path stroke="none" d="M0 0h24v24H0z" />
+											<path d="M9 5h10l2 2l-2 2h-10a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" />
+											<path d="M13 13h-7l-2 2l2 2h7a1 1 0 0 0 1 -1v-2a1 1 0 0 0 -1 -1" />
+											<line x1="12" y1="22" x2="12" y2="17" />
+											<line x1="12" y1="13" x2="12" y2="9" /> <line x1="12" y1="5" x2="12" y2="3" />
+										</svg>
+									</div>
+									<div>
+										<a href="/public-utility-extension" class="font-semibold text-gray-900">
+											Public Utility Extensions
+											<span class="absolute inset-0" />
+										</a>
+										<p class="mt-1 text-gray-600">Both commercial and residential</p>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 					</div>
 				</div>
 
