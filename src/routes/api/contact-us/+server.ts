@@ -24,7 +24,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		const response = await Postmark.sendEmailWithTemplate({
 			TemplateId: 21373960,
 			TemplateModel: data,
-			From: 'logan@firefly.llc',
+			From: 'logan@fireflysoftware.dev',
 			To: 'service@fts-excavation.com',
 			MessageStream: 'outbound',
 			TrackOpens: true
@@ -46,8 +46,8 @@ export const POST: RequestHandler = async ({ request }) => {
 	} catch (err) {
 		// Send error notification
 		await Postmark.sendEmail({
-			From: 'logan@firefly.llc',
-			To: 'logan@firefly.llc',
+			From: 'logan@fireflysoftware.dev',
+			To: 'logan@fireflysoftware.dev',
 
 			Subject: 'FtS Website form error',
 			TextBody: JSON.stringify(err)
