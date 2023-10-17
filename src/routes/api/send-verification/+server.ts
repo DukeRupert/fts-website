@@ -31,7 +31,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	// Generate data to send
 	const { data } = valid;
 	const support_email = 'service@fts-excavation.com';
-	const payload = data?.email ?? 'logan@firefly.llc';
+	const payload = data?.email ?? 'logan@fireflysoftware.dev';
 	const token = jwt.sign(payload, PROMO_SECRET);
 	const action_url = 'https://fts-excavation.com/api/validate/' + token;
 	const model: LeadModel = {
