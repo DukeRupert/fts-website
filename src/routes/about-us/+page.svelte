@@ -76,7 +76,7 @@
 				<p class="mt-8">
 					It's so important to start your project with an expert like FTS Excavation company to
 					prevent issues from arising such as settling and standing water that can affect the
-					soundness of the structure you're afterwards.
+					soundness of the structure years afterwards.
 				</p>
 				<p class="mt-8">
 					Thank you for considering us for your project and passing along our name.
