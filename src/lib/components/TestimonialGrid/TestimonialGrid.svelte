@@ -1,9 +1,9 @@
 <script>
-	import ryan_schaezler from '$lib/assets/reviews/ryan_schaezler.png?run&width=40&format=webp;avif;jpg';
-	import henny_baker from '$lib/assets/reviews/henny_baker.png?run&width=40&format=webp;avif;jpg';
-	import julie_pitt from '$lib/assets/reviews/julie_pitt.png?run&width=40&format=webp;avif;jpg';
-	import tish_taitano from '$lib/assets/reviews/tish_taitano.png?run&width=40&format=webp;avif;jpg';
-	import deAnne_davidson from '$lib/assets/reviews/deAnne_davidson.png?run&width=40&format=webp;avif;jpg';
+	import ryan_schaezler from '$lib/assets/reviews/ryan_schaezler.png?as=run&width=40&format=webp;avif;jpg';
+	import henny_baker from '$lib/assets/reviews/henny_baker.png?as=run&width=40&format=webp;avif;jpg';
+	import julie_pitt from '$lib/assets/reviews/julie_pitt.png?as=run&width=40&format=webp;avif;jpg';
+	import tish_taitano from '$lib/assets/reviews/tish_taitano.png?as=run&width=40&format=webp;avif;jpg';
+	import deAnne_davidson from '$lib/assets/reviews/deAnne_davidson.png?as=run&width=40&format=webp;avif;jpg';
 	import Img from '@zerodevx/svelte-img';
 	import StarRating from './StarRating.svelte';
 	import FadeIn from '$lib/components/FadeIn.svelte';

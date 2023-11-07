@@ -1,5 +1,5 @@
 <script lang="ts">
-	import fts_logo from '$lib/assets/logo/FtS_Excavation_logo_green_white.png?run&width=80&format=webp;avif;jpg';
+	import fts_logo from '$lib/assets/logo/FtS_Excavation_logo_green_white.png?as=run&width=80&format=webp;avif;jpg';
 	import Img from '@zerodevx/svelte-img';
 	import {
 		slide,

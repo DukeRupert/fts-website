@@ -1,5 +1,5 @@
 <script>
-	import fts_excavation_land_clearing from '$lib/assets/images/FtS-Excavation_5.webp?run';
+	import fts_excavation_land_clearing from '$lib/assets/images/FtS-Excavation_5.webp?as=run';
 	import Img from '@zerodevx/svelte-img';
 
 	const name = 'FtS Excavation';

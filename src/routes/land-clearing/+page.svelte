@@ -1,5 +1,5 @@
 <script lang="ts">
-	import land_clearing from '$lib/assets/images/FtS-Excavation_5.webp?run';
+	import land_clearing from '$lib/assets/images/FtS-Excavation_5.webp?as=run';
 	import Img from '@zerodevx/svelte-img';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 	import Seo from '$lib/components/Seo.svelte';

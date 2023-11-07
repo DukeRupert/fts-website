@@ -1,5 +1,5 @@
 <script lang="ts">
-	import site_preparation from '$lib/assets/images/site_preparation.jpeg?run';
+	import site_preparation from '$lib/assets/images/site_preparation.jpeg?as=run';
 	import Img from '@zerodevx/svelte-img';
 	import Blog from '$lib/components/Blog/3Column.svelte';
 	import type { PageData } from './$types';
@@ -8,34 +8,35 @@
 
 	export let data: PageData;
 	const title = 'Site preparation';
-	const description =  "Our comprehensive site preparation services set the stage for successful projects, whether it's clearing, grading, or utility installation. Partner with us and experience precision, efficiency, and client-centric solutions that make your project a resounding success.";
+	const description =
+		"Our comprehensive site preparation services set the stage for successful projects, whether it's clearing, grading, or utility installation. Partner with us and experience precision, efficiency, and client-centric solutions that make your project a resounding success.";
 
 	const solutions = [
-  {
-    "title": "Comprehensive Site Preparation",
-    "body": "At FtS Site Prep, we specialize in comprehensive site preparation services, transforming raw land into a canvas ready for development. From clearing and grading to excavation and utility installation, we lay the groundwork for your projects' success."
-  },
-  {
-    "title": "Skilled Site Preparation Experts",
-    "body": "Our team of skilled site preparation experts brings years of experience to every project. With precision and efficiency, we meticulously plan and execute site preparation, ensuring that your land is primed for construction."
-  },
-  {
-    "title": "Cutting-Edge Equipment and Technology",
-    "body": "We utilize cutting-edge equipment and technology to deliver top-notch site preparation. From advanced grading machinery to GPS-guided excavation, our tools ensure that your project starts on the right foot."
-  },
-  {
-    "title": "Cost-Effective Solutions",
-    "body": "We provide cost-effective site preparation solutions without compromising on quality or safety. Our efficient processes and competitive pricing make your project's groundwork accessible and affordable."
-  },
-  {
-    "title": "Efficient Project Management",
-    "body": "Efficiency is at the heart of our site preparation services. Our expert project managers oversee every detail, from scheduling to resource allocation, ensuring that your site is prepared on time and within budget."
-  },
-  {
-    "title": "Client-Centric Approach",
-    "body": "We believe in open communication and collaboration with our clients throughout the site preparation process. Your input is essential, and we work closely with you to tailor our services to your project's specific requirements, delivering results that exceed your expectations."
-  }
-]
+		{
+			title: 'Comprehensive Site Preparation',
+			body: "At FtS Site Prep, we specialize in comprehensive site preparation services, transforming raw land into a canvas ready for development. From clearing and grading to excavation and utility installation, we lay the groundwork for your projects' success."
+		},
+		{
+			title: 'Skilled Site Preparation Experts',
+			body: 'Our team of skilled site preparation experts brings years of experience to every project. With precision and efficiency, we meticulously plan and execute site preparation, ensuring that your land is primed for construction.'
+		},
+		{
+			title: 'Cutting-Edge Equipment and Technology',
+			body: 'We utilize cutting-edge equipment and technology to deliver top-notch site preparation. From advanced grading machinery to GPS-guided excavation, our tools ensure that your project starts on the right foot.'
+		},
+		{
+			title: 'Cost-Effective Solutions',
+			body: "We provide cost-effective site preparation solutions without compromising on quality or safety. Our efficient processes and competitive pricing make your project's groundwork accessible and affordable."
+		},
+		{
+			title: 'Efficient Project Management',
+			body: 'Efficiency is at the heart of our site preparation services. Our expert project managers oversee every detail, from scheduling to resource allocation, ensuring that your site is prepared on time and within budget.'
+		},
+		{
+			title: 'Client-Centric Approach',
+			body: "We believe in open communication and collaboration with our clients throughout the site preparation process. Your input is essential, and we work closely with you to tailor our services to your project's specific requirements, delivering results that exceed your expectations."
+		}
+	];
 
 	const seoData = {
 		title: `${title} | FtS Excavation`,

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import fts_logo from '$lib/assets/logo/FtS_Excavation_logo_green_white.png?run&width=80&format=webp;avif;jpg';
+	import fts_logo from '$lib/assets/logo/FtS_Excavation_logo_green_white.png?as=run&width=80&format=webp;avif;jpg';
 	import Img from '@zerodevx/svelte-img';
 	import { COMPANY } from '$lib/constants';
 </script>
@@ -81,7 +81,9 @@
 							</li>
 
 							<li>
-								<a href="/services" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Services</a>
+								<a href="/services" class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+									>Services</a
+								>
 							</li>
 
 							<li>
@@ -126,13 +128,14 @@
 								>
 							</li>
 							<li>
-								<a
-									href="/land-clearing"
-									class="text-sm leading-6 text-gray-600 hover:text-gray-900">Land clearing</a
+								<a href="/land-clearing" class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+									>Land clearing</a
 								>
 							</li>
 							<li>
-								<a href="/public-utility-extension" class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+								<a
+									href="/public-utility-extension"
+									class="text-sm leading-6 text-gray-600 hover:text-gray-900"
 									>Public utility extensions</a
 								>
 							</li>
@@ -167,13 +170,17 @@
 				</div>
 			</div>
 		</div>
-		<div class="mt-16 flex flex-col space-y-2 sm:flex-row sm:justify-between border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
+		<div
+			class="mt-16 flex flex-col space-y-2 sm:flex-row sm:justify-between border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24"
+		>
 			<p class="text-xs leading-5 text-gray-500">
 				&copy; {COMPANY.year}
 				{COMPANY.name}. All rights reserved.
 			</p>
 			<p class="text-xs leading-5 text-gray-500">
-				Created by <a href="https://www.fireflysoftware.dev/" target="_blank" rel="noreferrer">Firefly Software</a>
+				Created by <a href="https://www.fireflysoftware.dev/" target="_blank" rel="noreferrer"
+					>Firefly Software</a
+				>
 			</p>
 		</div>
 	</div>

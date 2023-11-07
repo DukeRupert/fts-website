@@ -1,5 +1,5 @@
 <script lang="ts">
-	import site_preparation from '$lib/assets/images/FtS-Excavation_5.webp?run';
+	import site_preparation from '$lib/assets/images/FtS-Excavation_5.webp?as=run';
 	import Img from '@zerodevx/svelte-img';
 	import Seo from '$lib/components/Seo.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
@@ -93,7 +93,8 @@
 						<p class="mt-1 text-gray-600">{body}</p>
 						{#if href}
 							<a class="unstyled mt-4 font-semibold text-primary-500 underline" {href}
-								>Learn more <span class="sr-only">about {title}</span> <span aria-hidden="true">&rarr;</span></a
+								>Learn more <span class="sr-only">about {title}</span>
+								<span aria-hidden="true">&rarr;</span></a
 							>
 						{/if}
 					</div>

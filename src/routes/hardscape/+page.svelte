@@ -1,5 +1,5 @@
 <script lang="ts">
-	import hardscape_patio from '$lib/assets/images/fts_hardscape_bonney_lake_patio.jpg?run';
+	import hardscape_patio from '$lib/assets/images/fts_hardscape_bonney_lake_patio.jpg?as=run';
 	import Img from '@zerodevx/svelte-img';
 	import Blog from '$lib/components/Blog/3Column.svelte';
 	import type { PageData } from './$types';

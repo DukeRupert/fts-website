@@ -1,5 +1,5 @@
 <script lang="ts">
-	import site_preparation from '$lib/assets/images/site_preparation.jpeg?run';
+	import foundation from '$lib/assets/images/fts_foundation.jpg?as=run';
 	import Img from '@zerodevx/svelte-img';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 	import Seo from '$lib/components/Seo.svelte';
@@ -64,7 +64,7 @@
 	<div class="relative overflow-hidden">
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
 			<Img
-				src={site_preparation}
+				src={foundation}
 				alt="Dug out trench for building works of new house concrete foundation on construction site"
 				class="mb-[-12%] mt-8 rounded-xl shadow-2xl ring-1 ring-gray-900/10"
 			/>

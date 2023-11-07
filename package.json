@@ -26,7 +26,7 @@
 		"@types/mailchimp__mailchimp_marketing": "^3.0.6",
 		"@typescript-eslint/eslint-plugin": "^5.48.1",
 		"@typescript-eslint/parser": "^5.48.1",
-		"@zerodevx/svelte-img": "^1.2.11",
+		"@zerodevx/svelte-img": "^2.1.0",
 		"autoprefixer": "^10.4.13",
 		"eslint": "^8.31.0",
 		"eslint-config-prettier": "^8.6.0",
@@ -46,7 +46,7 @@
 		"tailwindcss": "^3.2.4",
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.4",
-		"vite": "^4.0.4"
+		"vite": "^4.5.0"
 	},
 	"type": "module",
 	"dependencies": {

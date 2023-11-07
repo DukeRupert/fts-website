@@ -1,6 +1,6 @@
 <!-- about-us.svelte -->
 <script lang="ts">
-	import frank_and_bev from '$lib/assets/images/BandF.webp?run';
+	import frank_and_bev from '$lib/assets/images/BandF.webp?as=run';
 	import Img from '@zerodevx/svelte-img';
 	import Seo from '$lib/components/Seo.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
@@ -29,7 +29,7 @@
 				Since you are curious, here is a little bit of our story.
 			</p>
 		</div>
-		<figure class="mt-16 mx-auto max-w-2xl">
+		<figure class="mt-16 mx-auto max-w-2xl flex flex-col items-center">
 			<Img
 				class="aspect-square rounded-xl bg-gray-50 object-cover"
 				src={frank_and_bev}

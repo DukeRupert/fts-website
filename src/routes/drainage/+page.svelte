@@ -1,5 +1,5 @@
 <script lang="ts">
-	import drainage from '$lib/assets/images/drainage.jpeg?run';
+	import drainage from '$lib/assets/images/drainage.jpeg?as=run';
 	import Img from '@zerodevx/svelte-img';
 	import Blog from '$lib/components/Blog/3Column.svelte';
 	import type { PageData } from './$types';
