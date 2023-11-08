@@ -8,7 +8,7 @@
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 	import ServiceArea from '$lib/components/ServiceArea/ServiceArea.svelte';
 	import ModalForm from '$lib/components/ModalForm.svelte';
-	import { modalStore } from '@skeletonlabs/skeleton';
+	import { getModalStore } from '@skeletonlabs/skeleton';
 	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
 	import { onMount, onDestroy } from 'svelte';
 	import LogoCloud from '$lib/components/LogoCloud/LogoCloud.svelte';
@@ -16,6 +16,9 @@
 	import Seo from '$lib/components/Seo.svelte';
 
 	export let data: PageData;
+
+	// instantiate modal
+	const modalStore = getModalStore();
 
 	// Trigger leads modal
 	function triggerCustomModal(): void {

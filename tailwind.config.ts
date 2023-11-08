@@ -1,11 +1,23 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-module.exports = {
+// const defaultTheme = require('tailwindcss/defaultTheme');
+import { onBrandTheme } from './brand-theme'
+
+import { join } from 'path';
+import type { Config } from 'tailwindcss';
+
+// 1. Import the Skeleton plugin
+import { skeleton } from '@skeletonlabs/tw-plugin';
+
+const config = {
+	// 2. Opt for dark mode to be handled via the class method
 	darkMode: 'class',
 	content: [
 		'./src/**/*.{html,js,svelte,ts}',
-		require('path').join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
+		// 3. Append the path to the Skeleton package
+		join(require.resolve(
+			'@skeletonlabs/skeleton'),
+			'../**/*.{html,js,svelte,ts}'
+		)
 	],
-
 	theme: {
 		extend: {
 			colors: {
@@ -46,9 +58,9 @@ module.exports = {
 					900: '#ae4600'
 				}
 			},
-			fontFamily: {
-				sans: ['Libre Franklin', ...defaultTheme.fontFamily.sans]
-			},
+			// fontFamily: {
+			// 	sans: ['Libre Franklin', ...defaultTheme.fontFamily.sans]
+			// },
 			animation: {
 				'fade-in': 'fade-in 0.5s linear forwards',
 				marquee: 'marquee var(--marquee-duration) linear infinite',
@@ -61,10 +73,10 @@ module.exports = {
 			keyframes: {
 				'fade-in': {
 					from: {
-						opacity: 0
+						opacity: '0'
 					},
 					to: {
-						opacity: 1
+						opacity: '1'
 					}
 				},
 				marquee: {
@@ -130,11 +142,18 @@ module.exports = {
 			}
 		}
 	},
-
 	plugins: [
 		require('@tailwindcss/forms'),
 		require('@tailwindcss/typography'),
-		require('@tailwindcss/line-clamp'),
-		...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')()
+		// 4. Append the Skeleton plugin (after other plugins)
+		skeleton({
+			themes: {
+				custom: [
+					onBrandTheme
+				]
+			}
+		})
 	]
-};
+} satisfies Config;
+
+export default config;
