@@ -88,7 +88,7 @@ export const onBrandTheme: CustomThemeConfig = {
 		"--color-error-800": "143 41 41", // #8f2929
 		"--color-error-900": "117 33 33", // #752121
 		// surface | #A1A1AA 
-		"--color-surface-50": "241 241 242", // #f1f1f2
+		"--color-surface-50": "255 255 255", // #ffffff
 		"--color-surface-100": "236 236 238", // #ececee
 		"--color-surface-200": "232 232 234", // #e8e8ea
 		"--color-surface-300": "217 217 221", // #d9d9dd

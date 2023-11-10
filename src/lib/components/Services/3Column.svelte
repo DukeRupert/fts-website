@@ -1,6 +1,5 @@
 <script lang="ts">
 	import FadeIn from '../../components/FadeIn.svelte';
-	console.log('loaded');
 </script>
 
 <div id="services" class="bg-gradient-to-br from-primary-500 to-primary-900 py-24 sm:py-32">

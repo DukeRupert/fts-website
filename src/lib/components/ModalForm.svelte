@@ -1,17 +1,17 @@
 <script lang="ts">
+	import { getModalStore, getToastStore } from '@skeletonlabs/skeleton';
 	import { z } from 'zod';
 	import ErrorHandler from '$lib/components/ErrorHandler.svelte';
 	import type { LeadData } from '$lib/types/forms';
 	import { enhance } from '$app/forms';
-	import { getToastStore } from '@skeletonlabs/skeleton';
-	import { getModalStore } from '@skeletonlabs/skeleton';
-	
-	const modalStore = getModalStore();
-	const toastStore = getToastStore();
-	
+
 	// Props
 	/** Exposes parent props to this component. */
 	export let parent: any;
+
+	// Instantiate modal
+	const modalStore = getModalStore();
+	const toastStore = getToastStore();
 
 	// Form Data
 	const formData: LeadData = {
