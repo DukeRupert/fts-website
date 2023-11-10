@@ -17,7 +17,8 @@ const config = {
 			entries: ['*'],
 			handleMissingId: 'warn'
 		}
-	}
+	},
+	csrf: { checkOrigin: false, }
 };
 
 export default config;
