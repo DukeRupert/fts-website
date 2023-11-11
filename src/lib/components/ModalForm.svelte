@@ -43,7 +43,7 @@
 		// Generate token and send email
 		const { data } = valid;
 		try {
-			const response = await fetch('/api/send-verification', {
+			const response = await fetch('/api/send-code', {
 				method: 'POST',
 				body: JSON.stringify(data)
 			});
@@ -94,9 +94,9 @@
 			</svg>
 		</div>
 		<div class="mt-3 text-center sm:mt-5">
-			<h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Save $150</h3>
-			<div class="mt-2">
-				<p class="text-sm text-gray-500">Join our mailing list and save on your next project!</p>
+			<h3 class="text-4xl font-semibold leading-6 text-gray-900" id="modal-title">Save $150</h3>
+			<div class="mt-4">
+				<p class="text-sm text-gray-500">Join our mailing list to save on your next project!</p>
 			</div>
 		</div>
 	</div>

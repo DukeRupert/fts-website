@@ -35,6 +35,7 @@
 				message: 'Something went wrong! Please give us a call.',
 				background: 'variant-filled-error'
 			});
+			pending = false;
 		}
 	});
 

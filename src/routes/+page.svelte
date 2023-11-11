@@ -10,7 +10,7 @@
 	import ModalForm from '$lib/components/ModalForm.svelte';
 	import { getModalStore } from '@skeletonlabs/skeleton';
 	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 	import LogoCloud from '$lib/components/LogoCloud/LogoCloud.svelte';
 	import TestimonialGrid from '$lib/components/TestimonialGrid.svelte';
 	import Seo from '$lib/components/Seo.svelte';
@@ -37,32 +37,21 @@
 		modalStore.trigger(d);
 	}
 
-	// Trigger leads modal if
-	// user is new & scroll > 300 & trigger hasn't fired already
-	let main: HTMLElement | null;
-	let yScroll;
-	let promoTrigger = true;
-
-	function scrollHandler(e: any): void {
-		yScroll = e.target.scrollTop;
-		if (data?.promo && yScroll > 300 && promoTrigger) {
-			promoTrigger = false;
-			triggerCustomModal();
-		}
-	}
+	// Modal should trigger only once
+	let stopModal = false;
 
 	onMount(() => {
-		main = document.getElementById('page');
-		main?.addEventListener('scroll', scrollHandler);
 		// Check URL for tradeshow and trigger leads modal
 		const promo = $page.url.searchParams.get('promo');
-		if (promo && promo === 'tradeshow') {
+		if (promo && !stopModal) {
+			console.log('Promo');
+			stopModal = true;
+			triggerCustomModal();
+		} else if (!data.returning_user && !stopModal) {
+			console.log('Returning user');
+			stopModal = true;
 			triggerCustomModal();
 		}
-	});
-
-	onDestroy(() => {
-		main?.removeEventListener('scroll', scrollHandler);
 	});
 
 	const seoData = {

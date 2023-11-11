@@ -1,6 +1,9 @@
 <script lang="ts">
 	import type { LeadData } from '$lib/types/forms';
-	import { toastStore, modalStore } from '@skeletonlabs/skeleton';
+	import { getToastStore, getModalStore } from '@skeletonlabs/skeleton';
+
+	const toastStore = getToastStore();
+	const modalStore = getModalStore();
 
 	// Form Data
 	const formData: LeadData = {
@@ -12,7 +15,7 @@
 	async function onFormSubmit(): Promise<void> {
 		// Generate token and send email
 		try {
-			const response = await fetch('/api/send-verification', {
+			const response = await fetch('/api/send-code', {
 				method: 'POST',
 				body: JSON.stringify(formData)
 			});
@@ -20,7 +23,7 @@
 			if (response.ok) {
 				toastStore.trigger({
 					message: 'Success! Check your email.',
-					preset: 'variant-filled-success'
+					background: 'variant-filled-success'
 				});
 
 				return;
@@ -29,13 +32,13 @@
 			console.log(response);
 			toastStore.trigger({
 				message: 'Error. Please try again later.',
-				preset: 'variant-filled-error'
+				background: 'variant-filled-error'
 			});
 		} catch (error) {
 			console.log(error);
 			toastStore.trigger({
 				message: 'Error. Please try again later.',
-				preset: 'variant-filled-error'
+				background: 'variant-filled-error'
 			});
 		} finally {
 			modalStore.close();
