@@ -8,7 +8,7 @@ export const load: LayoutServerLoad = async ({ cookies }) => {
 		const uuid = crypto.randomUUID();
 		cookies.set('user_id', uuid);
 		return { returning_user: false };
+	} else {
+		return { returning_user: true };
 	}
-
-	return { returning_user: true };
 };
