@@ -13,6 +13,7 @@
 	import { onMount } from 'svelte';
 	import LogoCloud from '$lib/components/LogoCloud/LogoCloud.svelte';
 	import TestimonialGrid from '$lib/components/TestimonialGrid.svelte';
+	import Blog from '$lib/components/Blog/3Column.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 
 	export let data: PageData;
@@ -79,4 +80,5 @@
 <TestimonialGrid />
 <ServiceArea />
 <LogoCloud />
+<Blog posts={data.posts} />
 <CallToAction />

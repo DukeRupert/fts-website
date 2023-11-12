@@ -2,8 +2,8 @@
 	import type { Post } from '$lib/types/sanity';
 	import Card from './Card.svelte';
 
-	export let title = 'From the blog';
-	export let body = 'Learn how to grow your business with our expert advice.';
+	export let title = 'Recent work';
+	export let body = 'Check out some of our recent projects around the Puget Sound.';
 	export let posts: Post[];
 </script>
 
