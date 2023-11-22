@@ -27,6 +27,7 @@ export const load = async () => {
 
 export const actions = {
   default: async ({ request, fetch }) => {
+    console.log('Execute contact us form action')
     const form = await superValidate(request, schema);
     console.log('POST', form);
 
@@ -54,7 +55,7 @@ export const actions = {
       ],
       phone_numbers: [
         {
-          value: form.data.phone,
+          value: form.data.phone.replace(/\D/g,''), // Remove non-numeric characters
           is_primary: '1',
           code: '1'
         }
