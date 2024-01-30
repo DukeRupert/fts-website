@@ -1,5 +1,6 @@
 <script lang="ts">
 	import site_preparation from '$lib/assets/images/site_preparation.jpeg?as=run';
+	import silveria_site_prep from '$lib/assets/images/silveria_site_prep.png?as=run';
 	import Img from '@zerodevx/svelte-img';
 	import Blog from '$lib/components/Blog/3Column.svelte';
 	import type { PageData } from './$types';
@@ -67,7 +68,7 @@
 	<div class="relative overflow-hidden">
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
 			<Img
-				src={site_preparation}
+				src={silveria_site_prep}
 				alt="Dug out trench for building works of new house concrete foundation on construction site"
 				class="mb-[-12%] mt-8 rounded-xl shadow-2xl ring-1 ring-gray-900/10"
 			/>
