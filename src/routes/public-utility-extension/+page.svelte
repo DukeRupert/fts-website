@@ -1,5 +1,6 @@
 <script lang="ts">
 	import land_clearing from '$lib/assets/images/FtS-Excavation_5.webp?as=run';
+	import utilities from '$lib/assets/images/utilities.jpg?as=run';
 	import Img from '@zerodevx/svelte-img';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 	import Seo from '$lib/components/Seo.svelte';
@@ -64,8 +65,8 @@
 	<div class="relative overflow-hidden">
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
 			<Img
-				src={land_clearing}
-				alt="Dug out trench for building works of new house concrete foundation on construction site"
+				src={utilities}
+				alt="A public utility extension trench recently created by FtS Excavation."
 				class="mb-[-12%] mt-8 rounded-xl shadow-2xl ring-1 ring-gray-900/10"
 			/>
 			<div class="relative" aria-hidden="true">
