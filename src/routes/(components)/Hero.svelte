@@ -48,7 +48,6 @@
 		<video
 			poster="/image/poster.webp"
 			src="/video/excavator_720p.mp4"
-			type="video/mp4"
 			class="aspect-[3/2] object-cover object-right lg:aspect-auto lg:h-full lg:w-full"
 			autoplay
 			muted
