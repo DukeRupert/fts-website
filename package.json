@@ -59,11 +59,11 @@
 		"@sanity/client": "^6.7.1",
 		"@sanity/image-url": "^1.0.2",
 		"@sentry/sveltekit": "^7.92.0",
-		"@square/svelte-store": "^1.0.17",
 		"@supabase/supabase-js": "^2.38.4",
 		"@vercel/node": "^3.0.9",
 		"felte": "^1.2.12",
 		"jsonwebtoken": "^9.0.2",
+		"postgres": "^3.4.4",
 		"postmark": "^3.1.2",
 		"validator": "^13.11.0",
 		"zod": "^3.22.4"

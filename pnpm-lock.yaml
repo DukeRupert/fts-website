@@ -20,9 +20,6 @@ dependencies:
   '@sentry/sveltekit':
     specifier: ^7.92.0
     version: 7.92.0(@sveltejs/kit@1.27.3)(svelte@4.2.2)
-  '@square/svelte-store':
-    specifier: ^1.0.17
-    version: 1.0.17(svelte@4.2.2)
   '@supabase/supabase-js':
     specifier: ^2.38.4
     version: 2.38.4
@@ -35,6 +32,9 @@ dependencies:
   jsonwebtoken:
     specifier: ^9.0.2
     version: 9.0.2
+  postgres:
+    specifier: ^3.4.4
+    version: 3.4.4
   postmark:
     specifier: ^3.1.2
     version: 3.1.2
@@ -909,15 +909,6 @@ packages:
     dependencies:
       tailwindcss: 3.3.5
     dev: true
-
-  /@square/svelte-store@1.0.17(svelte@4.2.2):
-    resolution: {integrity: sha512-DZ6cnPMvxNzSAphgUlrOu6IBntihHq05FOSW7Qm8bA2+x/ZoviAumErFQUvtKiftCOjkQvxbKYXfzBnALiCSyQ==}
-    peerDependencies:
-      svelte: ^3.0.0
-    dependencies:
-      cookie-storage: 6.1.0
-      svelte: 4.2.2
-    dev: false
 
   /@supabase/functions-js@2.1.5:
     resolution: {integrity: sha512-BNzC5XhCzzCaggJ8s53DP+WeHHGT/NfTsx2wUSSGKR2/ikLFQTBCDzMvGz/PxYMqRko/LwncQtKXGOYp1PkPaw==}
@@ -1802,10 +1793,6 @@ packages:
   /convert-hrtime@3.0.0:
     resolution: {integrity: sha512-7V+KqSvMiHp8yWDuwfww06XleMWVVB9b9tURBx+G7UTADuo5hYPuowKloz4OzOqbPezxgo+fdQ1522WzPG4OeA==}
     engines: {node: '>=8'}
-    dev: false
-
-  /cookie-storage@6.1.0:
-    resolution: {integrity: sha512-HeVqbVy8BjXhAAuFtL6MTG+witHoLbxfky2jgVh9FmxmyL6IKa9gSSyPNjevXCCCxPu6Tzd9J8+eXTRQzYU/cg==}
     dev: false
 
   /cookie@0.5.0:
@@ -3614,6 +3601,11 @@ packages:
       nanoid: 3.3.7
       picocolors: 1.0.0
       source-map-js: 1.0.2
+
+  /postgres@3.4.4:
+    resolution: {integrity: sha512-IbyN+9KslkqcXa8AO9fxpk97PA4pzewvpi2B3Dwy9u4zpV32QicaEdgmF3eSQUzdRk7ttDHQejNgAEr4XoeH4A==}
+    engines: {node: '>=12'}
+    dev: false
 
   /postmark@3.1.2:
     resolution: {integrity: sha512-nm5vZR75Fk7coboWVMysq6eWZHMOUZAXOl+JXD3O1rzjOlZ9eYYq++/WyrheTyl0L4h97XJkftanFVU7OCTCDw==}
