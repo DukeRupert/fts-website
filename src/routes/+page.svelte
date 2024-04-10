@@ -3,8 +3,8 @@
 	import { jsonld_schema } from './seo';
 	import { page } from '$app/stores';
 	import type { PageData } from './$types';
-	import Hero from '$lib/components/Hero/AngledRight.svelte';
-	import Services from '$lib/components/Services/3Column.svelte';
+	import Hero from './(components)/Hero.svelte';
+	import Services from './(components)/Services.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 	import ServiceArea from '$lib/components/ServiceArea/ServiceArea.svelte';
 	import ModalForm from '$lib/components/ModalForm.svelte';
@@ -56,7 +56,7 @@
 	});
 
 	const seoData = {
-		title: "FtS Excavation | Puyallup's excavation experts | Home",
+		title: "FtS Excavation | Puyallup's excavation experts",
 		description:
 			'FtS-Excavation: Your trusted Puyallup excavation experts. Skilled professionals, advanced equipment, and reliable service. Residential, commercial, and industrial excavation. Contact us for a free consultation.',
 		url: 'https://www.fts-excavation.com/',
@@ -76,9 +76,9 @@
 
 <Seo data={seoData} />
 <Hero />
+<LogoCloud />
 <Services />
 <TestimonialGrid />
 <ServiceArea />
-<LogoCloud />
 <Blog posts={data.posts} />
 <CallToAction />
