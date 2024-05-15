@@ -105,9 +105,9 @@
 					<!-- 'Services' flyout menu, show/hide based on flyout menu state. -->
 					<div
 						on:mouseleave={close_services}
-						class="absolute z-10 -left-8 mt-5 flex w-screen max-w-max px-4 {$is_services_open
+						class="absolute -z-10 -left-8 mt-5 flex w-screen max-w-max px-4 {$is_services_open
 							? '!pointer-events-auto z-10 duration-200 opacity-100 translate-y-0'
-							: '-z-10 duration-150 opacity-0 translate-y-1'}"
+							: 'pointer-events-none duration-150 opacity-0 translate-y-1'}"
 					>
 						<div
 							class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 lg:max-w-3xl"
@@ -277,11 +277,11 @@
 										</svg>
 									</div>
 									<div>
-										<a href="/public-utility-extension" class="font-semibold text-gray-900">
-											Public Utility Extensions
+										<a href="/public-works" class="font-semibold text-gray-900">
+											Public Works
 											<span class="absolute inset-0" />
 										</a>
-										<p class="mt-1 text-gray-600">Both commercial and residential</p>
+										<p class="mt-1 text-gray-600">Proudly supporting the Puget Sound</p>
 									</div>
 								</div>
 							</div>
@@ -315,9 +315,9 @@
 					<!-- 'About' flyout menu, show/hide based on flyout menu state. -->
 					<div
 						on:mouseleave={close_about}
-						class="absolute pointer-events-none -left-8 top-full mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition {$is_about_open
+						class="absolute -z-10 pointer-events-none -left-8 top-full mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition {$is_about_open
 							? '!pointer-events-auto z-10 ease-out duration-200 opacity-100 translate-y-0'
-							: '-z-10 ease-in duration-150 opacity-0 translate-y-1'}"
+							: 'ease-in duration-150 opacity-0 translate-y-1'}"
 					>
 						<div class="p-4">
 							<div
@@ -530,6 +530,11 @@
 										class="mt-2 space-y-2"
 										id="disclosure-1"
 									>
+										<a
+											href="/public-works"
+											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-500 hover:underline"
+											>Public works</a
+										>
 										<a
 											href="/site-preparation"
 											class="unstyled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-200 hover:bg-primary-500 hover:underline"

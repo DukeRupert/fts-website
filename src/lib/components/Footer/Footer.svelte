@@ -108,6 +108,11 @@
 						<ul role="list" class="mt-6 space-y-4">
 							<li>
 								<a
+									href="/public-works"
+									class="text-sm leading-6 text-gray-600 hover:text-gray-900">Public works</a
+								>
+							</li><li>
+								<a
 									href="/site-preparation"
 									class="text-sm leading-6 text-gray-600 hover:text-gray-900">Site preparation</a
 								>
