@@ -1,4 +1,5 @@
 import type { RequestHandler } from './$types';
+import { POSTMARK_FROM_EMAIL, POSTMARK_TO_EMAIL } from '$env/static/private'
 import { error, json } from '@sveltejs/kit';
 import Postmark from '$lib/postmarkClient';
 
@@ -13,14 +14,14 @@ interface Payload {
 	company_name: string;
 }
 
-export const POST: RequestHandler = async ({ request, fetch }) => {
+export const POST: RequestHandler = async ({ request }) => {
 	console.log('/postmark/lead POST hit');
 	const payload = (await request.json()) as Payload;
 	console.log(payload);
 
 	// Postmark configuration
-	const from_email = 'logan@fireflysoftware.dev';
-	const to_email = 'service@fts-excavation.com';
+	const from_email = POSTMARK_FROM_EMAIL || "logan@fireflysoftware.dev" 
+	const to_email = POSTMARK_TO_EMAIL || 'logan@fireflysoftware.dev';
 	const template_id = 21373960;
 	const track_opens = false;
 
@@ -34,7 +35,7 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 		TrackOpens: track_opens
 	});
 
-	// Success
+	// Great Success
 	if (response.ErrorCode == 0) {
 		return json(response);
 	}
@@ -47,6 +48,6 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 		TextBody: JSON.stringify(response)
 	});
 
-	// Error
+	// Return error to client 
 	throw error(500, JSON.stringify(response.ErrorCode));
 };
