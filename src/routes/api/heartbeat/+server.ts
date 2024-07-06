@@ -1,9 +1,9 @@
 import type { RequestHandler } from './$types';
 import { error, json } from '@sveltejs/kit';
 import Postmark from '$lib/postmarkClient';
-import { HEARBEAT_TOKEN } from '$env/static/private';
+import { HEARTBEAT_TOKEN } from '$env/static/private';
 
-const key = HEARBEAT_TOKEN || 'none';
+const key = HEARTBEAT_TOKEN || 'none';
 
 export const POST: RequestHandler = async ({ request, fetch }) => {
 	console.log('/heartbeat POST');
