@@ -3,6 +3,9 @@
 	import { urlFor } from '$lib/sanity/urlFor';
 
 	export let data: Post;
+
+	const date = new Date(data.publishedAt)
+	const date_string = date.toLocaleDateString()
 </script>
 
 <article
@@ -24,7 +27,7 @@
 	<div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
 
 	<div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-		<time datetime="2020-03-16" class="mr-8">Mar 16, 2020</time>
+		<time datetime={date_string || "Mar 16, 2020"} class="mr-8">{date_string || "Mar 16, 2020"}</time>
 	</div>
 	<h3 class="mt-3 text-lg font-semibold leading-6 text-white">
 		<a href={`/projects/${data.slug.current}`} class="unstyled text-white">
