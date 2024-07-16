@@ -7,7 +7,7 @@
 
 	const title = 'Public utility extension';
 	const description =
-		"Elevate your community with FtS Excavation's utility extension services based in Puyallup, WA. From water to electricity, we deliver reliable infrastructure expansion with expert precision and a commitment to safety.";
+		"Utility extension services in the Puget Sound. FTS Excavation provides reliable infrastructure expansion for water, electricity, and more with a focus on safety.";
 
 	const solutions = [
 		{

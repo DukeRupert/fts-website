@@ -58,7 +58,7 @@
 	const seoData = {
 		title: "FtS Excavation | Puyallup's excavation experts",
 		description:
-			'FtS-Excavation: Your trusted Puyallup excavation experts. Skilled professionals, advanced equipment, and reliable service. Residential, commercial, and industrial excavation. Contact us for a free consultation.',
+			'FTS Excavation Services offers professional excavation services in the Puget Sound. Specializing in residential, commercial, and industrial projects, we ensure precision and reliability. Contact us for a free consultation today.',
 		url: 'https://www.fts-excavation.com/',
 		og: {
 			src: 'https://www.fts-excavation.com/image/seo/FtS-Excavation_1200.jpg',

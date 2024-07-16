@@ -9,7 +9,7 @@
 	export let data: PageData;
 	const title = 'Drainage';
 	const description =
-		'Our team specializes in keeping your property dry and safe, addressing drainage issues with precision and efficiency. From stormwater management to foundation protection, we ensure that water flows where it should, providing peace of mind and preserving the integrity of your space.';
+		'Effective drainage solutions in the Puget Sound. FTS Excavation addresses stormwater management and foundation protection to keep your property safe and dry.';
 
 	const solutions = [
 		{

@@ -6,7 +6,7 @@
 
 	const title = 'Land clearing';
 	const description =
-		"Transform your land into a canvas of possibilities with FtS Excavation's top-tier land clearing services in Puyallup, WA. Our expertise combines with cutting-edge equipment to create a clean slate for your projects, all while prioritizing environmental responsibility, safety, and seamless collaboration.";
+		"Professional land-clearing services in the Puget Sound. FTS Excavation combines expertise and advanced equipment for environmentally responsible land transformation.";
 
 	const solutions = [
 		{

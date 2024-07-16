@@ -11,7 +11,7 @@
 	export let data: PageData;
 	const title = 'Public Works';
 	const description =
-		"We specialize in high-quality excavation services for government projects.";
+		"Expert excavation services for government projects in the Puget Sound. FTS Excavation ensures quality and efficiency for all public works.";
 
 	const solutions = [
   {

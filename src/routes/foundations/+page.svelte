@@ -6,7 +6,7 @@
 
 	const title = 'Foundations';
 	const description =
-		"Choose FtS Excavation for foundations that stand firm and true. With a proven track record of excellence in excavation, we're your trusted partner for building the rock-solid foundations your projects deserve.";
+		"Reliable foundation excavation services in the Puget Sound. FTS Excavation builds strong foundations for residential and commercial projects.";
 
 	const solutions = [
 		{

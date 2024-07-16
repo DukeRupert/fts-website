@@ -9,7 +9,7 @@
 	export let data: PageData;
 	const title = 'Hardscape';
 	const description =
-		"Our custom hardscape designs are crafted with expert precision, using quality materials and a keen eye for functional aesthetics. Whether it's a stunning patio, a sturdy retaining wall, or an inviting outdoor oasis, we turn your outdoor dreams into beautiful, lasting realities.";
+		"Custom hardscape designs and installations in the Puget Sound. From patios to retaining walls, FTS Excavation transforms outdoor spaces with quality and precision.";
 
 	const solutions = [
 		{

@@ -10,7 +10,7 @@
 	export let data: PageData;
 	const title = 'Site preparation';
 	const description =
-		"Our comprehensive site preparation services set the stage for successful projects, whether it's clearing, grading, or utility installation. Partner with us and experience precision, efficiency, and client-centric solutions that make your project a resounding success.";
+		"Comprehensive site preparation services including clearing, grading, and utility installation in the Puget Sound. FTS Excavation ensures your project's success with precision and efficiency.";
 
 	const solutions = [
 		{
