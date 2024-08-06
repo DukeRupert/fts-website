@@ -1,10 +1,8 @@
-import type { Lead } from '$lib/contractorPlus/types/lead';
 import type { Actions } from './$types';
 import { fail } from '@sveltejs/kit';
 import { z } from 'zod';
 import validator from 'validator';
 import { superValidate } from 'sveltekit-superforms/server';
-import Postmark from '$lib/postmarkClient';
 
 const schema = z.object({
 	first_name: z.string().max(50, 'Must be less than 50 characters'),
@@ -51,7 +49,7 @@ export const actions = {
 				last_name: form.data.last_name,
 				email: form.data.email,
 				phone: form.data.phone,
-				message: `${form.data.location} - ${form.data.service}`,
+				message: `${form.data.location} - ${form.data.service} - ${form.data.description}`,
 				date: date,
 				recipient_name: 'FtS Excavation',
 				company_name: 'Firefly Software'
