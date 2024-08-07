@@ -5,6 +5,7 @@
 	import type { PageData } from './$types';
 	import Hero from './(components)/Hero.svelte';
 	import Services from './(components)/Services.svelte';
+	import Showcase from './(components)/Showcase.svelte';
 	import CallToAction from '$lib/sections/CallToAction.svelte';
 	import ServiceArea from '$lib/components/ServiceArea/ServiceArea.svelte';
 	import ModalForm from '$lib/components/ModalForm.svelte';
@@ -77,6 +78,7 @@
 <Seo data={seoData} />
 <Hero />
 <LogoCloud />
+<Showcase />
 <Services />
 <TestimonialGrid />
 <ServiceArea />

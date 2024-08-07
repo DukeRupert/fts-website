@@ -55,5 +55,19 @@
 	</head>
 	<body data-theme="on-brand-theme" data-sveltekit-preload-data="hover">
 		<div class="h-full">%sveltekit.body%</div>
+		<!-- CompanyCam Script -->
+		<script>
+			(function () {
+				var ccShowcaseRoot = document.getElementById('companycam-showcase-root');
+				if (!ccShowcaseRoot.attachShadow || !window.fetch) {
+					return;
+				}
+				var ccShowcaseRootParent = document.getElementsByTagName('body')[0];
+				var ccShowcaseScript = document.createElement('script');
+				ccShowcaseScript.src = 'https://showcase.companycam.com/bundle.js';
+				ccShowcaseScript.type = 'text/javascript';
+				ccShowcaseRootParent.appendChild(ccShowcaseScript);
+			})();
+		</script>
 	</body>
 </html>
