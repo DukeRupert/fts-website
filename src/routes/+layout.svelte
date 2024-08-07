@@ -22,7 +22,7 @@
 <svelte:head>
 	<script
 		defer
-		data-domain="plausible.angmar.dev"
+		data-domain="fts-excavation.com"
 		src="https://plausible.angmar.dev/js/script.js"
 	></script>
 </svelte:head>
