@@ -2,7 +2,7 @@
 	id="services"
 	class="relative bg-gradient-to-br from-primary-500 to-primary-900 py-24 sm:py-32"
 >
-	<div class="absolute -inset-x-20 top-0 bg-gradient-to-b from-white pt-[7%]"></div>
+	<div class="absolute -inset-x-20 top-0 bg-gradient-to-b from-white"></div>
 
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="mx-auto max-w-2xl lg:text-center">
