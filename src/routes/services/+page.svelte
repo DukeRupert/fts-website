@@ -78,7 +78,7 @@
 				class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
 			/>
 			<div class="relative" aria-hidden="true">
-				<div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
+				<div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white" />
 			</div>
 		</div>
 	</div>
