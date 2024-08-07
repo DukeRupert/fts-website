@@ -6,7 +6,7 @@
 	import { navigating } from '$app/stores';
 	import { is_open, is_services_open, is_about_open, is_mobile_services_open } from '$lib/stores';
 	import { initializeStores } from '@skeletonlabs/skeleton';
-	
+
 	// Initialize Skeleton stores
 	initializeStores();
 
@@ -22,8 +22,8 @@
 <svelte:head>
 	<script
 		defer
-		data-domain="fts-excavation.com"
-		src="https://plausible.io/js/script.tagged-events.js"
+		data-domain="plausible.angmar.dev"
+		src="https://plausible.angmar.dev/js/script.js"
 	></script>
 </svelte:head>
 
